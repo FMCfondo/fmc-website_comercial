@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aviso Legal – Fondo Mutuo de Cobertura S.A.S.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --sky:#B3E5FC;--sky-deep:#29B6F6;--navy:#0D3A5C;--navy-mid:#0D4F7C;
+  --gold:#E8A820;--gold-dark:#C8860A;--white:#fff;--gray:#F5F7FC;
+  --pale:#F0F9FF;--text:#0D2A45;--muted:#3D6080;--border:#C8E8F8;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;font-weight:300;color:var(--text);background:var(--white);line-height:1.7}
+nav{background:var(--sky);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:88px;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(41,182,246,.2)}
+.nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+.logo-name{font-family:'Merriweather',serif;font-size:13px;font-weight:400;color:var(--navy)}
+.logo-sub{font-size:10px;font-weight:500;letter-spacing:1.5px;color:var(--navy-mid);text-transform:uppercase;opacity:.7}
+.nav-back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:13px;font-weight:500;color:var(--navy);background:rgba(255,255,255,.5);border:1px solid rgba(13,58,92,.2);padding:8px 16px;border-radius:4px;transition:background .2s}
+.nav-back:hover{background:rgba(255,255,255,.8)}
+.doc-hero{background:var(--navy);padding:60px 5vw 50px;position:relative;overflow:hidden}
+.doc-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold)}
+.doc-hero-inner{max-width:860px;margin:0 auto}
+.doc-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,168,32,.15);border:1px solid rgba(232,168,32,.3);color:var(--gold);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:20px}
+.doc-hero h1{font-family:'Merriweather',serif;font-size:clamp(22px,3vw,36px);font-weight:300;color:#fff;margin-bottom:16px;line-height:1.3}
+.doc-meta{display:flex;gap:32px;flex-wrap:wrap;margin-top:20px}
+.doc-meta-item{font-size:13px;font-weight:300;color:rgba(255,255,255,.6)}
+.doc-meta-item strong{display:block;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+.doc-layout{max-width:860px;margin:0 auto;padding:60px 5vw 80px;display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:start}
+.doc-toc{position:sticky;top:108px}
+.doc-toc h3{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sky-deep);margin-bottom:16px}
+.doc-toc ul{list-style:none;display:flex;flex-direction:column;gap:4px}
+.doc-toc ul li a{font-size:13px;font-weight:300;color:var(--muted);text-decoration:none;padding:5px 10px;border-left:2px solid var(--border);display:block;transition:color .2s,border-color .2s;line-height:1.4}
+.doc-toc ul li a:hover{color:var(--navy);border-color:var(--sky-deep)}
+.doc-content{min-width:0}
+.doc-section{margin-bottom:48px;scroll-margin-top:110px}
+.doc-section h2{font-family:'Merriweather',serif;font-size:20px;font-weight:400;color:var(--navy);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--sky)}
+.doc-section p{font-size:14px;font-weight:300;line-height:1.8;color:var(--muted);margin-bottom:14px}
+.doc-section ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.doc-section ul li{font-size:14px;font-weight:300;line-height:1.7;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+.doc-section ul li::before{content:'•';color:var(--sky-deep);flex-shrink:0;font-weight:700;margin-top:1px}
+.id-card{background:var(--pale);border:1px solid var(--border);border-left:4px solid var(--sky-deep);border-radius:0 8px 8px 0;padding:24px;margin-bottom:24px}
+.id-card p{margin-bottom:6px;font-size:14px;font-weight:300;color:var(--muted)}
+.id-card p strong{color:var(--navy);font-weight:500}
+.vigencia-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,168,32,.1);border:1px solid rgba(232,168,32,.3);color:var(--gold-dark);font-size:12px;font-weight:600;padding:8px 16px;border-radius:6px;margin-top:8px}
+.highlight-box{background:var(--pale);border:1px solid var(--border);border-radius:8px;padding:20px 24px;margin-bottom:20px}
+.highlight-box p{margin-bottom:0;font-size:13px;font-style:italic;color:var(--navy-mid)}
+footer{background:var(--navy);border-top:3px solid var(--gold);padding:32px 5vw;text-align:center}
+footer p{font-size:13px;font-weight:300;color:rgba(255,255,255,.45)}
+footer a{color:var(--gold);text-decoration:none}
+footer a:hover{text-decoration:underline}
+@media(max-width:700px){.doc-layout{grid-template-columns:1fr}.doc-toc{display:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div>
+      <div class="logo-name">Fondo Mutuo de Cobertura</div>
+      <div class="logo-sub">S.A.S. · Colombia</div>
+    </div>
+  </a>
+  <a class="nav-back" href="index.html">← Volver al inicio</a>
+</nav>
+
+<div class="doc-hero">
+  <div class="doc-hero-inner">
+    <div class="doc-badge">Documento legal</div>
+    <h1>Aviso Legal</h1>
+    <div class="doc-meta">
+      <div class="doc-meta-item"><strong>Titular del sitio</strong>Fondo Mutuo de Cobertura S.A.S.</div>
+      <div class="doc-meta-item"><strong>NIT</strong>901.678.530-0</div>
+      <div class="doc-meta-item"><strong>Vigencia</strong>1 de enero de 2026</div>
+    </div>
+  </div>
+</div>
+
+<div class="doc-layout">
+  <aside class="doc-toc">
+    <h3>Contenido</h3>
+    <ul>
+      <li><a href="#titular">Titular del sitio web</a></li>
+      <li><a href="#objeto">Objeto</a></li>
+      <li><a href="#uso">Condiciones de uso</a></li>
+      <li><a href="#propiedad">Propiedad intelectual</a></li>
+      <li><a href="#responsabilidad">Limitación de responsabilidad</a></li>
+      <li><a href="#privacidad">Privacidad y datos personales</a></li>
+      <li><a href="#enlaces">Enlaces externos</a></li>
+      <li><a href="#modificaciones">Modificaciones</a></li>
+      <li><a href="#jurisdiccion">Jurisdicción aplicable</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </aside>
+
+  <main class="doc-content">
+
+    <div class="doc-section" id="titular">
+      <h2>1. Titular del sitio web</h2>
+      <div class="id-card">
+        <p><strong>Razón social:</strong> Fondo Mutuo de Cobertura S.A.S.</p>
+        <p><strong>NIT:</strong> 901.678.530-0</p>
+        <p><strong>Domicilio:</strong> Calle 52 # 49-28, Medellín, Antioquia, Colombia</p>
+        <p><strong>Correo electrónico:</strong> admin@fondomutuodecobertura.com</p>
+        <p><strong>Teléfono:</strong> (+57) 310 448 6842</p>
+        <p><strong>Sitio web:</strong> fondomutuodecobertura.com</p>
+      </div>
+    </div>
+
+    <div class="doc-section" id="objeto">
+      <h2>2. Objeto</h2>
+      <p>El presente aviso legal regula el acceso y el uso del sitio web <strong>fondomutuodecobertura.com</strong>, titularidad de Fondo Mutuo de Cobertura S.A.S. El acceso a este sitio implica la aceptación plena y sin reservas de las condiciones aquí establecidas.</p>
+      <p>Este sitio web tiene carácter informativo y tiene como finalidad dar a conocer los servicios de garantía que ofrece Fondo Mutuo de Cobertura S.A.S. a entidades del sector solidario y financiero colombiano. No constituye una oferta vinculante de servicios financieros.</p>
+    </div>
+
+    <div class="doc-section" id="uso">
+      <h2>3. Condiciones de uso</h2>
+      <p>El usuario se compromete a utilizar este sitio web de conformidad con la ley, la moral y el orden público, y en particular a:</p>
+      <ul>
+        <li>No utilizar el sitio con fines ilícitos o contrarios a las presentes condiciones.</li>
+        <li>No introducir, almacenar o difundir mediante el sitio ningún contenido que sea falso, ambiguo, inexacto, difamatorio o que vulnere derechos de terceros.</li>
+        <li>No intentar acceder a áreas restringidas del sitio ni a los sistemas informáticos de Fondo Mutuo de Cobertura S.A.S.</li>
+        <li>No realizar acciones que puedan dañar, inutilizar o deteriorar el sitio web o impedir su normal funcionamiento.</li>
+      </ul>
+      <p>Fondo Mutuo de Cobertura S.A.S. se reserva el derecho de denegar o retirar el acceso al sitio en cualquier momento y sin previo aviso a aquellos usuarios que incumplan estas condiciones.</p>
+    </div>
+
+    <div class="doc-section" id="propiedad">
+      <h2>4. Propiedad intelectual</h2>
+      <p>Todos los contenidos de este sitio web — incluyendo, sin limitarse a ello, textos, imágenes, logotipos, diseño gráfico, código fuente y estructura — son propiedad de Fondo Mutuo de Cobertura S.A.S. o de terceros que han autorizado su uso, y están protegidos por la legislación colombiana e internacional en materia de propiedad intelectual.</p>
+      <p>Queda expresamente prohibida la reproducción, distribución, comunicación pública o transformación total o parcial de los contenidos de este sitio sin la autorización previa y por escrito de Fondo Mutuo de Cobertura S.A.S.</p>
+    </div>
+
+    <div class="doc-section" id="responsabilidad">
+      <h2>5. Limitación de responsabilidad</h2>
+      <p>Fondo Mutuo de Cobertura S.A.S. no garantiza la disponibilidad continua e ininterrumpida del sitio web y no se responsabiliza por los daños o perjuicios que puedan derivarse de:</p>
+      <ul>
+        <li>Interrupciones en el funcionamiento del sitio por causas técnicas o de mantenimiento.</li>
+        <li>El uso indebido del sitio por parte de terceros.</li>
+        <li>La presencia de virus u otros elementos dañinos en los contenidos que puedan producir alteraciones en los sistemas informáticos del usuario.</li>
+        <li>La falta de exactitud, exhaustividad o actualización de los contenidos del sitio.</li>
+      </ul>
+      <p>La información publicada en este sitio tiene carácter meramente informativo. Para obtener información vinculante sobre los servicios de Fondo Mutuo de Cobertura S.A.S., el usuario debe contactar directamente a la entidad a través de los canales oficiales indicados.</p>
+    </div>
+
+    <div class="doc-section" id="privacidad">
+      <h2>6. Privacidad y datos personales</h2>
+      <p>El tratamiento de los datos personales recopilados a través de este sitio web se rige por la <a href="politica-datos.html" style="color:var(--sky-deep)">Política de Privacidad y Tratamiento de Datos Personales</a> de Fondo Mutuo de Cobertura S.A.S., elaborada en cumplimiento de la Ley 1581 de 2012 y el Decreto 1377 de 2013.</p>
+      <div class="highlight-box">
+        <p>Al utilizar el formulario de contacto de este sitio, el usuario autoriza a Fondo Mutuo de Cobertura S.A.S. para el tratamiento de sus datos personales con las finalidades descritas en la política de privacidad. Puede ejercer sus derechos de acceso, rectificación, supresión y revocación escribiendo a <strong>admin@fondomutuodecobertura.com</strong>.</p>
+      </div>
+    </div>
+
+    <div class="doc-section" id="enlaces">
+      <h2>7. Enlaces externos</h2>
+      <p>Este sitio web puede contener enlaces a sitios de terceros. Fondo Mutuo de Cobertura S.A.S. no tiene control sobre dichos sitios y no asume ninguna responsabilidad por sus contenidos, políticas de privacidad o prácticas. La inclusión de un enlace no implica respaldo o relación alguna con el sitio enlazado.</p>
+    </div>
+
+    <div class="doc-section" id="modificaciones">
+      <h2>8. Modificaciones</h2>
+      <p>Fondo Mutuo de Cobertura S.A.S. se reserva el derecho de modificar, en cualquier momento y sin previo aviso, los contenidos de este sitio web, así como las presentes condiciones legales. Se recomienda al usuario revisar periódicamente este aviso para mantenerse informado de los cambios que puedan producirse.</p>
+      <div class="vigencia-badge">✓ Vigente desde el 1 de enero de 2026</div>
+    </div>
+
+    <div class="doc-section" id="jurisdiccion">
+      <h2>9. Jurisdicción aplicable</h2>
+      <p>El presente aviso legal se rige por la legislación de la República de Colombia. Para la resolución de cualquier controversia derivada del acceso o uso de este sitio web, las partes se someten a la jurisdicción de los tribunales competentes de la ciudad de Medellín, Colombia, con renuncia expresa a cualquier otro fuero que pudiera corresponderles.</p>
+    </div>
+
+    <div class="doc-section" id="contacto">
+      <h2>10. Contacto</h2>
+      <p>Para cualquier consulta relacionada con este aviso legal, puede contactarnos a través de los siguientes canales:</p>
+      <div class="id-card">
+        <p><strong>Correo electrónico:</strong> admin@fondomutuodecobertura.com</p>
+        <p><strong>Teléfono:</strong> (+57) 310 448 6842</p>
+        <p><strong>Dirección:</strong> Calle 52 # 49-28, Edificio La Lonja, Medellín, Antioquia, Colombia</p>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <p>© 2026 Fondo Mutuo de Cobertura S.A.S. · NIT 901.678.530-0 ·
+    <a href="index.html">Inicio</a> ·
+    <a href="politica-datos.html">Política de privacidad</a> ·
+    <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a>
+  </p>
+</footer>
+
+</body>
+</html>
