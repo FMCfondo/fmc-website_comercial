@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PQR – Peticiones, Quejas y Reclamos | Fondo Mutuo de Cobertura S.A.S.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --sky:#B3E5FC;--sky-mid:#81D4FA;--sky-deep:#29B6F6;
+  --navy:#0D3A5C;--navy-mid:#0D4F7C;
+  --gold:#E8A820;--gold-dark:#C8860A;
+  --white:#fff;--gray:#F5F7FC;--pale:#F0F9FF;
+  --text:#0D2A45;--muted:#3D6080;--border:#C8E8F8;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;font-weight:300;color:var(--text);background:var(--white);line-height:1.7}
+
+nav{background:#fff;border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:80px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,.08)}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-name{font-family:'Merriweather',serif;font-size:12px;font-weight:400;color:var(--navy)}
+.logo-sub{font-size:9px;font-weight:500;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase}
+.nav-back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:13px;font-weight:500;color:var(--navy);background:var(--pale);border:1px solid var(--border);padding:8px 16px;border-radius:4px;transition:background .2s}
+.nav-back:hover{background:var(--sky)}
+
+.hero{background:var(--navy);padding:60px 5vw 50px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold)}
+.hero-inner{max-width:900px;margin:0 auto}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,168,32,.15);border:1px solid rgba(232,168,32,.3);color:var(--gold);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:20px}
+.hero h1{font-family:'Merriweather',serif;font-size:clamp(24px,3vw,38px);font-weight:300;color:#fff;margin-bottom:12px;line-height:1.3}
+.hero p{font-size:15px;font-weight:300;color:rgba(255,255,255,.65);max-width:580px;line-height:1.8}
+.hero-meta{display:flex;gap:32px;flex-wrap:wrap;margin-top:24px}
+.meta-item{font-size:13px;font-weight:300;color:rgba(255,255,255,.6)}
+.meta-item strong{display:block;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+
+.main{max-width:900px;margin:0 auto;padding:60px 5vw 80px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+
+.tipo-cards{display:flex;flex-direction:column;gap:12px}
+.tipo-card{background:var(--pale);border:1px solid var(--border);border-left:4px solid var(--sky-deep);border-radius:0 8px 8px 0;padding:20px 24px;cursor:pointer;transition:all .2s}
+.tipo-card:hover,.tipo-card.active{background:var(--sky);border-left-color:var(--navy)}
+.tipo-card h3{font-size:15px;font-weight:500;color:var(--navy);margin-bottom:4px}
+.tipo-card p{font-size:13px;font-weight:300;color:var(--muted);line-height:1.5}
+.tipo-card .plazo{font-size:11px;font-weight:600;color:var(--sky-deep);letter-spacing:.5px;margin-top:8px;text-transform:uppercase}
+
+.form-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:36px;box-shadow:0 4px 20px rgba(41,182,246,.08)}
+.form-card h2{font-family:'Merriweather',serif;font-size:20px;font-weight:400;color:var(--navy);margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--sky)}
+.pqr-form{display:flex;flex-direction:column;gap:14px}
+.fg{display:flex;flex-direction:column;gap:5px}
+.fg label{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.fg input,.fg textarea,.fg select{font-family:'Inter',sans-serif;font-size:14px;font-weight:300;color:var(--text);background:var(--gray);border:1px solid var(--border);border-radius:6px;padding:11px 14px;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--sky-deep);background:#fff}
+.fg textarea{min-height:120px;resize:none}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.submit-btn{background:var(--navy);color:#fff;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:14px 32px;border:none;border-radius:4px;cursor:pointer;transition:background .2s;align-self:flex-start}
+.submit-btn:hover{background:var(--gold);color:var(--navy)}
+.form-note{font-size:12px;font-weight:300;color:var(--muted);line-height:1.6;margin-top:4px}
+
+.info-box{background:var(--pale);border:1px solid var(--border);border-radius:8px;padding:20px 24px;margin-top:20px}
+.info-box h4{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sky-deep);margin-bottom:12px}
+.info-box p{font-size:13px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:6px}
+.info-box a{color:var(--sky-deep);text-decoration:none;font-weight:400}
+
+footer{background:var(--navy);border-top:3px solid var(--gold);padding:28px 5vw;text-align:center}
+footer p{font-size:13px;font-weight:300;color:rgba(255,255,255,.4)}
+footer a{color:var(--gold);text-decoration:none}
+
+@media(max-width:700px){
+  .main{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div>
+      <div class="logo-name">Fondo Mutuo de Cobertura</div>
+      <div class="logo-sub">S.A.S. · Colombia</div>
+    </div>
+  </a>
+  <a class="nav-back" href="index.html">← Volver al inicio</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="badge">Atención al usuario</div>
+    <h1>Peticiones, Quejas y Reclamos</h1>
+    <p>Recibimos y atendemos todas sus solicitudes de acuerdo con la normatividad colombiana vigente. Su mensaje es importante para nosotros.</p>
+    <div class="hero-meta">
+      <div class="meta-item"><strong>Consultas</strong>Respuesta en 10 días hábiles</div>
+      <div class="meta-item"><strong>Reclamos</strong>Respuesta en 15 días hábiles</div>
+      <div class="meta-item"><strong>Canal escrito</strong>admin@fondomutuodecobertura.com</div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div>
+    <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sky-deep);margin-bottom:16px">Seleccione el tipo de solicitud</p>
+    <div class="tipo-cards">
+      <div class="tipo-card active" onclick="selectTipo(this, 'Petición')">
+        <h3>Petición</h3>
+        <p>Solicitud de información, documentos o explicaciones sobre nuestros servicios y procesos.</p>
+        <div class="plazo">⏱ Respuesta: 10 días hábiles</div>
+      </div>
+      <div class="tipo-card" onclick="selectTipo(this, 'Queja')">
+        <h3>Queja</h3>
+        <p>Manifestación de inconformidad con la conducta o el servicio prestado por FMC.</p>
+        <div class="plazo">⏱ Respuesta: 15 días hábiles</div>
+      </div>
+      <div class="tipo-card" onclick="selectTipo(this, 'Reclamo')">
+        <h3>Reclamo</h3>
+        <p>Solicitud de corrección, actualización o supresión de información, o incumplimiento de obligaciones.</p>
+        <div class="plazo">⏱ Respuesta: 15 días hábiles</div>
+      </div>
+      <div class="tipo-card" onclick="selectTipo(this, 'Solicitud de supresión de datos')">
+        <h3>Supresión de datos personales</h3>
+        <p>Solicitud de eliminación de sus datos personales de nuestras bases de datos, conforme a la Ley 1581 de 2012.</p>
+        <div class="plazo">⏱ Respuesta: 15 días hábiles</div>
+      </div>
+    </div>
+
+    <div class="info-box" style="margin-top:24px">
+      <h4>Canales de atención</h4>
+      <p><strong style="color:var(--navy)">Correo electrónico:</strong><br/><a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a></p>
+      <p><strong style="color:var(--navy)">Teléfono:</strong><br/>(+57) 310 448 6842</p>
+      <p><strong style="color:var(--navy)">Dirección:</strong><br/>Calle 52 #49-28, Edificio La Lonja, Medellín</p>
+      <p style="margin-top:12px;font-size:12px;font-style:italic">Si no recibe respuesta en el plazo indicado, puede presentar su queja ante la Superintendencia de Industria y Comercio (SIC).</p>
+    </div>
+  </div>
+
+  <div class="form-card">
+    <h2>Envíe su solicitud</h2>
+    <form class="pqr-form" action="https://formspree.io/f/mlgoggog" method="POST">
+      <input type="hidden" name="_subject" value="Nueva PQR desde fondomutuodecobertura.com"/>
+      <input type="hidden" name="tipo_solicitud" id="tipo_hidden" value="Petición"/>
+      <div class="form-row">
+        <div class="fg">
+          <label>Nombre completo *</label>
+          <input type="text" name="nombre" placeholder="Su nombre completo" required/>
+        </div>
+        <div class="fg">
+          <label>Número de identificación *</label>
+          <input type="text" name="identificacion" placeholder="Cédula o NIT" required/>
+        </div>
+      </div>
+      <div class="fg">
+        <label>Correo electrónico *</label>
+        <input type="email" name="email" placeholder="correo@ejemplo.com" required/>
+      </div>
+      <div class="fg">
+        <label>Teléfono de contacto</label>
+        <input type="tel" name="telefono" placeholder="(+57) 300 000 0000"/>
+      </div>
+      <div class="fg">
+        <label>Tipo de solicitud *</label>
+        <select name="tipo" id="tipo_select" required>
+          <option value="Petición">Petición</option>
+          <option value="Queja">Queja</option>
+          <option value="Reclamo">Reclamo</option>
+          <option value="Solicitud de supresión de datos">Supresión de datos personales</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Descripción detallada *</label>
+        <textarea name="descripcion" placeholder="Describa su solicitud de manera clara y detallada. Incluya toda la información relevante que nos permita atenderle adecuadamente." required></textarea>
+      </div>
+      <div class="fg">
+        <label>Número de radicado o crédito (si aplica)</label>
+        <input type="text" name="radicado" placeholder="Número de referencia"/>
+      </div>
+      <button type="submit" class="submit-btn">Enviar solicitud →</button>
+      <p class="form-note">* Campos obligatorios. Al enviar este formulario, usted autoriza a Fondo Mutuo de Cobertura S.A.S. para el tratamiento de sus datos conforme a nuestra <a href="politica-datos.html" style="color:var(--sky-deep)">Política de privacidad</a>.</p>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Fondo Mutuo de Cobertura S.A.S. · NIT 901.678.530-0 ·
+    <a href="index.html">Inicio</a> ·
+    <a href="politica-datos.html">Política de privacidad</a> ·
+    <a href="aviso-legal.html">Aviso legal</a>
+  </p>
+</footer>
+
+<script>
+function selectTipo(card, tipo) {
+  document.querySelectorAll('.tipo-card').forEach(c => c.classList.remove('active'));
+  card.classList.add('active');
+  document.getElementById('tipo_hidden').value = tipo;
+  document.getElementById('tipo_select').value = tipo;
+}
+</script>
+</body>
+</html>
