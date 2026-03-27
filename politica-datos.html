@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Política de Tratamiento de Datos Personales – Fondo Mutuo de Cobertura S.A.S.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --sky:#B3E5FC;
+  --sky-deep:#29B6F6;
+  --navy:#0D3A5C;
+  --navy-mid:#0D4F7C;
+  --gold:#E8A820;
+  --gold-dark:#C8860A;
+  --white:#fff;
+  --gray:#F5F7FC;
+  --pale:#F0F9FF;
+  --text:#0D2A45;
+  --muted:#3D6080;
+  --border:#C8E8F8;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;font-weight:300;color:var(--text);background:var(--white);line-height:1.7}
+
+/* NAV */
+nav{background:var(--sky);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:88px;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(41,182,246,.2)}
+.nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+.logo-text{display:flex;flex-direction:column;line-height:1.2}
+.logo-name{font-family:'Merriweather',serif;font-size:13px;font-weight:400;color:var(--navy)}
+.logo-sub{font-size:10px;font-weight:500;letter-spacing:1.5px;color:var(--navy-mid);text-transform:uppercase;opacity:.7}
+.nav-back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:13px;font-weight:500;color:var(--navy);background:rgba(255,255,255,.5);border:1px solid rgba(13,58,92,.2);padding:8px 16px;border-radius:4px;transition:background .2s}
+.nav-back:hover{background:rgba(255,255,255,.8)}
+
+/* HERO */
+.doc-hero{background:var(--navy);padding:60px 5vw 50px;position:relative;overflow:hidden}
+.doc-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold)}
+.doc-hero-inner{max-width:860px;margin:0 auto}
+.doc-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,168,32,.15);border:1px solid rgba(232,168,32,.3);color:var(--gold);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:20px}
+.doc-hero h1{font-family:'Merriweather',serif;font-size:clamp(22px,3vw,36px);font-weight:300;color:#fff;margin-bottom:16px;line-height:1.3}
+.doc-meta{display:flex;gap:32px;flex-wrap:wrap;margin-top:20px}
+.doc-meta-item{font-size:13px;font-weight:300;color:rgba(255,255,255,.6)}
+.doc-meta-item strong{display:block;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+
+/* LAYOUT */
+.doc-layout{max-width:860px;margin:0 auto;padding:60px 5vw 80px;display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:start}
+.doc-toc{position:sticky;top:108px}
+.doc-toc h3{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sky-deep);margin-bottom:16px}
+.doc-toc ul{list-style:none;display:flex;flex-direction:column;gap:4px}
+.doc-toc ul li a{font-size:13px;font-weight:300;color:var(--muted);text-decoration:none;padding:5px 10px;border-left:2px solid var(--border);display:block;transition:color .2s,border-color .2s;line-height:1.4}
+.doc-toc ul li a:hover{color:var(--navy);border-color:var(--sky-deep)}
+
+/* CONTENT */
+.doc-content{min-width:0}
+.doc-section{margin-bottom:48px;scroll-margin-top:110px}
+.doc-section h2{font-family:'Merriweather',serif;font-size:20px;font-weight:400;color:var(--navy);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--sky)}
+.doc-section h3{font-family:'Merriweather',serif;font-size:17px;font-weight:400;color:var(--navy-mid);margin:24px 0 12px}
+.doc-section p{font-size:14px;font-weight:300;line-height:1.8;color:var(--muted);margin-bottom:14px}
+.doc-section ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.doc-section ul li{font-size:14px;font-weight:300;line-height:1.7;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+.doc-section ul li::before{content:'•';color:var(--sky-deep);flex-shrink:0;font-weight:700;margin-top:1px}
+.id-card{background:var(--pale);border:1px solid var(--border);border-left:4px solid var(--sky-deep);border-radius:0 8px 8px 0;padding:24px;margin-bottom:24px}
+.id-card p{margin-bottom:6px;font-size:14px;font-weight:300;color:var(--muted)}
+.id-card p strong{color:var(--navy);font-weight:500}
+.vigencia-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,168,32,.1);border:1px solid rgba(232,168,32,.3);color:var(--gold-dark);font-size:12px;font-weight:600;padding:8px 16px;border-radius:6px;margin-top:8px}
+
+/* FOOTER */
+footer{background:var(--navy);border-top:3px solid var(--gold);padding:32px 5vw;text-align:center}
+footer p{font-size:13px;font-weight:300;color:rgba(255,255,255,.45)}
+footer a{color:var(--gold);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media(max-width:700px){
+  .doc-layout{grid-template-columns:1fr}
+  .doc-toc{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="logo-text">
+      <span class="logo-name">Fondo Mutuo de Cobertura</span>
+      <span class="logo-sub">S.A.S. · Colombia</span>
+    </div>
+  </a>
+  <a class="nav-back" href="index.html">← Volver al inicio</a>
+</nav>
+
+<div class="doc-hero">
+  <div class="doc-hero-inner">
+    <div class="doc-badge">Documento legal</div>
+    <h1>Manual de Políticas de Tratamiento de Datos Personales</h1>
+    <div class="doc-meta">
+      <div class="doc-meta-item"><strong>Responsable</strong>Fondo Mutuo de Cobertura S.A.S.</div>
+      <div class="doc-meta-item"><strong>NIT</strong>901.678.530-0</div>
+      <div class="doc-meta-item"><strong>Vigencia</strong>1 de enero de 2026</div>
+      <div class="doc-meta-item"><strong>Normativa</strong>Ley 1581 de 2012 · Decreto 1377 de 2013</div>
+    </div>
+  </div>
+</div>
+
+<div class="doc-layout">
+  <aside class="doc-toc">
+    <h3>Contenido</h3>
+    <ul>
+      <li><a href="#identificacion">Identificación del responsable</a></li>
+      <li><a href="#legislacion">Legislación aplicable</a></li>
+      <li><a href="#alcance">Ámbito de aplicación</a></li>
+      <li><a href="#conceptos">Conceptos y definiciones</a></li>
+      <li><a href="#principios">Principios</a></li>
+      <li><a href="#finalidades">Finalidades</a></li>
+      <li><a href="#autorizacion">Autorización</a></li>
+      <li><a href="#derechos">Derechos de los titulares</a></li>
+      <li><a href="#procedimientos">Consultas y reclamos</a></li>
+      <li><a href="#seguridad">Seguridad de la información</a></li>
+      <li><a href="#responsable">Responsable del tratamiento</a></li>
+      <li><a href="#vigencia">Vigencia</a></li>
+    </ul>
+  </aside>
+
+  <main class="doc-content">
+
+    <div class="doc-section" id="identificacion">
+      <h2>Identificación del responsable del tratamiento</h2>
+      <div class="id-card">
+        <p><strong>Nombre o razón social:</strong> Fondo Mutuo de Cobertura S.A.S.</p>
+        <p><strong>NIT:</strong> 901.678.530-0</p>
+        <p><strong>Domicilio:</strong> Calle 52 # 49-28, Medellín, Antioquia, Colombia</p>
+        <p><strong>Correo electrónico:</strong> admin@fondomutuodecobertura.com</p>
+        <p><strong>Teléfono:</strong> (+57) 310 448 6842</p>
+        <p><strong>Constitución:</strong> Documento privado del 3 de noviembre de 2022, inscrita el 3 de febrero de 2023 en la Cámara de Comercio de Medellín.</p>
+      </div>
+      <p>El presente manual tiene como finalidad dar cumplimiento a la Ley Estatutaria 1581 de 2012 y su Decreto Reglamentario 1377 de 2013, la cual tiene por objeto desarrollar el derecho constitucional que tienen todas las personas a conocer, actualizar y rectificar las informaciones que se hayan recogido sobre ellas en bases de datos o archivos, y los demás derechos, libertades y garantías constitucionales a que se refiere el artículo 15 de la Constitución Política.</p>
+      <p>Fondo Mutuo de Cobertura S.A.S. manifiesta que garantiza los derechos de la privacidad, intimidad y buen nombre en el tratamiento de los datos personales, y en consecuencia, todas sus actuaciones se regirán por los principios de legalidad, finalidad, libertad, veracidad, calidad, transparencia, acceso y circulación restringida, seguridad y confidencialidad.</p>
+    </div>
+
+    <div class="doc-section" id="legislacion">
+      <h2>1. Legislación aplicable</h2>
+      <p>El presente manual fue elaborado teniendo en cuenta las disposiciones contenidas en:</p>
+      <ul>
+        <li>Artículo 15 de la Constitución Política de Colombia</li>
+        <li>Ley 1581 de 2012 — "Por la cual se dictan disposiciones generales para la protección de datos personales"</li>
+        <li>Decreto 1377 de 2013 — "Por el cual se reglamenta parcialmente la Ley 1581 de 2012"</li>
+        <li>Ley 1266 de 2008</li>
+        <li>Decretos reglamentarios 1727 de 2009 y 2592 de 2010</li>
+        <li>Sentencias C-1011 de 2008 y C-748 de 2011 de la Corte Constitucional</li>
+      </ul>
+      <p>A estas políticas le serán aplicables todas las demás normas que complementen o sustituyan las anteriores.</p>
+    </div>
+
+    <div class="doc-section" id="alcance">
+      <h2>2. Ámbito de aplicación o alcance</h2>
+      <p>Esta Política será aplicable a las bases de datos que se encuentren bajo la administración de Fondo Mutuo de Cobertura S.A.S., o sean susceptibles de ser conocidas por éste en virtud de las relaciones laborales o comerciales desarrolladas con empleados, contratistas o proveedores.</p>
+      <p>La presente política se aplicará y obligará a las siguientes personas:</p>
+      <ul>
+        <li>Representantes legales y/o administradores societarios</li>
+        <li>Personal interno de Fondo Mutuo de Cobertura S.A.S., directivos o no, que custodien y traten bases de datos de carácter personal</li>
+        <li>Contratistas y personas naturales o jurídicas que presten sus servicios bajo cualquier tipo de modalidad contractual, en virtud de la cual se realice cualquier tratamiento de datos de carácter personal</li>
+        <li>Los accionistas, revisores fiscales y aquellas otras personas con las cuales exista una relación legal de orden estatutario</li>
+        <li>Personas públicas o privadas en condición de usuarios de los datos personales</li>
+        <li>Las demás personas que establezca la ley</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="conceptos">
+      <h2>3. Conceptos y definiciones</h2>
+      <ul>
+        <li><strong style="color:var(--navy)">Autorización:</strong> Consentimiento previo, expreso e informado del Titular para llevar a cabo el tratamiento de datos personales.</li>
+        <li><strong style="color:var(--navy)">Aviso de Privacidad:</strong> Comunicación verbal o escrita generada por el responsable, dirigida al Titular para el tratamiento de sus datos personales.</li>
+        <li><strong style="color:var(--navy)">Base de Datos:</strong> Conjunto organizado de datos personales objeto de tratamiento.</li>
+        <li><strong style="color:var(--navy)">Dato Personal:</strong> Cualquier información vinculada o que pueda asociarse a una o varias personas naturales determinadas o determinables.</li>
+        <li><strong style="color:var(--navy)">Datos Sensibles:</strong> Aquellos que afectan la intimidad del Titular o cuyo uso indebido puede generar su discriminación.</li>
+        <li><strong style="color:var(--navy)">Encargado del Tratamiento:</strong> Persona natural o jurídica que realice el tratamiento de datos personales por cuenta del responsable.</li>
+        <li><strong style="color:var(--navy)">Responsable del Tratamiento:</strong> Persona natural o jurídica que decida sobre la base de datos y/o el tratamiento de los datos.</li>
+        <li><strong style="color:var(--navy)">Titular:</strong> Persona natural o jurídica cuyos datos personales sean objeto de tratamiento.</li>
+        <li><strong style="color:var(--navy)">Tratamiento:</strong> Cualquier operación sobre datos personales, tales como la recolección, almacenamiento, uso, circulación o supresión.</li>
+        <li><strong style="color:var(--navy)">Transmisión:</strong> Tratamiento de datos personales que implica la comunicación de los mismos dentro o fuera del territorio de la República de Colombia.</li>
+        <li><strong style="color:var(--navy)">Transferencia:</strong> Envío de información o datos personales a un receptor que a su vez es responsable del tratamiento.</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="principios">
+      <h2>4. Principios</h2>
+      <ul>
+        <li><strong style="color:var(--navy)">Legalidad:</strong> El tratamiento de datos personales debe sujetarse a lo establecido en las normas que reglamentan la materia.</li>
+        <li><strong style="color:var(--navy)">Finalidad:</strong> El tratamiento debe obedecer a una finalidad legítima de la cual debe ser informada al Titular.</li>
+        <li><strong style="color:var(--navy)">Libertad:</strong> El tratamiento solo puede llevarse a cabo con el consentimiento previo, expreso e informado del Titular.</li>
+        <li><strong style="color:var(--navy)">Veracidad o calidad:</strong> La información sujeta a tratamiento debe ser veraz, completa, exacta, actualizada, comprobable y comprensible.</li>
+        <li><strong style="color:var(--navy)">Transparencia:</strong> Se garantizará el derecho del Titular a obtener información acerca de la existencia de datos que le conciernan, en cualquier momento y sin restricciones.</li>
+        <li><strong style="color:var(--navy)">Acceso y circulación restringida:</strong> El tratamiento solo podrá hacerse por personas autorizadas por el Titular y/o por las personas previstas en la ley.</li>
+        <li><strong style="color:var(--navy)">Seguridad:</strong> La información se protegerá mediante medidas técnicas, humanas y administrativas necesarias para evitar adulteración, pérdida o acceso no autorizado.</li>
+        <li><strong style="color:var(--navy)">Confidencialidad:</strong> Todas las personas que intervengan en el tratamiento están obligadas a garantizar la reserva de la información.</li>
+        <li><strong style="color:var(--navy)">Temporalidad:</strong> El dato no podrá ser utilizado más allá del tiempo para el que fue previsto.</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="finalidades">
+      <h2>5. Finalidades</h2>
+      <h3>5.1 Finalidades generales</h3>
+      <ul>
+        <li>Registro de la información personal en los sistemas de Fondo Mutuo de Cobertura S.A.S.</li>
+        <li>Pago de obligaciones contractuales</li>
+        <li>Transmisión y transferencia de datos personales con respecto a las garantías legales aplicables</li>
+        <li>Envío de información a entidades gubernamentales o judiciales por solicitud expresa</li>
+        <li>Soporte en procesos de auditorías externas o internas, nacionales o internacionales</li>
+        <li>Informar sobre cambios en la política adoptada por Fondo Mutuo de Cobertura S.A.S.</li>
+        <li>Establecer y gestionar la relación precontractual y contractual comercial, laboral o civil</li>
+        <li>Responder a las peticiones, consultas, reclamos y/o quejas de los Titulares</li>
+        <li>Control y prevención del fraude y lavado de activos, incluyendo consulta en listas restrictivas y todo lo requerido para el SARLAFT</li>
+        <li>Identificar al deudor beneficiario de la garantía y a sus codeudores</li>
+        <li>Consultar en centrales de riesgo la información relevante para conocer el desempeño como deudor y la capacidad de pago</li>
+        <li>Reportar a las centrales de riesgo el cumplimiento o incumplimiento de las obligaciones</li>
+        <li>Informar al intermediario financiero y terceros relacionados sobre el estado y comportamiento de las garantías</li>
+        <li>Transferir información personal a terceros adquirentes de cartera</li>
+        <li>Ofrecer productos y servicios que complementen el producto de garantía</li>
+      </ul>
+
+      <h3>5.2 Finalidades para el tratamiento de datos de intermediarios financieros</h3>
+      <ul>
+        <li>Registro histórico y estadístico como intermediario financiero vinculado</li>
+        <li>Uso de la información para la operación de las diferentes fases del ciclo de la garantía</li>
+        <li>Relacionamiento comercial y envío de políticas, procedimientos y documentos del Fondo como avalista</li>
+      </ul>
+
+      <h3>5.3 Finalidades para el tratamiento de datos de beneficiarios de garantías (personas naturales)</h3>
+      <ul>
+        <li>Ofrecer productos y servicios que complementen el producto de garantía</li>
+        <li>Actualizar, verificar y complementar los datos personales y de contacto del deudor</li>
+        <li>Realizar análisis de riesgos, estadísticos, de control, supervisión, encuestas y gestión de cobranza</li>
+        <li>Consulta y reporte en centrales de riesgo conforme a la Ley 1266 de 2008</li>
+        <li>Envío de comunicaciones comerciales relacionadas con los servicios prestados</li>
+        <li>Envío de comunicaciones sobre el estado de pago y posibles incumplimientos</li>
+        <li>Atender consultas y reclamos en relación con el servicio o el tratamiento de datos personales</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="autorizacion">
+      <h2>6. Autorización</h2>
+      <p>Para el tratamiento de los datos personales, Fondo Mutuo de Cobertura S.A.S. solicitará la autorización previa, expresa e informada del Titular, la cual podrá ser obtenida de manera verbal, escrita, electrónica y/o por conductas inequívocas del Titular.</p>
+      <p>La recolección de datos personales se limitará a aquellos que sean pertinentes, adecuados y necesarios para: (i) el desarrollo del objeto social, (ii) la atención de PQRS, (iii) el desarrollo de relaciones comerciales y financieras, (iv) la intención conforme a la normatividad vigente y (v) la atención de solicitudes de autoridades y entes de control.</p>
+    </div>
+
+    <div class="doc-section" id="derechos">
+      <h2>7. Derechos de los titulares de la información</h2>
+      <p>De conformidad con el artículo 8 de la Ley 1581 de 2012, el Titular tiene los siguientes derechos:</p>
+      <ul>
+        <li>Conocer, actualizar y rectificar sus datos personales</li>
+        <li>Solicitar prueba de la autorización otorgada al responsable del tratamiento</li>
+        <li>Ser informado sobre el uso que se ha dado a sus datos personales</li>
+        <li>Presentar quejas ante la Superintendencia de Industria y Comercio por infracciones a la ley</li>
+        <li>Revocar la autorización y/o solicitar la supresión del dato cuando no se respeten los principios y derechos constitucionales</li>
+        <li>Acceder en forma gratuita a sus datos personales que hayan sido objeto de tratamiento</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="procedimientos">
+      <h2>8. Procedimientos para la atención de consultas y reclamos</h2>
+      <h3>8.1 Consultas</h3>
+      <p>Los Titulares podrán realizar consultas sobre sus datos personales a través de los canales habilitados. La consulta será atendida en un término máximo de <strong>diez (10) días hábiles</strong> contados a partir de la fecha de recibo. Cuando no fuere posible atender la consulta dentro de dicho término, se informará al interesado y se indicará la fecha de respuesta, la cual no podrá superar cinco (5) días hábiles adicionales.</p>
+
+      <h3>8.2 Reclamos</h3>
+      <p>El Titular que considere que su información debe ser corregida, actualizada o suprimida, o que advierta incumplimiento de los deberes contenidos en la Ley, podrá presentar un reclamo. El término máximo para atenderlo será de <strong>quince (15) días hábiles</strong>, prorrogables por ocho (8) días hábiles adicionales con justificación.</p>
+      <p>La solicitud debe contener como mínimo:</p>
+      <ul>
+        <li>Nombre y domicilio del titular o medio para recibir respuesta</li>
+        <li>Documentos que acrediten la identidad o representación</li>
+        <li>Descripción clara y precisa de los datos con los cuales se ejerce el derecho</li>
+        <li>Otros documentos que faciliten la localización de los datos</li>
+      </ul>
+
+      <h3>8.3 Supresión de datos</h3>
+      <p>El Titular tiene el derecho de solicitar la supresión de sus datos personales cuando considere que no están siendo tratados conforme a la normatividad, hayan dejado de ser necesarios para la finalidad para la cual fueron obtenidos, o se haya superado el periodo necesario para el cumplimiento de los fines.</p>
+      <p>Fondo Mutuo de Cobertura S.A.S. podrá negar la supresión cuando el Titular tenga un deber legal o contractual de permanecer en la base de datos, o cuando los datos sean necesarios para proteger intereses jurídicamente tutelados.</p>
+    </div>
+
+    <div class="doc-section" id="seguridad">
+      <h2>9. Seguridad de la información y medidas de seguridad</h2>
+      <p>Fondo Mutuo de Cobertura S.A.S. adoptará las medidas técnicas, humanas y administrativas necesarias para otorgar seguridad a los registros, evitando su adulteración, pérdida, consulta, uso o acceso no autorizado o fraudulento, en desarrollo del principio de seguridad establecido en la normatividad vigente.</p>
+    </div>
+
+    <div class="doc-section" id="responsable">
+      <h2>10. Responsable de tratamiento de datos personales</h2>
+      <div class="id-card">
+        <p><strong>Entidad responsable:</strong> Fondo Mutuo de Cobertura S.A.S.</p>
+        <p><strong>Canal de contacto:</strong> admin@fondomutuodecobertura.com</p>
+        <p><strong>Teléfono:</strong> (+57) 310 448 6842</p>
+        <p><strong>Dirección:</strong> Calle 52 # 49-28, Medellín, Antioquia, Colombia</p>
+      </div>
+    </div>
+
+    <div class="doc-section" id="vigencia">
+      <h2>11. Vigencia</h2>
+      <p>La presente política entra en vigencia a partir del <strong>1 de enero de 2026</strong> y tendrá vigencia indefinida hasta que sea modificada o derogada por Fondo Mutuo de Cobertura S.A.S. Cualquier modificación sustancial será informada a los Titulares a través de los canales habilitados.</p>
+      <div class="vigencia-badge">✓ Vigente desde el 1 de enero de 2026</div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <p>© 2026 Fondo Mutuo de Cobertura S.A.S. · NIT 901.678.530-0 · <a href="index.html">Volver al inicio</a> · <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a></p>
+</footer>
+
+</body>
+</html>
