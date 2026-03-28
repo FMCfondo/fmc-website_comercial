@@ -261,6 +261,7 @@ footer{background:var(--navy);border-top:3px solid var(--gold);padding:48px 5vw 
 .form-success-btn{margin-top:8px;background:none;border:1.5px solid var(--sky-deep);color:var(--navy);font-size:13px;font-weight:500;padding:8px 20px;border-radius:4px;cursor:pointer;transition:all .2s}
 .form-success-btn:hover{background:var(--sky-deep);color:#fff}
 </style>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcOFpwsAAAAAKnZJ00rSsHCC1mZy6klWccH8rhN"></script>
 </head>
 <body>
 
@@ -637,6 +638,7 @@ footer{background:var(--navy);border-top:3px solid var(--gold);padding:48px 5vw 
         </div>
         <form class="cta-form" id="contact-form" action="https://formspree.io/f/mlgoggog" method="POST">
           <input type="hidden" name="_subject" value="Nueva solicitud desde fondomutuodecobertura.com"/>
+          <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response"/>
           <div class="form-row">
             <div class="fg"><label>Nombre</label><input type="text" name="nombre" placeholder="Su nombre completo" required/></div>
             <div class="fg"><label>Cargo</label><input type="text" name="cargo" placeholder="Representante Legal, Gerente..."/></div>
@@ -743,15 +745,24 @@ window.addEventListener('scroll',function(){
   document.getElementById('mobileMenu').classList.remove('open');
 });
 
-// Async form submission
+// Async form submission with reCAPTCHA v3
 const form=document.getElementById('contact-form');
 if(form){
   form.addEventListener('submit',async function(e){
     e.preventDefault();
     const btn=document.getElementById('submit-btn');
-    btn.textContent='Enviando...';
+    btn.textContent='Verificando...';
     btn.disabled=true;
     try{
+      // Get reCAPTCHA token
+      const token=await new Promise((resolve,reject)=>{
+        grecaptcha.ready(()=>{
+          grecaptcha.execute('6LcOFpwsAAAAAKnZJ00rSsHCC1mZy6klWccH8rhN',{action:'contact'})
+            .then(resolve).catch(reject);
+        });
+      });
+      document.getElementById('g-recaptcha-response').value=token;
+      btn.textContent='Enviando...';
       const res=await fetch(form.action,{
         method:'POST',
         body:new FormData(form),
