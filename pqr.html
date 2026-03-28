@@ -162,12 +162,13 @@ footer a{color:var(--gold);text-decoration:none}
         <div class="radicado-label">Número de radicado</div>
         <div class="radicado-num" id="radicado-display">—</div>
       </div>
-      <p>Hemos recibido su solicitud. Le responderemos al correo registrado dentro de los plazos establecidos por la Ley 1581 de 2012. Conserve su número de radicado como referencia.</p>
+      <p>Hemos recibido su solicitud. Le responderemos al correo registrado dentro de los plazos establecidos por la Ley 1581 de 2012. <strong>Conserve su número de radicado como referencia.</strong></p>
       <button class="pqr-success-btn" onclick="resetPqrForm()">Enviar otra solicitud</button>
     </div>
+    <div id="pqr-form-inner">
     <h2>Envíe su solicitud</h2>
     <form class="pqr-form" id="pqr-form" action="https://formspree.io/f/mlgoggog" method="POST">
-      <input type="hidden" name="_subject" value="Nueva PQR desde fondomutuodecobertura.com"/>
+      <input type="hidden" name="_subject" id="pqr-subject" value="Nueva PQR desde fondomutuodecobertura.com"/>
       <input type="hidden" name="tipo_solicitud" id="tipo_hidden" value="Petición"/>
       <input type="hidden" name="numero_radicado" id="radicado_hidden"/>
       <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-pqr"/>
@@ -209,6 +210,7 @@ footer a{color:var(--gold);text-decoration:none}
       <button type="submit" class="submit-btn" id="pqr-submit-btn">Enviar solicitud →</button>
       <p class="form-note">* Campos obligatorios. Al enviar este formulario, usted autoriza a Fondo Mutuo de Cobertura S.A.S. para el tratamiento de sus datos conforme a nuestra <a href="politica-datos.html" style="color:var(--sky-deep)">Política de privacidad</a>.</p>
     </form>
+    </div>
   </div>
 </div>
 
@@ -255,6 +257,7 @@ if(pqrForm) {
       document.getElementById('g-recaptcha-pqr').value = token;
       const radicado = generateRadicado();
       document.getElementById('radicado_hidden').value = radicado;
+      document.getElementById('pqr-subject').value = 'PQR ' + radicado + ' - fondomutuodecobertura.com';
       btn.textContent = 'Enviando...';
       const res = await fetch(pqrForm.action, {
         method: 'POST',
