@@ -63,6 +63,15 @@ nav{background:#fff;border-bottom:3px solid var(--gold);display:flex;align-items
 .info-box p{font-size:13px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:6px}
 .info-box a{color:var(--sky-deep);text-decoration:none;font-weight:400}
 
+.form-success{display:none;background:rgba(41,182,246,.1);border:1px solid var(--sky-deep);border-radius:10px;padding:40px 32px;text-align:center;flex-direction:column;align-items:center;gap:16px}
+.form-success.show{display:flex}
+.form-success-icon{font-size:48px}
+.form-success h3{font-family:'Merriweather',serif;font-size:22px;font-weight:400;color:var(--navy)}
+.form-success p{font-size:14px;font-weight:300;color:var(--muted);line-height:1.7;max-width:480px}
+.radicado-box{background:var(--navy);color:var(--gold);font-family:'Merriweather',serif;font-size:20px;font-weight:700;padding:14px 28px;border-radius:8px;letter-spacing:2px;margin:8px 0}
+.radicado-note{font-size:12px;color:var(--muted);font-style:italic}
+.form-success-btn{background:none;border:1.5px solid var(--sky-deep);color:var(--navy);font-size:13px;font-weight:500;padding:8px 20px;border-radius:4px;cursor:pointer;transition:all .2s;margin-top:8px}
+.form-success-btn:hover{background:var(--sky-deep);color:#fff}
 footer{background:var(--navy);border-top:3px solid var(--gold);padding:28px 5vw;text-align:center}
 footer p{font-size:13px;font-weight:300;color:rgba(255,255,255,.4)}
 footer a{color:var(--gold);text-decoration:none}
@@ -71,7 +80,19 @@ footer a{color:var(--gold);text-decoration:none}
   .main{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
 }
+.pqr-success{display:none;background:var(--pale);border:1px solid var(--sky-deep);border-radius:12px;padding:40px 32px;text-align:center}
+.pqr-success.show{display:flex;flex-direction:column;align-items:center;gap:16px}
+.pqr-success-icon{font-size:48px}
+.pqr-success h3{font-family:'Merriweather',serif;font-size:22px;font-weight:400;color:var(--navy)}
+.pqr-success p{font-size:14px;font-weight:300;color:var(--muted);line-height:1.7;max-width:480px}
+.radicado-box{background:var(--white);border:2px solid var(--sky-deep);border-radius:8px;padding:16px 28px;margin:8px 0}
+.radicado-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.radicado-num{font-family:'Merriweather',serif;font-size:24px;font-weight:700;color:var(--navy)}
+.pqr-success-btn{margin-top:8px;background:none;border:1.5px solid var(--sky-deep);color:var(--navy);font-size:13px;font-weight:500;padding:9px 22px;border-radius:4px;cursor:pointer;font-family:'Lato',sans-serif;transition:all .2s}
+.pqr-success-btn:hover{background:var(--sky-deep);color:#fff}
 </style>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcOFpwsAAAAAKnZJ00rSsHCC1mZy6klWccH8rhN"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcOFpwsAAAAAKnZJ00rSsHCC1mZy6klWccH8rhN"></script>
 </head>
 <body>
 
@@ -133,11 +154,23 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
   </div>
 
-  <div class="form-card">
+  <div class="form-card" id="pqr-form-container">
+    <div class="pqr-success" id="pqr-success">
+      <div class="pqr-success-icon">✅</div>
+      <h3>Su solicitud ha sido radicada</h3>
+      <div class="radicado-box">
+        <div class="radicado-label">Número de radicado</div>
+        <div class="radicado-num" id="radicado-display">—</div>
+      </div>
+      <p>Hemos recibido su solicitud. Le responderemos al correo registrado dentro de los plazos establecidos por la Ley 1581 de 2012. Conserve su número de radicado como referencia.</p>
+      <button class="pqr-success-btn" onclick="resetPqrForm()">Enviar otra solicitud</button>
+    </div>
     <h2>Envíe su solicitud</h2>
-    <form class="pqr-form" action="https://formspree.io/f/mlgoggog" method="POST">
+    <form class="pqr-form" id="pqr-form" action="https://formspree.io/f/mlgoggog" method="POST">
       <input type="hidden" name="_subject" value="Nueva PQR desde fondomutuodecobertura.com"/>
       <input type="hidden" name="tipo_solicitud" id="tipo_hidden" value="Petición"/>
+      <input type="hidden" name="numero_radicado" id="radicado_hidden"/>
+      <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-pqr"/>
       <div class="form-row">
         <div class="fg">
           <label>Nombre completo *</label>
@@ -173,7 +206,7 @@ footer a{color:var(--gold);text-decoration:none}
         <label>Número de radicado o crédito (si aplica)</label>
         <input type="text" name="radicado" placeholder="Número de referencia"/>
       </div>
-      <button type="submit" class="submit-btn">Enviar solicitud →</button>
+      <button type="submit" class="submit-btn" id="pqr-submit-btn">Enviar solicitud →</button>
       <p class="form-note">* Campos obligatorios. Al enviar este formulario, usted autoriza a Fondo Mutuo de Cobertura S.A.S. para el tratamiento de sus datos conforme a nuestra <a href="politica-datos.html" style="color:var(--sky-deep)">Política de privacidad</a>.</p>
     </form>
   </div>
@@ -193,6 +226,65 @@ function selectTipo(card, tipo) {
   card.classList.add('active');
   document.getElementById('tipo_hidden').value = tipo;
   document.getElementById('tipo_select').value = tipo;
+}
+
+function generateRadicado() {
+  const now = new Date();
+  const fecha = now.getFullYear().toString() +
+    String(now.getMonth()+1).padStart(2,'0') +
+    String(now.getDate()).padStart(2,'0');
+  const hora = String(now.getHours()).padStart(2,'0') +
+    String(now.getMinutes()).padStart(2,'0');
+  return 'PQR-' + fecha + '-' + hora;
+}
+
+const pqrForm = document.getElementById('pqr-form');
+if(pqrForm) {
+  pqrForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('pqr-submit-btn');
+    btn.textContent = 'Verificando...';
+    btn.disabled = true;
+    try {
+      const token = await new Promise((resolve, reject) => {
+        grecaptcha.ready(() => {
+          grecaptcha.execute('6LcOFpwsAAAAAKnZJ00rSsHCC1mZy6klWccH8rhN', {action: 'pqr'})
+            .then(resolve).catch(reject);
+        });
+      });
+      document.getElementById('g-recaptcha-pqr').value = token;
+      const radicado = generateRadicado();
+      document.getElementById('radicado_hidden').value = radicado;
+      btn.textContent = 'Enviando...';
+      const res = await fetch(pqrForm.action, {
+        method: 'POST',
+        body: new FormData(pqrForm),
+        headers: {Accept: 'application/json'}
+      });
+      if(res.ok) {
+        document.getElementById('radicado-display').textContent = radicado;
+        pqrForm.style.display = 'none';
+        pqrForm.previousElementSibling.previousElementSibling.style.display = 'none'; // hide h2
+        document.getElementById('pqr-success').classList.add('show');
+      } else {
+        btn.textContent = 'Error al enviar. Intente de nuevo.';
+        btn.disabled = false;
+      }
+    } catch(err) {
+      btn.textContent = 'Error al enviar. Intente de nuevo.';
+      btn.disabled = false;
+    }
+  });
+}
+
+function resetPqrForm() {
+  document.getElementById('pqr-success').classList.remove('show');
+  const form = document.getElementById('pqr-form');
+  form.reset();
+  form.style.display = 'flex';
+  document.querySelector('.form-card h2').style.display = 'block';
+  document.getElementById('pqr-submit-btn').textContent = 'Enviar solicitud →';
+  document.getElementById('pqr-submit-btn').disabled = false;
 }
 </script>
 </body>
