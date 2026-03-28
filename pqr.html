@@ -93,6 +93,8 @@ footer a{color:var(--gold);text-decoration:none}
 </style>
 <script src="https://www.google.com/recaptcha/api.js?render=6LcOFpwsAAAAAKnZJ00rSsHCC1mZy6klWccH8rhN"></script>
 <script src="https://www.google.com/recaptcha/api.js?render=6LcOFpwsAAAAAKnZJ00rSsHCC1mZy6klWccH8rhN"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>emailjs.init("DER3wHr2vjDioIMl6");</script>
 </head>
 <body>
 
@@ -167,11 +169,10 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <div id="pqr-form-inner">
     <h2>Envíe su solicitud</h2>
-    <form class="pqr-form" id="pqr-form" action="https://formspree.io/f/mlgoggog" method="POST">
-      <input type="hidden" name="_subject" id="pqr-subject" value="Nueva PQR desde fondomutuodecobertura.com"/>
-      <input type="hidden" name="tipo_solicitud" id="tipo_hidden" value="Petición"/>
-      <input type="hidden" name="numero_radicado" id="radicado_hidden"/>
-      <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-pqr"/>
+    <form class="pqr-form" id="pqr-form">
+      <input type="hidden" id="tipo_hidden" value="Petición"/>
+      <input type="hidden" id="radicado_hidden"/>
+      <input type="hidden" id="g-recaptcha-pqr"/>
       <div class="form-row">
         <div class="fg">
           <label>Nombre completo *</label>
@@ -247,33 +248,51 @@ if(pqrForm) {
     const btn = document.getElementById('pqr-submit-btn');
     btn.textContent = 'Verificando...';
     btn.disabled = true;
+
     try {
+      // reCAPTCHA
       const token = await new Promise((resolve, reject) => {
         grecaptcha.ready(() => {
           grecaptcha.execute('6LcOFpwsAAAAAKnZJ00rSsHCC1mZy6klWccH8rhN', {action: 'pqr'})
             .then(resolve).catch(reject);
         });
       });
-      document.getElementById('g-recaptcha-pqr').value = token;
+
+      // Generate radicado
       const radicado = generateRadicado();
       document.getElementById('radicado_hidden').value = radicado;
-      document.getElementById('pqr-subject').value = 'PQR ' + radicado + ' - fondomutuodecobertura.com';
-      btn.textContent = 'Enviando...';
-      const res = await fetch(pqrForm.action, {
-        method: 'POST',
-        body: new FormData(pqrForm),
-        headers: {Accept: 'application/json'}
+
+      // Get form values
+      const nombre = pqrForm.querySelector('[name="nombre"]').value;
+      const identificacion = pqrForm.querySelector('[name="identificacion"]').value;
+      const email = pqrForm.querySelector('[name="email"]').value;
+      const telefono = pqrForm.querySelector('[name="telefono"]').value || 'No indicado';
+      const tipo = document.getElementById('tipo_select').value;
+      const descripcion = pqrForm.querySelector('[name="descripcion"]').value;
+      const radicadoRef = pqrForm.querySelector('[name="radicado"]').value || 'N/A';
+      const fecha = new Date().toLocaleDateString('es-CO', {
+        year: 'numeric', month: 'long', day: 'numeric',
+        hour: '2-digit', minute: '2-digit'
       });
-      if(res.ok) {
-        document.getElementById('radicado-display').textContent = radicado;
-        pqrForm.style.display = 'none';
-        pqrForm.previousElementSibling.previousElementSibling.style.display = 'none'; // hide h2
-        document.getElementById('pqr-success').classList.add('show');
-      } else {
-        btn.textContent = 'Error al enviar. Intente de nuevo.';
-        btn.disabled = false;
-      }
+
+      const params = {
+        radicado, tipo, fecha, nombre, identificacion,
+        email, telefono, descripcion, radicado_ref: radicadoRef
+      };
+
+      btn.textContent = 'Enviando...';
+
+      // Send both emails
+      await emailjs.send('service_nvulxc2', 'template_9h751kb', params);
+      await emailjs.send('service_nvulxc2', 'template_5e3ua1d', params);
+
+      // Show success
+      document.getElementById('radicado-display').textContent = radicado;
+      document.getElementById('pqr-form-inner').style.display = 'none';
+      document.getElementById('pqr-success').classList.add('show');
+
     } catch(err) {
+      console.error('Error:', err);
       btn.textContent = 'Error al enviar. Intente de nuevo.';
       btn.disabled = false;
     }
@@ -282,10 +301,9 @@ if(pqrForm) {
 
 function resetPqrForm() {
   document.getElementById('pqr-success').classList.remove('show');
+  document.getElementById('pqr-form-inner').style.display = 'block';
   const form = document.getElementById('pqr-form');
   form.reset();
-  form.style.display = 'flex';
-  document.querySelector('.form-card h2').style.display = 'block';
   document.getElementById('pqr-submit-btn').textContent = 'Enviar solicitud →';
   document.getElementById('pqr-submit-btn').disabled = false;
 }
