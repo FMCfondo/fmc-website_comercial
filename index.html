@@ -7,7 +7,7 @@
 <meta name="description" content="Primer fondo de cobertura creado desde el mutualismo colombiano. Respaldamos su cartera, ampliamos su colocación y le damos acceso a beneficios exclusivos."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -18,7 +18,7 @@
   --text:#0D2A45;--muted:#3D6080;--border:#C8E8F8;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;font-weight:300;color:var(--text);background:var(--white);overflow-x:hidden}
+body{font-family:'Lato',sans-serif;font-weight:300;color:var(--text);background:var(--white);overflow-x:hidden}
 
 /* TOPBAR */
 .topbar{background:var(--navy);height:38px;display:flex;align-items:center;justify-content:flex-end;padding:0 5vw;gap:20px}
@@ -162,7 +162,7 @@ h2{font-family:'Merriweather',serif;font-size:clamp(22px,2.6vw,34px);font-weight
 .cifra-lbl{font-size:13px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.4}
 
 /* Historia */
-.nosotros-historia{display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:56px;max-width:720px}
+.nosotros-historia{display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:56px}
 .historia-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:32px}
 .historia-card h3{font-family:'Merriweather',serif;font-size:18px;font-weight:400;color:var(--gold);margin-bottom:14px}
 .historia-card p{font-size:14px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.65)}
@@ -210,12 +210,12 @@ h2{font-family:'Merriweather',serif;font-size:clamp(22px,2.6vw,34px);font-weight
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .fg{display:flex;flex-direction:column;gap:5px}
 .fg label{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
-.fg input,.fg textarea,.fg select{font-family:'Inter',sans-serif;font-size:14px;font-weight:300;color:var(--text);background:rgba(255,255,255,.7);border:1px solid rgba(13,58,92,.2);border-radius:6px;padding:11px 14px;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.fg input,.fg textarea,.fg select{font-family:'Lato',sans-serif;font-size:14px;font-weight:300;color:var(--text);background:rgba(255,255,255,.7);border:1px solid rgba(13,58,92,.2);border-radius:6px;padding:11px 14px;outline:none;transition:border-color .2s;-webkit-appearance:none}
 .fg input::placeholder,.fg textarea::placeholder{color:rgba(13,58,92,.35)}
 .fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--sky-deep);background:#fff}
 .fg textarea{min-height:100px;resize:none}
 .fg select option{color:var(--text);background:#fff}
-.submit-btn{background:var(--gold);color:#fff;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:14px 32px;border:none;border-radius:4px;cursor:pointer;transition:background .2s;align-self:flex-start;box-shadow:0 4px 14px rgba(232,168,32,.3)}
+.submit-btn{background:var(--gold);color:#fff;font-family:'Lato',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:14px 32px;border:none;border-radius:4px;cursor:pointer;transition:background .2s;align-self:flex-start;box-shadow:0 4px 14px rgba(232,168,32,.3)}
 .submit-btn:hover{background:var(--gold-dark)}
 
 /* FOOTER */
@@ -388,12 +388,7 @@ footer{background:var(--navy);border-top:3px solid var(--gold);padding:48px 5vw 
   </div>
 </section>
 
-<!-- WAVE -->
-<div class="wave-div" style="background:var(--pale)">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60">
-    <path d="M0,20 C360,60 720,0 1080,40 C1260,55 1380,15 1440,20 L1440,60 L0,60 Z" fill="white"/>
-  </svg>
-</div>
+<div style="background:var(--pale);padding:0 5vw"><div style="max-width:1160px;margin:0 auto;height:2px;background:linear-gradient(90deg,var(--sky-deep),var(--sky),transparent)"></div></div>
 
 <!-- GARANTIAS -->
 <section class="garantias-section" id="garantias">
@@ -499,15 +494,11 @@ footer{background:var(--navy);border-top:3px solid var(--gold);padding:48px 5vw 
   </div>
 </section>
 
-<!-- WAVE -->
-<div class="wave-div" style="background:var(--pale)">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60">
-    <path d="M0,35 C180,5 400,55 700,20 C950,0 1200,45 1440,25 L1440,60 L0,60 Z" fill="var(--navy)"/>
-  </svg>
-</div>
+<div style="background:var(--pale);padding:0 5vw"><div style="max-width:1160px;margin:0 auto;height:2px;background:linear-gradient(90deg,var(--sky-deep),var(--sky),transparent)"></div></div>
+<div style="background:var(--pale);height:0"></div>
 
 <!-- NOSOTROS -->
-<section class="nosotros-section" id="nosotros">
+<section class="nosotros-section" id="nosotros" style="padding-top:70px">
   <svg class="nosotros-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice">
     <path d="M0,200 C300,100 600,300 900,200 C1100,130 1300,250 1440,180 L1440,0 L0,0 Z" fill="rgba(255,255,255,1)"/>
     <path d="M0,600 C250,520 550,680 850,580 C1050,510 1280,630 1440,560 L1440,800 L0,800 Z" fill="rgba(255,255,255,1)"/>
