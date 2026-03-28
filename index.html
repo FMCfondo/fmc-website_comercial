@@ -122,7 +122,7 @@ h2{font-family:'Merriweather',serif;font-size:clamp(22px,2.6vw,34px);font-weight
 .cond-check{width:20px;height:20px;border-radius:50%;background:var(--sky-deep);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700}
 
 /* PARA QUIEN */
-.paraquien-section{background:var(--gray)}
+.paraquien-section{background:var(--white)}
 .paraquien-grid{display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:start}
 .paraquien-main{background:var(--sky);border-radius:14px;padding:40px;border:1px solid var(--border)}
 .paraquien-main h3{font-family:'Merriweather',serif;font-size:22px;font-weight:300;color:var(--navy);margin-bottom:16px}
@@ -162,7 +162,7 @@ h2{font-family:'Merriweather',serif;font-size:clamp(22px,2.6vw,34px);font-weight
 .cifra-lbl{font-size:13px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.4}
 
 /* Historia */
-.nosotros-historia{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:56px}
+.nosotros-historia{display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:56px;max-width:720px}
 .historia-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:32px}
 .historia-card h3{font-family:'Merriweather',serif;font-size:18px;font-weight:400;color:var(--gold);margin-bottom:14px}
 .historia-card p{font-size:14px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.65)}
@@ -253,6 +253,13 @@ footer{background:var(--navy);border-top:3px solid var(--gold);padding:48px 5vw 
   .footer-inner{grid-template-columns:1fr}
   .stat-grid{grid-template-columns:1fr 1fr}
 }
+.form-success{display:none;background:rgba(41,182,246,.12);border:1px solid var(--sky-deep);border-radius:10px;padding:32px 24px;text-align:center}
+.form-success.show{display:flex;flex-direction:column;align-items:center;gap:12px}
+.form-success-icon{font-size:40px}
+.form-success h3{font-family:'Merriweather',serif;font-size:20px;font-weight:400;color:var(--navy)}
+.form-success p{font-size:14px;font-weight:300;color:var(--navy-mid);line-height:1.7}
+.form-success-btn{margin-top:8px;background:none;border:1.5px solid var(--sky-deep);color:var(--navy);font-size:13px;font-weight:500;padding:8px 20px;border-radius:4px;cursor:pointer;transition:all .2s}
+.form-success-btn:hover{background:var(--sky-deep);color:#fff}
 </style>
 </head>
 <body>
@@ -421,14 +428,8 @@ footer{background:var(--navy);border-top:3px solid var(--gold);padding:48px 5vw 
   </div>
 </section>
 
-<!-- WAVE -->
-<div class="wave-div" style="background:white">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60">
-    <path d="M0,40 C200,10 500,60 720,25 C940,0 1200,50 1440,30 L1440,60 L0,60 Z" fill="var(--gray)"/>
-  </svg>
-</div>
-
 <!-- PARA QUIEN -->
+<div style="background:var(--white);padding:0 5vw"><div style="max-width:1160px;margin:0 auto;height:2px;background:linear-gradient(90deg,var(--sky-deep),var(--sky),transparent)"></div></div>
 <section class="paraquien-section" id="paraquien">
   <div class="inner">
     <div class="eyebrow">¿Su entidad puede vincularse?</div>
@@ -536,11 +537,7 @@ footer{background:var(--navy);border-top:3px solid var(--gold);padding:48px 5vw 
     <div class="nosotros-historia">
       <div class="historia-card">
         <h3>Nuestro origen</h3>
-        <p>FMC nació a finales de 2022 como resultado de la visión estratégica de la Federación de Mutuales de Antioquia y las asociaciones mutuales fundadoras. Iniciamos operaciones en abril de 2023 con un propósito claro: transformar el sector mutualista proporcionando garantías crediticias bajo condiciones de equidad y respaldo técnico, para que las mutuales puedan crecer su cartera con mayor confianza y sus asociados accedan más fácilmente al crédito.</p>
-      </div>
-      <div class="historia-card">
-        <h3>2025: año de mayor dinamismo</h3>
-        <p>El ejercicio 2025 ha sido el de mayor dinamismo operativo en nuestra historia, aportando por sí solo el 55% de la cobertura histórica del Fondo — $26.000 millones garantizados en un solo año. Esta aceleración ha ido de la mano con una gestión financiera sólida, logrando una utilidad neta de $34 millones que garantiza la sostenibilidad del modelo y nuestra capacidad de seguir reinvirtiendo en beneficios para el sector.</p>
+        <p>FMC nació a finales de 2022 como resultado de la visión estratégica de la Federación de Mutuales de Antioquia y las asociaciones mutuales fundadoras. Iniciamos operaciones en abril de 2023 con un propósito claro: transformar el sector mutualista proporcionando garantías crediticias bajo condiciones de equidad y respaldo técnico, para que las mutuales puedan crecer su cartera con mayor confianza y sus asociados accedan más fácilmente al crédito. Lo que comenzó como una unión de entidades pioneras se ha consolidado como un ecosistema de confianza en expansión — un modelo que ha demostrado que el sector mutual puede construir sus propias herramientas de respaldo.</p>
       </div>
     </div>
 
@@ -646,15 +643,24 @@ footer{background:var(--navy);border-top:3px solid var(--gold);padding:48px 5vw 
           <div class="cta-detail"><div class="cta-icon">📞</div><div class="cta-detail-text"><strong>Teléfono</strong>+57 310 448 6842</div></div>
         </div>
       </div>
-      <div class="cta-card">
-        <form class="cta-form" action="https://formspree.io/f/mlgoggog" method="POST">
+      <div class="cta-card" id="form-container">
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">✅</div>
+          <h3>¡Mensaje enviado!</h3>
+          <p>Gracias por contactarnos. Un asesor de FMC revisará su solicitud y le responderá dentro de las próximas 24 horas hábiles.</p>
+          <button class="form-success-btn" onclick="resetForm()">Enviar otro mensaje</button>
+        </div>
+        <form class="cta-form" id="contact-form" action="https://formspree.io/f/mlgoggog" method="POST">
           <input type="hidden" name="_subject" value="Nueva solicitud desde fondomutuodecobertura.com"/>
           <div class="form-row">
             <div class="fg"><label>Nombre</label><input type="text" name="nombre" placeholder="Su nombre completo" required/></div>
             <div class="fg"><label>Cargo</label><input type="text" name="cargo" placeholder="Representante Legal, Gerente..."/></div>
           </div>
           <div class="fg"><label>Entidad</label><input type="text" name="entidad" placeholder="Razón social de la mutual o empresa" required/></div>
-          <div class="fg"><label>Correo electrónico</label><input type="email" name="email" placeholder="correo@entidad.com.co" required/></div>
+          <div class="form-row">
+            <div class="fg"><label>Correo electrónico</label><input type="email" name="email" placeholder="correo@entidad.com.co" required/></div>
+            <div class="fg"><label>Teléfono de contacto</label><input type="tel" name="telefono" placeholder="+57 300 000 0000"/></div>
+          </div>
           <div class="fg">
             <label>Tipo de entidad</label>
             <select name="tipo_entidad">
@@ -667,7 +673,7 @@ footer{background:var(--navy);border-top:3px solid var(--gold);padding:48px 5vw 
             </select>
           </div>
           <div class="fg"><label>Mensaje</label><textarea name="mensaje" placeholder="Cuéntenos sobre su cartera o su necesidad de cobertura..."></textarea></div>
-          <button type="submit" class="submit-btn">Enviar solicitud →</button>
+          <button type="submit" class="submit-btn" id="submit-btn">Enviar solicitud →</button>
         </form>
       </div>
     </div>
@@ -741,20 +747,53 @@ function toggleMenu(){
   const menu=document.getElementById('mobileMenu');
   menu.classList.toggle('open');
 }
-
-// Close menu on outside click
 document.addEventListener('click',function(e){
   const menu=document.getElementById('mobileMenu');
   const hamburger=document.querySelector('.hamburger');
-  if(!menu.contains(e.target) && !hamburger.contains(e.target)){
+  if(!menu.contains(e.target)&&!hamburger.contains(e.target)){
     menu.classList.remove('open');
   }
 });
-
-// Close menu on scroll
 window.addEventListener('scroll',function(){
   document.getElementById('mobileMenu').classList.remove('open');
 });
+
+// Async form submission
+const form=document.getElementById('contact-form');
+if(form){
+  form.addEventListener('submit',async function(e){
+    e.preventDefault();
+    const btn=document.getElementById('submit-btn');
+    btn.textContent='Enviando...';
+    btn.disabled=true;
+    try{
+      const res=await fetch(form.action,{
+        method:'POST',
+        body:new FormData(form),
+        headers:{Accept:'application/json'}
+      });
+      if(res.ok){
+        form.style.display='none';
+        document.getElementById('form-success').classList.add('show');
+      } else {
+        btn.textContent='Error al enviar. Intente de nuevo.';
+        btn.disabled=false;
+      }
+    } catch(err){
+      btn.textContent='Error al enviar. Intente de nuevo.';
+      btn.disabled=false;
+    }
+  });
+}
+
+function resetForm(){
+  document.getElementById('form-success').classList.remove('show');
+  const form=document.getElementById('contact-form');
+  form.reset();
+  form.style.display='flex';
+  document.getElementById('submit-btn').textContent='Enviar solicitud →';
+  document.getElementById('submit-btn').disabled=false;
+}
 </script>
 </body>
 </html>
