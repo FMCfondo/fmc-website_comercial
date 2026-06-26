@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0E2E47;--navy2:#16456b;--gold:#C8901F;--ink:#15314a;--mut:#5b7188;--ivory:#FAF7F0;--line:#E7E0D2}
+body{font-family:'Lato',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--ivory)}
+.tag{position:fixed;top:0;left:0;background:#0E2E47;color:#fff;font:600 12px system-ui;padding:6px 14px;letter-spacing:.5px;z-index:9;border-bottom-right-radius:8px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 56px;background:#fff;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:46px}
+.bn{font-family:'Playfair Display',Georgia,serif;font-size:15px;color:var(--navy);line-height:1.1}
+.bs{font-size:9px;letter-spacing:2px;color:var(--mut);text-transform:uppercase;margin-top:2px}
+.nl{display:flex;gap:30px;align-items:center}
+.nl a{color:var(--navy);text-decoration:none;font-size:13.5px;font-weight:500;letter-spacing:.2px}
+.cta{background:var(--navy);color:#fff !important;padding:11px 22px;border-radius:3px;font-size:13px;font-weight:600}
+.goldrule{height:3px;background:linear-gradient(90deg,var(--gold),#e7c069)}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;padding:74px 56px 90px;max-width:1240px;margin:0 auto;align-items:center}
+.eyebrow{display:inline-block;color:var(--gold);font-size:11.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;border-left:3px solid var(--gold);padding-left:12px;margin-bottom:26px}
+h1{font-family:'Playfair Display',Georgia,serif;font-size:52px;line-height:1.14;color:var(--navy);font-weight:400;letter-spacing:-.5px}
+h1 b{color:var(--gold);font-weight:700}
+.lead{font-size:17px;line-height:1.75;color:var(--mut);margin:26px 0 36px;max-width:480px}
+.btns{display:flex;gap:14px}
+.b1{background:var(--navy);color:#fff;padding:15px 30px;border-radius:3px;font-weight:600;font-size:14px;text-decoration:none}
+.b2{border:1.5px solid #c9d3dd;color:var(--navy);padding:15px 28px;border-radius:3px;font-weight:600;font-size:14px;text-decoration:none}
+.panel{background:var(--navy);border-radius:6px;padding:6px;box-shadow:0 30px 60px -25px rgba(14,46,71,.5)}
+.phead{color:#9fb6cc;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;padding:18px 22px 12px}
+.stats{display:grid;grid-template-columns:1fr 1fr}
+.st{padding:20px 22px;border-top:1px solid rgba(255,255,255,.08)}
+.st:nth-child(odd){border-right:1px solid rgba(255,255,255,.08)}
+.snum{font-family:'Playfair Display',Georgia,serif;color:var(--gold);font-size:20px;font-weight:700;margin-bottom:5px}
+.slbl{color:#c2d2e0;font-size:12.5px;line-height:1.45}
+.quote{background:linear-gradient(90deg,var(--gold),#d9a838);color:#1b1304;font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:13.5px;line-height:1.55;padding:16px 22px;margin:6px;border-radius:4px}
+.foot{padding:0 56px 40px;max-width:1240px;margin:0 auto;display:flex;gap:34px;color:var(--mut);font-size:13px;font-weight:600}
+.foot span{display:flex;align-items:center;gap:8px}.dot{width:6px;height:6px;background:var(--gold);border-radius:50%}
+</style></head>
+<body>
+<div class="tag">DIRECCIÓN A · Institucional / Heritage</div>
+<nav>
+  <div class="brand"><img src="/logo-fmc.png" alt="FMC"><div><div class="bn">Fondo Mutuo de Cobertura</div><div class="bs">S.A.S. · Colombia</div></div></div>
+  <div class="nl"><a>Cómo funciona</a><a>Garantías</a><a>Nosotros</a><a>PQR</a><a class="cta">Contáctenos</a></div>
+</nav>
+<div class="goldrule"></div>
+<section class="hero">
+  <div>
+    <span class="eyebrow">Fiador institucional · Sector mutual colombiano</span>
+    <h1>El fondo de garantías construido <b>por el mutualismo, para el mutualismo.</b></h1>
+    <p class="lead">FMC es el primer fondo de cobertura creado por mutuales colombianas. Proteja su cartera, amplíe su colocación y acceda a beneficios exclusivos.</p>
+    <div class="btns"><a class="b1">Solicitar información →</a><a class="b2">Cómo funciona</a></div>
+  </div>
+  <div class="panel">
+    <div class="phead">Características clave</div>
+    <div class="stats">
+      <div class="st"><div class="snum">100%</div><div class="slbl">Cobertura del monto total del crédito</div></div>
+      <div class="st"><div class="snum">Supersolidaria</div><div class="slbl">Garantía aceptada por la Supersolidaria</div></div>
+      <div class="st"><div class="snum">Sin mínimos</div><div class="slbl">Sin mínimos de colocación para vincularse</div></div>
+      <div class="st"><div class="snum">Reserva propia</div><div class="slbl">Cada entidad mantiene su propia reserva</div></div>
+    </div>
+    <div class="quote">"Unirnos en proyectos que nos fortalezcan a todos es la garantía de ser más competitivos cada día."</div>
+  </div>
+</section>
+<div class="foot"><span><span class="dot"></span>Aceptada por la Supersolidaria</span><span><span class="dot"></span>Sin mínimos de colocación</span><span><span class="dot"></span>Beneficios exclusivos para vinculadas</span></div>
+</body></html>
