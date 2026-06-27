@@ -24,19 +24,15 @@
 <title>Aviso Legal – Fondo Mutuo de Cobertura S.A.S.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --sky:#B3E5FC;--sky-deep:#29B6F6;--navy:#0D3A5C;--navy-mid:#0D4F7C;
-  --gold:#E8A820;--gold-dark:#C8860A;--white:#fff;--gray:#F5F7FC;
-  --pale:#F0F9FF;--text:#0D2A45;--muted:#3D6080;--border:#C8E8F8;
-}
+:root{--royal:#1E40AF;--royal-deep:#13286E;--royal-light:#2C53D4;--royal-50:#EEF2FD;--gold:#E6A41E;--gold-deep:#C2860F;--gold-bright:#F4C969;--ink:#11213F;--muted:#586580;--soft:#7C8AA3;--line:#E5E9F1;--bg:#F6F8FC;--white:#fff;--navy:#13286E;--navy-mid:#1E40AF;--sky:#EAF2FD;--sky-mid:#B7D4F5;--sky-deep:#1E40AF;--gold-dark:#C2860F;--gray:#F2F5FA;--pale:#F6F9FD;--text:#11213F;--border:#E5E9F1;}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;font-weight:300;color:var(--text);background:var(--white);line-height:1.7}
+body{font-family:'Inter',sans-serif;font-weight:400;color:var(--text);background:var(--white);line-height:1.7}
 nav{background:var(--sky);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:88px;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(41,182,246,.2)}
 .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
-.logo-name{font-family:'Merriweather',serif;font-size:13px;font-weight:400;color:var(--navy)}
+.logo-name{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:400;color:var(--navy)}
 .logo-sub{font-size:10px;font-weight:500;letter-spacing:1.5px;color:var(--navy-mid);text-transform:uppercase;opacity:.7}
 .nav-back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:13px;font-weight:500;color:var(--navy);background:rgba(255,255,255,.5);border:1px solid rgba(13,58,92,.2);padding:8px 16px;border-radius:4px;transition:background .2s}
 .nav-back:hover{background:rgba(255,255,255,.8)}
@@ -44,7 +40,7 @@ nav{background:var(--sky);border-bottom:3px solid var(--gold);display:flex;align
 .doc-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold)}
 .doc-hero-inner{max-width:860px;margin:0 auto}
 .doc-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,168,32,.15);border:1px solid rgba(232,168,32,.3);color:var(--gold);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:20px}
-.doc-hero h1{font-family:'Merriweather',serif;font-size:clamp(22px,3vw,36px);font-weight:300;color:#fff;margin-bottom:16px;line-height:1.3}
+.doc-hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,3vw,36px);font-weight:300;color:#fff;margin-bottom:16px;line-height:1.3}
 .doc-meta{display:flex;gap:32px;flex-wrap:wrap;margin-top:20px}
 .doc-meta-item{font-size:13px;font-weight:300;color:rgba(255,255,255,.6)}
 .doc-meta-item strong{display:block;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
@@ -56,7 +52,7 @@ nav{background:var(--sky);border-bottom:3px solid var(--gold);display:flex;align
 .doc-toc ul li a:hover{color:var(--navy);border-color:var(--sky-deep)}
 .doc-content{min-width:0}
 .doc-section{margin-bottom:48px;scroll-margin-top:110px}
-.doc-section h2{font-family:'Merriweather',serif;font-size:20px;font-weight:400;color:var(--navy);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--sky)}
+.doc-section h2{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:400;color:var(--navy);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--sky)}
 .doc-section p{font-size:14px;font-weight:300;line-height:1.8;color:var(--muted);margin-bottom:14px}
 .doc-section ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
 .doc-section ul li{font-size:14px;font-weight:300;line-height:1.7;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
@@ -72,6 +68,19 @@ footer p{font-size:13px;font-weight:300;color:rgba(255,255,255,.45)}
 footer a{color:var(--gold);text-decoration:none}
 footer a:hover{text-decoration:underline}
 @media(max-width:700px){.doc-layout{grid-template-columns:1fr}.doc-toc{display:none}}
+
+nav{background:#fff!important;border-bottom:1px solid var(--line)!important;box-shadow:0 6px 28px -22px rgba(17,33,63,.5)}
+.logo-name{color:var(--royal);font-weight:600}
+.nav-back{border-radius:30px;background:var(--royal-50);border:1px solid var(--royal-50);color:var(--royal)}
+.nav-back:hover{background:#e0e7fb}
+.hero,.doc-hero{background:radial-gradient(700px 420px at 88% -20%,rgba(69,182,232,.2),transparent 60%),linear-gradient(155deg,#1E40AF,#13286E)!important}
+.hero h1,.doc-hero h1{font-weight:700;letter-spacing:-.5px}
+.form-card h2,.doc-section h2,.form-success h3,.pqr-success h3,.tipo-card h3,.info-box h4{font-weight:600}
+.submit-btn{background:var(--gold)!important;color:#3a2600!important;border-radius:30px!important;letter-spacing:.3px}
+.submit-btn:hover{background:var(--gold-bright)!important;color:#3a2600!important}
+.form-card,.form-success,.pqr-success,.info-box{border-radius:16px}
+.form-success-btn,.pqr-success-btn{border-radius:30px}
+.radicado-box{border-radius:12px}
 </style>
 </head>
 <body>
