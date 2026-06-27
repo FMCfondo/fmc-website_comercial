@@ -24,22 +24,16 @@
 <title>PQR – Peticiones, Quejas y Reclamos | Fondo Mutuo de Cobertura S.A.S.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --sky:#B3E5FC;--sky-mid:#81D4FA;--sky-deep:#29B6F6;
-  --navy:#0D3A5C;--navy-mid:#0D4F7C;
-  --gold:#E8A820;--gold-dark:#C8860A;
-  --white:#fff;--gray:#F5F7FC;--pale:#F0F9FF;
-  --text:#0D2A45;--muted:#3D6080;--border:#C8E8F8;
-}
+:root{--royal:#1E40AF;--royal-deep:#13286E;--royal-light:#2C53D4;--royal-50:#EEF2FD;--gold:#E6A41E;--gold-deep:#C2860F;--gold-bright:#F4C969;--ink:#11213F;--muted:#586580;--soft:#7C8AA3;--line:#E5E9F1;--bg:#F6F8FC;--white:#fff;--navy:#13286E;--navy-mid:#1E40AF;--sky:#EAF2FD;--sky-mid:#B7D4F5;--sky-deep:#1E40AF;--gold-dark:#C2860F;--gray:#F2F5FA;--pale:#F6F9FD;--text:#11213F;--border:#E5E9F1;}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;font-weight:300;color:var(--text);background:var(--white);line-height:1.7}
+body{font-family:'Inter',sans-serif;font-weight:400;color:var(--text);background:var(--white);line-height:1.7}
 
 nav{background:#fff;border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:80px;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,.08)}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo-name{font-family:'Merriweather',serif;font-size:12px;font-weight:400;color:var(--navy)}
+.logo-name{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:400;color:var(--navy)}
 .logo-sub{font-size:9px;font-weight:500;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase}
 .nav-back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:13px;font-weight:500;color:var(--navy);background:var(--pale);border:1px solid var(--border);padding:8px 16px;border-radius:4px;transition:background .2s}
 .nav-back:hover{background:var(--sky)}
@@ -48,7 +42,7 @@ nav{background:#fff;border-bottom:3px solid var(--gold);display:flex;align-items
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold)}
 .hero-inner{max-width:900px;margin:0 auto}
 .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,168,32,.15);border:1px solid rgba(232,168,32,.3);color:var(--gold);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:20px}
-.hero h1{font-family:'Merriweather',serif;font-size:clamp(24px,3vw,38px);font-weight:300;color:#fff;margin-bottom:12px;line-height:1.3}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,3vw,38px);font-weight:300;color:#fff;margin-bottom:12px;line-height:1.3}
 .hero p{font-size:15px;font-weight:300;color:rgba(255,255,255,.65);max-width:580px;line-height:1.8}
 .hero-meta{display:flex;gap:32px;flex-wrap:wrap;margin-top:24px}
 .meta-item{font-size:13px;font-weight:300;color:rgba(255,255,255,.6)}
@@ -64,7 +58,7 @@ nav{background:#fff;border-bottom:3px solid var(--gold);display:flex;align-items
 .tipo-card .plazo{font-size:11px;font-weight:600;color:var(--sky-deep);letter-spacing:.5px;margin-top:8px;text-transform:uppercase}
 
 .form-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:36px;box-shadow:0 4px 20px rgba(41,182,246,.08)}
-.form-card h2{font-family:'Merriweather',serif;font-size:20px;font-weight:400;color:var(--navy);margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--sky)}
+.form-card h2{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:400;color:var(--navy);margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--sky)}
 .pqr-form{display:flex;flex-direction:column;gap:14px}
 .fg{display:flex;flex-direction:column;gap:5px}
 .fg label{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
@@ -84,9 +78,9 @@ nav{background:#fff;border-bottom:3px solid var(--gold);display:flex;align-items
 .form-success{display:none;background:rgba(41,182,246,.1);border:1px solid var(--sky-deep);border-radius:10px;padding:40px 32px;text-align:center;flex-direction:column;align-items:center;gap:16px}
 .form-success.show{display:flex}
 .form-success-icon{font-size:48px}
-.form-success h3{font-family:'Merriweather',serif;font-size:22px;font-weight:400;color:var(--navy)}
+.form-success h3{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:400;color:var(--navy)}
 .form-success p{font-size:14px;font-weight:300;color:var(--muted);line-height:1.7;max-width:480px}
-.radicado-box{background:var(--navy);color:var(--gold);font-family:'Merriweather',serif;font-size:20px;font-weight:700;padding:14px 28px;border-radius:8px;letter-spacing:2px;margin:8px 0}
+.radicado-box{background:var(--navy);color:var(--gold);font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;padding:14px 28px;border-radius:8px;letter-spacing:2px;margin:8px 0}
 .radicado-note{font-size:12px;color:var(--muted);font-style:italic}
 .form-success-btn{background:none;border:1.5px solid var(--sky-deep);color:var(--navy);font-size:13px;font-weight:500;padding:8px 20px;border-radius:4px;cursor:pointer;transition:all .2s;margin-top:8px}
 .form-success-btn:hover{background:var(--sky-deep);color:#fff}
@@ -101,13 +95,26 @@ footer a{color:var(--gold);text-decoration:none}
 .pqr-success{display:none;background:var(--pale);border:1px solid var(--sky-deep);border-radius:12px;padding:40px 32px;text-align:center}
 .pqr-success.show{display:flex;flex-direction:column;align-items:center;gap:16px}
 .pqr-success-icon{font-size:48px}
-.pqr-success h3{font-family:'Merriweather',serif;font-size:22px;font-weight:400;color:var(--navy)}
+.pqr-success h3{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:400;color:var(--navy)}
 .pqr-success p{font-size:14px;font-weight:300;color:var(--muted);line-height:1.7;max-width:480px}
 .radicado-box{background:var(--white);border:2px solid var(--sky-deep);border-radius:8px;padding:16px 28px;margin:8px 0}
 .radicado-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.radicado-num{font-family:'Merriweather',serif;font-size:24px;font-weight:700;color:var(--navy)}
+.radicado-num{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:var(--navy)}
 .pqr-success-btn{margin-top:8px;background:none;border:1.5px solid var(--sky-deep);color:var(--navy);font-size:13px;font-weight:500;padding:9px 22px;border-radius:4px;cursor:pointer;font-family:'Lato',sans-serif;transition:all .2s}
 .pqr-success-btn:hover{background:var(--sky-deep);color:#fff}
+
+nav{background:#fff!important;border-bottom:1px solid var(--line)!important;box-shadow:0 6px 28px -22px rgba(17,33,63,.5)}
+.logo-name{color:var(--royal);font-weight:600}
+.nav-back{border-radius:30px;background:var(--royal-50);border:1px solid var(--royal-50);color:var(--royal)}
+.nav-back:hover{background:#e0e7fb}
+.hero,.doc-hero{background:radial-gradient(700px 420px at 88% -20%,rgba(69,182,232,.2),transparent 60%),linear-gradient(155deg,#1E40AF,#13286E)!important}
+.hero h1,.doc-hero h1{font-weight:700;letter-spacing:-.5px}
+.form-card h2,.doc-section h2,.form-success h3,.pqr-success h3,.tipo-card h3,.info-box h4{font-weight:600}
+.submit-btn{background:var(--gold)!important;color:#3a2600!important;border-radius:30px!important;letter-spacing:.3px}
+.submit-btn:hover{background:var(--gold-bright)!important;color:#3a2600!important}
+.form-card,.form-success,.pqr-success,.info-box{border-radius:16px}
+.form-success-btn,.pqr-success-btn{border-radius:30px}
+.radicado-box{border-radius:12px}
 </style>
 <script src="https://www.google.com/recaptcha/api.js?render=6LcOFpwsAAAAAKnZJ00rSsHCC1mZy6klWccH8rhN"></script>
 <script src="https://www.google.com/recaptcha/api.js?render=6LcOFpwsAAAAAKnZJ00rSsHCC1mZy6klWccH8rhN"></script>
