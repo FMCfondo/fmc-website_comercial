@@ -214,6 +214,8 @@ h2{font-size:clamp(26px,2.9vw,38px);font-weight:700;line-height:1.18;margin-bott
 .fg select option{color:var(--ink);background:#fff}
 .submit-btn{background:var(--gold);color:#3a2600;font-family:'Inter',sans-serif;font-size:14px;font-weight:700;letter-spacing:.3px;padding:15px 32px;border:none;border-radius:30px;cursor:pointer;transition:all .2s;align-self:flex-start;box-shadow:0 16px 30px -12px rgba(230,164,30,.6)}
 .submit-btn:hover{background:var(--gold-bright);transform:translateY(-2px)}
+.form-consent{font-size:12px;line-height:1.6;color:#aebfd6;margin-top:-2px}
+.form-consent a{color:var(--gold-bright);text-decoration:underline;text-underline-offset:2px}
 
 footer{background:linear-gradient(160deg,#13286E,#0E1F52);padding:54px 5vw 30px;position:relative;overflow:hidden}
 .footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:24px;position:relative;z-index:1}
@@ -538,11 +540,11 @@ footer{background:linear-gradient(160deg,#13286E,#0E1F52);padding:54px 5vw 30px;
     <!-- CIFRAS -->
     <div class="cifras-grid">
       <div class="cifra-card">
-        <div class="cifra-num">$56.000M</div>
+        <div class="cifra-num">+$65.000M</div>
         <div class="cifra-lbl">Garantizados desde nuestro origen, protegiendo el progreso de miles de familias</div>
       </div>
       <div class="cifra-card">
-        <div class="cifra-num">+19.000</div>
+        <div class="cifra-num">~22.000</div>
         <div class="cifra-lbl">Operaciones crediticias respaldadas desde abril de 2023</div>
       </div>
       <div class="cifra-card">
@@ -704,6 +706,7 @@ footer{background:linear-gradient(160deg,#13286E,#0E1F52);padding:54px 5vw 30px;
             </select>
           </div>
           <div class="fg"><label>Mensaje</label><textarea name="mensaje" placeholder="Cuéntenos sobre su cartera o su necesidad de cobertura..."></textarea></div>
+          <p class="form-consent">Al enviar este formulario usted autoriza a Fondo Mutuo de Cobertura S.A.S. a tratar sus datos personales para atender su solicitud, conforme a nuestro <a href="/aviso-privacidad">Aviso de Privacidad</a> y nuestra <a href="/politica-datos">Política de Tratamiento de Datos</a>.</p>
           <button type="submit" class="submit-btn" id="submit-btn">Enviar solicitud →</button>
         </form>
       </div>
@@ -756,7 +759,8 @@ footer{background:linear-gradient(160deg,#13286E,#0E1F52);padding:54px 5vw 30px;
   <div class="footer-bottom">
     <p>© 2026 Fondo Mutuo de Cobertura S.A.S. · NIT 901.678.530-0 · Todos los derechos reservados.</p>
     <div class="footer-legal">
-      <a href="/politica-datos">Política de privacidad y tratamiento de datos</a>
+      <a href="/politica-datos">Política de tratamiento de datos</a>
+      <a href="/aviso-privacidad">Aviso de privacidad</a>
       <a href="/aviso-legal">Aviso legal</a>
     </div>
   </div>

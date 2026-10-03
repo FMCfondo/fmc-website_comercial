@@ -7,19 +7,19 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-<meta name="description" content="Conozca cómo Fondo Mutuo de Cobertura S.A.S. recolecta, usa y protege sus datos personales, conforme a la Ley 1581 de 2012 y normas concordantes."/>
+<meta name="description" content="Manual de Políticas y Procedimientos de Tratamiento de Datos Personales de Fondo Mutuo de Cobertura S.A.S. (MA-GA-PDP-001), conforme a la Ley 1581 de 2012 y la Ley 1266 de 2008."/>
 <link rel="canonical" href="https://www.fondomutuodecobertura.com/politica-datos"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Fondo Mutuo de Cobertura S.A.S."/>
 <meta property="og:title" content="Política de Tratamiento de Datos Personales – Fondo Mutuo de Cobertura S.A.S."/>
-<meta property="og:description" content="Conozca cómo Fondo Mutuo de Cobertura S.A.S. recolecta, usa y protege sus datos personales, conforme a la Ley 1581 de 2012 y normas concordantes."/>
+<meta property="og:description" content="Manual de Políticas y Procedimientos de Tratamiento de Datos Personales de Fondo Mutuo de Cobertura S.A.S. (MA-GA-PDP-001), conforme a la Ley 1581 de 2012 y la Ley 1266 de 2008."/>
 <meta property="og:url" content="https://www.fondomutuodecobertura.com/politica-datos"/>
 <meta property="og:image" content="https://www.fondomutuodecobertura.com/og-image.jpg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Política de Tratamiento de Datos Personales – Fondo Mutuo de Cobertura S.A.S."/>
-<meta name="twitter:description" content="Conozca cómo Fondo Mutuo de Cobertura S.A.S. recolecta, usa y protege sus datos personales, conforme a la Ley 1581 de 2012 y normas concordantes."/>
+<meta name="twitter:description" content="Manual de Políticas y Procedimientos de Tratamiento de Datos Personales de Fondo Mutuo de Cobertura S.A.S. (MA-GA-PDP-001), conforme a la Ley 1581 de 2012 y la Ley 1266 de 2008."/>
 <meta name="twitter:image" content="https://www.fondomutuodecobertura.com/og-image.jpg"/>
 <title>Política de Tratamiento de Datos Personales – Fondo Mutuo de Cobertura S.A.S.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -95,6 +95,44 @@ nav{background:#fff!important;border-bottom:1px solid var(--line)!important;box-
 .form-card,.form-success,.pqr-success,.info-box{border-radius:16px}
 .form-success-btn,.pqr-success-btn{border-radius:30px}
 .radicado-box{border-radius:12px}
+
+/* DOCUMENTO EXTENSO (manual / aviso) */
+.doc-layout{max-width:1040px;grid-template-columns:240px 1fr}
+.doc-toc{max-height:calc(100vh - 130px);overflow:auto;padding-right:6px}
+.doc-toc ul li a span{color:var(--royal);font-weight:600;margin-right:2px}
+.doc-section h2 .cap{color:var(--gold-deep);font-weight:700;margin-right:4px}
+.doc-section p a,.doc-section li a,.id-card a,.doc-table a,.note-box a{color:var(--royal);text-decoration:underline;text-underline-offset:2px}
+.doc-section ul li>span,.doc-section ol li>span{flex:1;min-width:0}
+.doc-section li strong,.doc-section p strong{color:var(--navy);font-weight:600}
+.doc-section ol{list-style:none;counter-reset:item;display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.doc-section ol>li{counter-increment:item;font-size:14px;font-weight:300;line-height:1.7;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+.doc-section ol>li::before{content:counter(item) '.';color:var(--royal);font-weight:600;min-width:22px;flex-shrink:0}
+.doc-section ol.alpha>li::before{content:counter(item,lower-alpha) ')'}
+.table-wrap{overflow-x:auto;margin:8px 0 22px;border:1px solid var(--line);border-radius:12px}
+.doc-table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.6}
+.doc-table th{background:var(--royal-50);color:var(--navy);font-weight:600;text-align:left;padding:11px 14px;border-bottom:1px solid var(--line)}
+.doc-table.enc td:nth-child(-n+2){white-space:nowrap;color:var(--navy);font-weight:500}
+.doc-hero-inner{max-width:1040px}
+.doc-table td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--muted);font-weight:300;vertical-align:top}
+.doc-table tr:last-child td{border-bottom:none}
+.doc-table td strong{color:var(--navy);font-weight:600}
+.doc-callout{display:flex;gap:14px;align-items:flex-start;background:var(--royal-50);border:1px solid #d6e0fa;border-radius:14px;padding:18px 20px;margin-bottom:40px}
+.doc-callout p{font-size:14px;line-height:1.7;color:var(--ink);margin:0}
+.doc-callout a{color:var(--royal);font-weight:600}
+.doc-callout svg{flex-shrink:0;color:var(--royal);margin-top:2px}
+.note-box{background:var(--bg);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:16px 18px;margin-top:8px}
+.note-box p{margin:0}
+footer .footer-links{margin-top:8px}
+@media(max-width:700px){
+  .doc-layout{grid-template-columns:1fr;gap:0;padding-top:36px}
+  .doc-meta{gap:16px 28px}
+  .doc-table thead{display:none}
+  .doc-table tr{display:block;border-bottom:1px solid var(--line);padding:6px 0}
+  .doc-table tr:last-child{border-bottom:none}
+  .doc-table td{display:block;border:none;padding:4px 14px}
+  .doc-table.enc td:nth-child(-n+2){display:inline-block;padding-right:0}
+  .doc-table.enc td:nth-child(2)::before{content:'· '}
+}
 </style>
 </head>
 <body>
@@ -111,13 +149,14 @@ nav{background:#fff!important;border-bottom:1px solid var(--line)!important;box-
 
 <div class="doc-hero">
   <div class="doc-hero-inner">
-    <div class="doc-badge">Documento legal</div>
-    <h1>Manual de Políticas de Tratamiento de Datos Personales</h1>
+    <div class="doc-badge">Documento legal · MA-GA-PDP-001</div>
+    <h1>Manual de Políticas y Procedimientos de Tratamiento de Datos Personales</h1>
     <div class="doc-meta">
       <div class="doc-meta-item"><strong>Responsable</strong>Fondo Mutuo de Cobertura S.A.S.</div>
       <div class="doc-meta-item"><strong>NIT</strong>901.678.530-0</div>
+      <div class="doc-meta-item"><strong>Código / Versión</strong>MA-GA-PDP-001 · v01</div>
       <div class="doc-meta-item"><strong>Vigencia</strong>1 de enero de 2026</div>
-      <div class="doc-meta-item"><strong>Normativa</strong>Ley 1581 de 2012 · Decreto 1377 de 2013</div>
+      <div class="doc-meta-item"><strong>Normativa</strong>Ley 1581 de 2012 · Ley 1266 de 2008</div>
     </div>
   </div>
 </div>
@@ -126,202 +165,483 @@ nav{background:#fff!important;border-bottom:1px solid var(--line)!important;box-
   <aside class="doc-toc">
     <h3>Contenido</h3>
     <ul>
-      <li><a href="#identificacion">Identificación del responsable</a></li>
-      <li><a href="#legislacion">Legislación aplicable</a></li>
-      <li><a href="#alcance">Ámbito de aplicación</a></li>
-      <li><a href="#conceptos">Conceptos y definiciones</a></li>
-      <li><a href="#principios">Principios</a></li>
-      <li><a href="#finalidades">Finalidades</a></li>
-      <li><a href="#autorizacion">Autorización</a></li>
-      <li><a href="#derechos">Derechos de los titulares</a></li>
-      <li><a href="#procedimientos">Consultas y reclamos</a></li>
-      <li><a href="#seguridad">Seguridad de la información</a></li>
-      <li><a href="#responsable">Responsable del tratamiento</a></li>
-      <li><a href="#vigencia">Vigencia</a></li>
+<li><a href="#introduccion"><span>I.</span> Introducción y responsable</a></li>
+<li><a href="#marco-legal"><span>II.</span> Marco legal</a></li>
+<li><a href="#ambito"><span>III.</span> Ámbito de aplicación</a></li>
+<li><a href="#definiciones"><span>IV.</span> Definiciones</a></li>
+<li><a href="#principios"><span>V.</span> Principios</a></li>
+<li><a href="#finalidades"><span>VI.</span> Finalidades</a></li>
+<li><a href="#autorizacion"><span>VII.</span> Autorización</a></li>
+<li><a href="#derechos"><span>VIII.</span> Derechos del titular</a></li>
+<li><a href="#consultas-reclamos"><span>IX.</span> Consultas y reclamos</a></li>
+<li><a href="#retencion"><span>X.</span> Retención y supresión</a></li>
+<li><a href="#seguridad"><span>XI.</span> Seguridad de la información</a></li>
+<li><a href="#encargados"><span>XII.</span> Encargados y transmisión</a></li>
+<li><a href="#incidentes"><span>XIII.</span> Incidentes de seguridad</a></li>
+<li><a href="#roles"><span>XIV.</span> Roles y sanciones</a></li>
+<li><a href="#rnbd-aviso"><span>XV.</span> RNBD y aviso de privacidad</a></li>
+<li><a href="#vigencia"><span>XVI.</span> Vigencia y versiones</a></li>
     </ul>
   </aside>
 
   <main class="doc-content">
 
-    <div class="doc-section" id="identificacion">
-      <h2>Identificación del responsable del tratamiento</h2>
-      <div class="id-card">
-        <p><strong>Nombre o razón social:</strong> Fondo Mutuo de Cobertura S.A.S.</p>
-        <p><strong>NIT:</strong> 901.678.530-0</p>
-        <p><strong>Domicilio:</strong> Calle 52 # 49-28, Medellín, Antioquia, Colombia</p>
-        <p><strong>Correo electrónico:</strong> admin@fondomutuodecobertura.com</p>
-        <p><strong>Teléfono:</strong> (+57) 310 448 6842</p>
-        <p><strong>Constitución:</strong> Documento privado del 3 de noviembre de 2022, inscrita el 3 de febrero de 2023 en la Cámara de Comercio de Medellín.</p>
-      </div>
-      <p>El presente manual tiene como finalidad dar cumplimiento a la Ley Estatutaria 1581 de 2012 y su Decreto Reglamentario 1377 de 2013, la cual tiene por objeto desarrollar el derecho constitucional que tienen todas las personas a conocer, actualizar y rectificar las informaciones que se hayan recogido sobre ellas en bases de datos o archivos, y los demás derechos, libertades y garantías constitucionales a que se refiere el artículo 15 de la Constitución Política.</p>
-      <p>Fondo Mutuo de Cobertura S.A.S. manifiesta que garantiza los derechos de la privacidad, intimidad y buen nombre en el tratamiento de los datos personales, y en consecuencia, todas sus actuaciones se regirán por los principios de legalidad, finalidad, libertad, veracidad, calidad, transparencia, acceso y circulación restringida, seguridad y confidencialidad.</p>
-    </div>
+<div class="doc-callout"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><p>¿Busca la versión resumida? Consulte nuestro <a href="/aviso-privacidad">Aviso de Privacidad</a> (FM-GA-PDP-001). Para ejercer sus derechos de Habeas Data escriba a <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a>.</p></div>
 
-    <div class="doc-section" id="legislacion">
-      <h2>1. Legislación aplicable</h2>
-      <p>El presente manual fue elaborado teniendo en cuenta las disposiciones contenidas en:</p>
-      <ul>
-        <li>Artículo 15 de la Constitución Política de Colombia</li>
-        <li>Ley 1581 de 2012 — "Por la cual se dictan disposiciones generales para la protección de datos personales"</li>
-        <li>Decreto 1377 de 2013 — "Por el cual se reglamenta parcialmente la Ley 1581 de 2012"</li>
-        <li>Ley 1266 de 2008</li>
-        <li>Decretos reglamentarios 1727 de 2009 y 2592 de 2010</li>
-        <li>Sentencias C-1011 de 2008 y C-748 de 2011 de la Corte Constitucional</li>
-      </ul>
-      <p>A estas políticas le serán aplicables todas las demás normas que complementen o sustituyan las anteriores.</p>
-    </div>
+<section class="doc-section" id="introduccion">
+<h2><span class="cap">I.</span> Introducción, objeto del Manual e identificación del Responsable</h2>
+<h3>1.1. Introducción</h3>
+<p>FONDO MUTUO DE COBERTURA S.A.S. (en adelante, "FMC", "el Fondo" o "el Responsable") reconoce la protección de datos personales como un derecho fundamental de rango constitucional y como un pilar de la confianza en su operación. En desarrollo de los artículos 15 y 20 de la Constitución Política, y en cumplimiento del artículo 18 literal f) de la Ley Estatutaria 1581 de 2012, FMC adopta el presente Manual Interno de Políticas y Procedimientos para el Tratamiento de Datos Personales (en adelante, "el Manual" o "la Política"), con el fin de garantizar el adecuado cumplimiento del régimen legal de Habeas Data y, en especial, la atención de consultas y reclamos por parte de los Titulares de la información.</p>
+<p>FMC manifiesta que garantiza los derechos a la privacidad, la intimidad, el buen nombre y el habeas data en el Tratamiento de los Datos Personales que reposan en sus bases de datos. En consecuencia, todas sus actuaciones se rigen por los principios rectores enunciados en el Capítulo V de este Manual, así como por los principios especiales del régimen de habeas data financiero.</p>
+<p>Por la naturaleza de su actividad, FMC actúa como avalista o garante de obligaciones crediticias originadas por entidades intermediarias (mutuales) con las que tiene convenio de garantía, y en tal condición consulta y reporta información a operadores de información (centrales de riesgo). Por ello, además del régimen general de la Ley 1581 de 2012, le resulta aplicable el régimen especial de la Ley 1266 de 2008 sobre el dato financiero, crediticio y comercial.</p>
+<h3>1.2. Objeto del Manual</h3>
+<p>El presente Manual tiene por objeto:</p>
+<ol>
+<li><span>Desarrollar el derecho constitucional que tienen todas las personas a conocer, actualizar, rectificar y suprimir las informaciones que se hayan recogido sobre ellas en bases de datos o archivos administrados por FMC, conforme a los artículos 15 y 20 de la Constitución Política.</span></li>
+<li><span>Establecer los principios, finalidades, derechos, deberes y procedimientos que rigen el Tratamiento de Datos Personales por parte de FMC, en su calidad de Responsable.</span></li>
+<li><span>Definir los mecanismos y términos para la atención de consultas y reclamos de los Titulares.</span></li>
+<li><span>Determinar las medidas técnicas, humanas y administrativas de seguridad de la información, así como el procedimiento de gestión de incidentes.</span></li>
+<li><span>Declarar la transmisión internacional de datos a los encargados de Tratamiento ubicados en el exterior y las garantías que la amparan.</span></li>
+</ol>
+<p>Este Manual es de obligatorio cumplimiento para todas las personas que, de manera permanente u ocasional, intervengan en el Tratamiento de Datos Personales por cuenta o en interés de FMC.</p>
+<h3>1.3. Identificación del Responsable del Tratamiento</h3>
+<div class="id-card">
+<p><strong>Razón social:</strong> FONDO MUTUO DE COBERTURA S.A.S.</p>
+<p><strong>NIT:</strong> 901.678.530-0</p>
+<p><strong>Naturaleza:</strong> Sociedad por Acciones Simplificada (S.A.S.), constituida mediante documento privado del 3 de noviembre de 2022 e inscrita el 3 de febrero de 2023 en la Cámara de Comercio de Medellín, según el certificado de existencia y representación legal.</p>
+<p><strong>Domicilio y dirección:</strong> Calle 52 No. 49-28, Ed. La Lonja, Piso 10, Medellín (Antioquia), Colombia</p>
+<p><strong>Representante Legal:</strong> Edwin Fernando Cardona Guisao</p>
+<p><strong>Correo electrónico (canal oficial de Habeas Data):</strong> <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a></p>
+<p><strong>Teléfono de contacto:</strong> (+57) 310 448 6842</p>
+</div>
+<p>El canal oficial para el ejercicio de los derechos de Habeas Data y para cualquier comunicación relacionada con el Tratamiento de Datos Personales es el correo electrónico <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a>. Las solicitudes también podrán radicarse físicamente en la dirección del domicilio social: Calle 52 No. 49-28, Ed. La Lonja, Piso 10, Medellín (Antioquia).</p>
+<p>Queda prohibido el uso de cuentas de correo electrónico personales o de dominios gratuitos (por ejemplo, cuentas @gmail) para el envío, la recepción o el almacenamiento de información de clientes, deudores, intermediarios o de cualquier otro Titular. Toda comunicación institucional relacionada con Datos Personales se cursará exclusivamente por el canal oficial aquí indicado.</p>
+<h3>1.4. Responsabilidad institucional y Oficial de Protección de Datos</h3>
+<p>El Responsable del Tratamiento de los Datos Personales es FONDO MUTUO DE COBERTURA S.A.S. como persona jurídica. La responsabilidad legal por el cumplimiento del régimen de protección de datos recae en la empresa y no, individualmente, en la persona designada para vigilar su cumplimiento.</p>
+<p>Sin perjuicio de lo anterior, FMC designa un Oficial de Protección de Datos Personales, Adrian López Aisales, quien tiene a su cargo velar por la implementación, supervisión y cumplimiento de la presente Política, canalizar y dar trámite a las consultas y reclamos de los Titulares, y servir de enlace con la Superintendencia de Industria y Comercio. El Oficial de Protección de Datos ejerce sus funciones reportando al canal institucional <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a>, sin que su designación traslade a su persona la responsabilidad legal que corresponde a FMC como Responsable.</p>
+<h3>1.5. Derogatoria expresa de versiones anteriores</h3>
+<p>A partir de la aprobación del presente Manual (MA-GA-PDP-001, Versión 01), quedan expresamente derogadas y sin ningún efecto las versiones anteriores de la Política y del Manual de Tratamiento de Datos Personales de FMC —incluido el Manual de 2024 y los borradores elaborados en 2026—, cuyas disposiciones se entienden íntegramente sustituidas por este Manual.</p>
+<p>Cualquier referencia interna o externa a dichos documentos se entenderá hecha al presente Manual.</p>
+</section>
+<section class="doc-section" id="marco-legal">
+<h2><span class="cap">II.</span> Marco legal aplicable</h2>
+<p>El presente Manual se elabora con fundamento en las siguientes disposiciones, las cuales coexisten y se aplican de manera integral a FMC:</p>
+<h3>2.1. Fundamento constitucional</h3>
+<ul>
+<li><span><strong>Artículo 15 de la Constitución Política:</strong> derecho de toda persona a conocer, actualizar y rectificar la información recogida sobre ella en bases de datos y archivos (habeas data), y a la protección de su intimidad y buen nombre.</span></li>
+<li><span><strong>Artículo 20 de la Constitución Política:</strong> derecho a la información.</span></li>
+</ul>
+<h3>2.2. Régimen general de protección de datos personales</h3>
+<ul>
+<li><span>Ley Estatutaria 1581 de 2012, "por la cual se dictan disposiciones generales para la protección de datos personales".</span></li>
+<li><span>Decreto Único Reglamentario 1074 de 2015 del Sector Comercio, Industria y Turismo (Título 2.2.2), que compiló y reemplazó el Decreto 1377 de 2013 —hoy derogado—. Toda referencia reglamentaria al régimen general debe entenderse hecha al Decreto 1074 de 2015.</span></li>
+<li><span>Decreto 090 de 2018, que modificó el Decreto 1074 de 2015 en lo relativo al Registro Nacional de Bases de Datos (RNBD) y fijó los sujetos obligados a su inscripción y el umbral aplicable (ver Capítulo XV).</span></li>
+</ul>
+<h3>2.3. Régimen especial del dato financiero, crediticio y comercial</h3>
+<p>Por consultar y reportar información a operadores (centrales de riesgo) y tratar datos de crédito y mora, a FMC le aplica de manera especial:</p>
+<ul>
+<li><span>Ley Estatutaria 1266 de 2008 (habeas data financiero), que regula los deberes de las fuentes, los operadores y los usuarios de información financiera, crediticia, comercial y de servicios, así como los principios de veracidad o calidad, finalidad, circulación restringida, temporalidad, interpretación integral de derechos fundamentales, y seguridad y confidencialidad.</span></li>
+<li><span>Ley 2157 de 2021 ("borrón y cuenta nueva"), que modifica y complementa la Ley 1266 de 2008 en materia de permanencia y caducidad del dato negativo.</span></li>
+</ul>
+<p>La Ley 1266 de 2008 no desplaza a la Ley 1581 de 2012: ambas coexisten, operando la primera como régimen especial (<em>lex specialis</em>) para el dato financiero y crediticio reportado a operadores.</p>
+<h3>2.4. Jurisprudencia y normas complementarias</h3>
+<ul>
+<li><span>Sentencias C-1011 de 2008 y C-748 de 2011 de la Corte Constitucional, que modularon, respectivamente, la Ley 1266 de 2008 y la Ley 1581 de 2012.</span></li>
+<li><span>Código de Comercio, en especial su artículo 60, que establece el deber del comerciante de conservar sus libros y papeles por un término de diez (10) años, base de la política de retención, en concordancia con las normas tributarias y contables aplicables.</span></li>
+<li><span>Normativa sobre prevención del lavado de activos y financiación del terrorismo (SARLAFT), como finalidad legítima sustentada en deber legal.</span></li>
+<li><span>Circular Única de la Superintendencia de Industria y Comercio (SIC), Título V (Protección de Datos Personales), en lo relativo al RNBD, al reporte de incidentes de seguridad y a los estándares de transmisión y transferencia internacional.</span></li>
+</ul>
+<p>A esta Política le serán aplicables todas las demás normas que complementen, modifiquen o sustituyan las anteriores.</p>
+</section>
+<section class="doc-section" id="ambito">
+<h2><span class="cap">III.</span> Ámbito de aplicación y poblaciones objeto</h2>
+<h3>3.1. Ámbito de aplicación</h3>
+<p>La presente Política se aplica a todas las bases de datos y archivos que contengan Datos Personales y que se encuentren bajo la administración de FMC, o que sean susceptibles de ser conocidos por éste en virtud de las relaciones contractuales, comerciales, laborales o legales que desarrolle. Respecto de las bases de datos que administra para la finalidad de la garantía crediticia, FMC actúa como Responsable del Tratamiento; en los demás casos podrá tener la calidad de Encargado o de Responsable, según reciba los datos de un tercero o los recabe y defina por sí mismo su finalidad.</p>
+<p>Esta Política obliga a las siguientes personas:</p>
+<ol>
+<li><span>Representantes legales y administradores societarios.</span></li>
+<li><span>Personal interno de FMC, directivo o no, que custodie o trate bases de datos de carácter personal.</span></li>
+<li><span>Contratistas y personas naturales o jurídicas que presten servicios a FMC bajo cualquier modalidad contractual y que, en virtud de ello, realicen cualquier Tratamiento de Datos Personales.</span></li>
+<li><span>Accionistas, revisores fiscales y demás personas con quienes exista una relación legal de orden estatutario.</span></li>
+<li><span>Personas públicas o privadas en condición de usuarios de los Datos Personales.</span></li>
+<li><span>Las demás personas que establezca la ley.</span></li>
+</ol>
+<h3>3.2. Poblaciones objeto del Tratamiento</h3>
+<p>El Tratamiento de Datos Personales por parte de FMC recae sobre las siguientes categorías de Titulares:</p>
+<ul>
+<li><span><strong>Intermediarios (mutuales) con convenio:</strong> entidades intermediarias (mutuales) con convenio de garantía crediticia vigente con FMC, así como sus representantes legales, funcionarios y personas de contacto. Sus datos se tratan para la operación del ciclo de la garantía, el relacionamiento comercial y el envío de políticas, procedimientos y documentos del Fondo en su condición de avalista.</span></li>
+<li><span><strong>Deudores beneficiarios de la garantía (personas naturales):</strong> asociados o clientes de las mutuales que resultan beneficiarios de la garantía otorgada por FMC. Estos Titulares no son clientes directos de FMC, sino de la mutual: es la mutual quien capta de ellos, al originar el crédito, la autorización previa, expresa e informada para el Tratamiento de sus Datos Personales. Dicha autorización debe habilitar expresamente a FMC —como avalista o garante— a recibir y tratar tales datos para la finalidad de la garantía, y a consultar y reportar a las centrales de riesgo en los términos de la Ley 1266 de 2008. Respecto de las bases que administra para esa finalidad, FMC actúa como Responsable del Tratamiento. FMC verificará y estandarizará con las mutuales la cláusula de autorización, de modo que incluya a FMC como receptor de los datos y comprenda las finalidades crediticias y de habeas data financiero.</span></li>
+<li><span><strong>Proveedores y contratistas:</strong> personas naturales, o personas naturales vinculadas a personas jurídicas, que prestan servicios a FMC bajo cualquier modalidad contractual. Sus datos se tratan para la gestión precontractual y contractual, el pago de obligaciones y el cumplimiento de deberes legales.</span></li>
+<li><span><strong>Empleados y colaboradores:</strong> personas naturales vinculadas laboralmente o que ejecuten labores por cuenta de FMC, cuyos datos se tratan para la gestión de la relación laboral y el cumplimiento de obligaciones legales y reglamentarias. Se incluyen las personas candidatas a vacantes, respecto de sus procesos de selección.</span></li>
+<li><span><strong>Aliados estratégicos:</strong> terceros con quienes FMC mantiene relaciones para la emisión, administración o recuperación de las garantías (agentes comerciales, operadores de recuperación de cartera y demás aliados), respecto de cuyos representantes y personas de contacto se realiza Tratamiento para los fines del relacionamiento y la operación de la garantía.</span></li>
+</ul>
+</section>
+<section class="doc-section" id="definiciones">
+<h2><span class="cap">IV.</span> Definiciones y clasificación de datos</h2>
+<h3>4.1. Definiciones</h3>
+<p>Para los efectos de la presente Política, los siguientes términos tendrán el significado que a continuación se indica, en singular y plural, y se entenderán modificados cuando la ley, la reglamentación aplicable o las autoridades competentes así lo dispongan:</p>
+<ul>
+<li><span><strong>Autorización:</strong> consentimiento previo, expreso e informado del Titular para llevar a cabo el Tratamiento de Datos Personales.</span></li>
+<li><span><strong>Aviso de Privacidad:</strong> comunicación verbal o escrita generada por el Responsable y dirigida al Titular, mediante la cual se le informa sobre la existencia de las políticas de Tratamiento que le serán aplicables, la forma de acceder a ellas y las finalidades del Tratamiento.</span></li>
+<li><span><strong>Base de Datos:</strong> conjunto organizado de Datos Personales objeto de Tratamiento.</span></li>
+<li><span><strong>Dato Personal:</strong> cualquier información vinculada o que pueda asociarse a una o varias personas naturales determinadas o determinables.</span></li>
+<li><span><strong>Dato Sensible:</strong> aquel que afecta la intimidad del Titular o cuyo uso indebido puede generar su discriminación, tales como los que revelen origen racial o étnico, orientación política, convicciones religiosas o filosóficas, pertenencia a sindicatos u organizaciones sociales o de derechos humanos, así como los datos relativos a la salud, a la vida sexual y los datos biométricos.</span></li>
+<li><span><strong>Encargado del Tratamiento:</strong> persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros realice el Tratamiento de Datos Personales por cuenta del Responsable.</span></li>
+<li><span><strong>Responsable del Tratamiento:</strong> persona natural o jurídica, pública o privada, que por sí misma o en asocio con otros decida sobre la base de datos y/o el Tratamiento de los datos.</span></li>
+<li><span><strong>Titular:</strong> persona natural cuyos Datos Personales sean objeto de Tratamiento.</span></li>
+<li><span><strong>Tratamiento:</strong> cualquier operación o conjunto de operaciones sobre Datos Personales, tales como la recolección, almacenamiento, uso, circulación o supresión.</span></li>
+<li><span><strong>Fuente de información:</strong> persona, entidad u organización que recibe o conoce datos personales de los Titulares por una relación comercial o de servicio, y que los suministra a un operador de información. En esta condición actúa FMC al reportar a las centrales de riesgo.</span></li>
+<li><span><strong>Usuario de información:</strong> persona que, en los términos de la Ley 1266 de 2008, puede acceder a información personal de uno o varios Titulares suministrada por un operador, para su uso interno. En esta condición actúa FMC al consultar las centrales de riesgo para valorar el riesgo crediticio.</span></li>
+<li><span><strong>Operador de información:</strong> persona que administra bases de datos de información financiera, crediticia, comercial o de servicios (central de riesgo) y que la pone en circulación.</span></li>
+</ul>
+<h3>4.2. Clasificación de los Datos Personales</h3>
+<p>Conforme al régimen legal y a la naturaleza de la operación de FMC, los Datos Personales se clasifican así:</p>
+<ul>
+<li><span><strong>Dato Público:</strong> aquel calificado como tal por la ley o la Constitución y el que no sea semiprivado, privado o sensible. Son públicos, entre otros, los datos relativos al estado civil de las personas, a su profesión u oficio y a su calidad de comerciante o de servidor público, así como los contenidos en documentos públicos, registros públicos y sentencias ejecutoriadas no sometidas a reserva. Ejemplo en la operación de FMC: el nombre.</span></li>
+<li><span><strong>Dato Semiprivado:</strong> aquel que no tiene naturaleza íntima, reservada ni pública, y cuyo conocimiento o divulgación puede interesar no solo a su Titular, sino a un grupo de personas o a la sociedad en general. Comprende, de manera relevante para FMC, la información financiera y crediticia (comportamiento de pago, cumplimiento o incumplimiento de obligaciones), sujeta de manera especial a la Ley 1266 de 2008.</span></li>
+<li><span><strong>Dato Privado:</strong> aquel que por su naturaleza íntima o reservada solo es relevante para el Titular. Comprende, entre otros, las direcciones de residencia, los números de contacto personal y los correos electrónicos personales.</span></li>
+<li><span><strong>Dato Sensible:</strong> aquel que afecta la intimidad del Titular o cuyo uso indebido puede generar discriminación. FMC, por la naturaleza de su operación, no requiere tratar datos sensibles; en el evento de recolectar alguno (por ejemplo, datos biométricos), su Tratamiento exigirá autorización expresa que informe el carácter facultativo de la respuesta y las finalidades específicas, con la observancia reforzada de las medidas de seguridad.</span></li>
+</ul>
+<h3>4.3. Distinción entre Transmisión y Transferencia de datos</h3>
+<p>Para efectos de la comunicación de datos dentro o fuera del territorio nacional, FMC distingue entre las siguientes operaciones:</p>
+<ul>
+<li><span><strong>Transmisión:</strong> Tratamiento de Datos Personales que implica su comunicación, dentro o fuera de Colombia, cuando tenga por objeto la realización de un Tratamiento por el Encargado por cuenta del Responsable. En este caso, el destinatario no decide sobre los datos: los procesa siguiendo las instrucciones del Responsable.</span></li>
+<li><span><strong>Transferencia:</strong> envío de Datos Personales a un receptor que es, a su vez, Responsable del Tratamiento (decide sobre los datos) y que se encuentra dentro o fuera del país.</span></li>
+</ul>
+<p>Esta distinción es decisiva para FMC. Los proveedores de infraestructura tecnológica que soportan los sistemas de FMC —ubicados en los Estados Unidos de América— tratan los datos por cuenta y según las instrucciones de FMC, por lo que ostentan la calidad de Encargados y la operación constituye una transmisión internacional, no una transferencia. El listado maestro de estos Encargados, sus finalidades y el encuadre legal completo de la transmisión internacional se desarrollan en el Capítulo XII de este Manual, al cual se remite.</p>
+</section>
+<section class="doc-section" id="principios">
+<h2><span class="cap">V.</span> Principios rectores del Tratamiento</h2>
+<p>A fin de dar correcto cumplimiento a la normatividad aplicable, en especial a lo dispuesto en el artículo 4 de la Ley 1581 de 2012, cuando FONDO MUTUO DE COBERTURA S.A.S. realice el Tratamiento de Datos Personales se regirá por los siguientes principios rectores, los cuales son de obligatoria observancia y se aplican de manera armónica e integral:</p>
+<ul>
+<li><span><strong>Principio de legalidad:</strong> El Tratamiento de Datos Personales es una actividad reglada que debe sujetarse a lo establecido en las normas que regulan la materia, en particular la Ley 1581 de 2012, el Decreto 1074 de 2015 y la Ley 1266 de 2008.</span></li>
+<li><span><strong>Principio de finalidad:</strong> El Tratamiento de los Datos Personales recolectados por FMC debe obedecer a una finalidad legítima, determinada y explícita, de acuerdo con la Constitución y la ley, la cual debe ser informada al Titular de manera previa o concomitante con la recolección.</span></li>
+<li><span><strong>Principio de libertad:</strong> El Tratamiento sólo puede llevarse a cabo con el consentimiento previo, expreso e informado del Titular. Los Datos Personales no podrán ser obtenidos o divulgados sin previa autorización, o en ausencia de mandato legal o judicial que releve el consentimiento.</span></li>
+<li><span><strong>Principio de veracidad o calidad:</strong> La información sujeta a Tratamiento debe ser veraz, completa, exacta, actualizada, comprobable y comprensible. Se prohíbe el Tratamiento de datos parciales, incompletos, fraccionados o que induzcan a error.</span></li>
+<li><span><strong>Principio de transparencia:</strong> En el Tratamiento debe garantizarse el derecho del Titular a obtener de FMC, en cualquier momento y sin restricciones, información acerca de la existencia de datos que le conciernan.</span></li>
+<li><span><strong>Principio de acceso y circulación restringida:</strong> El Tratamiento sólo podrá hacerse por las personas autorizadas por el Titular y/o por las personas previstas en la ley. Los Datos Personales, salvo la información pública, no podrán estar disponibles en internet u otros medios de divulgación o comunicación masiva, salvo que el acceso sea técnicamente controlable para brindar un conocimiento restringido sólo a los Titulares o a terceros autorizados.</span></li>
+<li><span><strong>Principio de seguridad:</strong> La información sujeta a Tratamiento por parte de FMC se protegerá mediante el uso de las medidas técnicas, humanas y administrativas que sean necesarias para otorgar seguridad a los registros, evitando su adulteración, pérdida, consulta, uso o acceso no autorizado o fraudulento.</span></li>
+<li><span><strong>Principio de confidencialidad:</strong> Todas las personas que intervengan en el Tratamiento de Datos Personales que no tengan la naturaleza de públicos están obligadas a garantizar la reserva de la información, inclusive después de finalizada su relación con alguna de las labores que comprende el Tratamiento, pudiendo sólo realizar suministro o comunicación de Datos Personales cuando ello corresponda al desarrollo de las actividades autorizadas en la ley.</span></li>
+</ul>
+<p>Adicionalmente, dado el carácter financiero y crediticio de la operación de FMC como avalista y garante, y en virtud del régimen especial de la Ley 1266 de 2008 (Habeas Data financiero), el Tratamiento de la información crediticia se rige también por el siguiente principio:</p>
+<ul>
+<li><span><strong>Principio de temporalidad o caducidad de la información:</strong> El dato no podrá ser suministrado ni utilizado más allá del tiempo razonable y necesario para el cumplimiento de la finalidad para la cual fue previsto. En consecuencia, vencido dicho término, opera su exclusión de la base de datos, con el fin de evitar que la información allí consignada pueda ser usada para fines distintos a los autorizados. En materia de información crediticia negativa reportada a operadores de información (centrales de riesgo), la permanencia y caducidad del dato se sujetan a los términos especiales del artículo 13 de la Ley 1266 de 2008 y demás normas concordantes que lo modifiquen o complementen.</span></li>
+</ul>
+</section>
+<section class="doc-section" id="finalidades">
+<h2><span class="cap">VI.</span> Finalidades del Tratamiento</h2>
+<p>FMC reconoce que el Titular de los Datos Personales tiene derecho a una expectativa razonable de privacidad, considerando siempre sus responsabilidades, derechos y obligaciones frente a la Empresa. En virtud de la relación establecida entre FMC y el Titular, se informa que los Datos Personales recolectados, utilizados, actualizados, circulados, transmitidos, transferidos, suprimidos y, en general, sometidos a cualquier forma de Tratamiento, se tratarán de acuerdo con las finalidades previamente informadas al Titular, las cuales corresponden en todo caso al desarrollo del objeto social de la Empresa y a sus actividades ordinarias como avalista y garante de obligaciones crediticias.</p>
+<p>Las finalidades aquí descritas son determinadas, explícitas y legítimas, y se informan al Titular de manera previa o concomitante con la recolección de sus datos, en cumplimiento del principio de finalidad.</p>
+<h3>6.1. Finalidades generales</h3>
+<p>Las siguientes finalidades serán aplicables a todos los Titulares que hayan autorizado de forma previa, expresa e informada el Tratamiento de sus Datos Personales, sea directamente o por conducto del intermediario financiero (mutual) que captó la autorización al originar el crédito:</p>
+<ol>
+<li><span>Registrar y administrar la información personal en los sistemas y bases de datos de FMC.</span></li>
+<li><span>Establecer y gestionar la relación precontractual, contractual, comercial, civil o de cualquier otra índole que surja en virtud del cumplimiento de una obligación legal o contractual a cargo de la Empresa.</span></li>
+<li><span>Dar cumplimiento a las obligaciones contractuales derivadas de la garantía, incluyendo el pago, la administración, el seguimiento y la liquidación de las obligaciones respaldadas.</span></li>
+<li><span>Transmitir y transferir los Datos Personales en los términos y con las garantías legales aplicables a cada una de estas operaciones, conforme al Capítulo XII de este Manual.</span></li>
+<li><span>Atender solicitudes de información de entidades gubernamentales, administrativas o judiciales en ejercicio de sus funciones legales o por orden judicial.</span></li>
+<li><span>Brindar soporte en procesos de auditoría externa o interna, nacional o internacional.</span></li>
+<li><span>Recolectar y tratar los datos necesarios para el cumplimiento de los deberes que, como Responsable del Tratamiento, le corresponden a FMC.</span></li>
+<li><span>Informar al Titular sobre cambios sustanciales en la presente Política de Tratamiento de Datos Personales.</span></li>
+<li><span>Atender y dar respuesta a las peticiones, consultas, quejas, reclamos y sugerencias (PQRS) que radiquen los Titulares a través de cualquiera de los canales habilitados por la Empresa para tal efecto.</span></li>
+<li><span>Realizar el control y la prevención del fraude, del lavado de activos y de la financiación del terrorismo, incluyendo —sin limitarse a ello— la consulta en listas restrictivas y vinculantes y el Tratamiento de toda la información requerida en el marco del Sistema de Administración del Riesgo de Lavado de Activos y Financiación del Terrorismo (SARLAFT), en cumplimiento de los deberes legales aplicables a la Empresa.</span></li>
+<li><span>Identificar al deudor beneficiario de la garantía y a sus codeudores.</span></li>
+<li><span>Consultar, en cualquier tiempo, en las centrales de riesgo y operadores de información, los datos relevantes para conocer el desempeño del Titular como deudor, su capacidad de pago y para valorar el riesgo de otorgar o mantener la garantía, en observancia del deber de usuario de información previsto en la Ley 1266 de 2008.</span></li>
+<li><span>Reportar a las centrales de riesgo y operadores de información el cumplimiento o incumplimiento de las obligaciones a cargo del Titular, en observancia del deber de fuente de información previsto en la Ley 1266 de 2008, previa notificación al Titular en los términos legales.</span></li>
+<li><span>Suministrar a las centrales de riesgo los datos relativos a solicitudes de crédito, así como los referentes a relaciones comerciales, financieras y, en general, socioeconómicas que el deudor entregue a la Empresa o que consten en registros públicos, bases de datos o documentos públicos.</span></li>
+<li><span>Informar al intermediario financiero, a los agentes comerciales, a los operadores de recuperación de cartera y a los terceros con quienes se tenga una relación contractual para la emisión o administración de las garantías, acerca del estado y comportamiento de la(s) garantía(s), así como actualizar y compartir con ellos la información financiera, comercial o de contacto pertinente.</span></li>
+<li><span>Transferir información personal a terceros adquirentes de la cartera que haya enajenado FMC.</span></li>
+<li><span>Ofrecer productos y servicios de FMC que complementen el producto de la garantía, así como adelantar la comercialización y el mercadeo de los productos de garantía.</span></li>
+<li><span>Tratar los datos que el Titular suministre o que la Empresa recolecte a través de sus distintos canales de atención para la radicación de solicitudes, consultas, quejas y reclamos, con la finalidad de atenderlos y darles respuesta.</span></li>
+<li><span>Cualquier otra finalidad que resulte de la relación entre el Titular y FMC o de la autorización otorgada por el Titular.</span></li>
+</ol>
+<h3>6.2. Finalidades para el Tratamiento de Datos Personales de intermediarios financieros</h3>
+<p>FMC dará Tratamiento a los Datos Personales de los intermediarios financieros (entidades mutuales con convenio) y de sus funcionarios o representantes, de acuerdo con las siguientes finalidades:</p>
+<ol>
+<li><span>Mantener el registro histórico y estadístico del intermediario financiero, y/o de su funcionario o representante vinculado, en su calidad de contraparte con la cual FMC mantiene relaciones comerciales vigentes en el marco del convenio de garantía.</span></li>
+<li><span>Emplear la información con fines de contacto para la operación de las diferentes fases del ciclo de la garantía de las obligaciones respaldadas por la Empresa.</span></li>
+<li><span>Adelantar el relacionamiento comercial y enviar políticas, procedimientos, comunicaciones y documentos de FMC en su condición de avalista de la garantía prestada.</span></li>
+<li><span>Gestionar el acceso, la operación y la trazabilidad del intermediario en el portal seguro dispuesto por la Empresa, así como administrar los permisos y el aislamiento de la información que le corresponde a cada intermediario.</span></li>
+</ol>
+<h3>6.3. Finalidades para el Tratamiento de Datos Personales de deudores beneficiarios de garantías (personas naturales)</h3>
+<p>FMC realizará el Tratamiento de los Datos Personales de los deudores beneficiarios de la garantía, personas naturales, para los siguientes fines:</p>
+<ol>
+<li><span>Ofrecer productos y servicios de FMC que complementen el producto de la garantía.</span></li>
+<li><span>Actualizar, verificar y complementar los Datos Personales y de contacto del deudor, tales como número de celular, dirección de residencia, teléfono fijo y correo electrónico.</span></li>
+<li><span>Realizar análisis de riesgo, estadísticos, de control, de supervisión, encuestas, gestión de cobranza, comercialización de productos y mercadeo.</span></li>
+<li><span>Consultar y reportar en centrales de riesgo y operadores de información, en observancia de los deberes de fuente y de usuario de información en los términos de la Ley 1266 de 2008, incluyendo la notificación previa al Titular antes de efectuar reportes negativos, con la antelación mínima exigida por la ley.</span></li>
+<li><span>Enviar comunicaciones comerciales y publicidad relacionada con los servicios prestados por FMC.</span></li>
+<li><span>Enviar comunicaciones relacionadas con el estado de pago de la obligación, los posibles incumplimientos de la obligación crediticia y demás aspectos propios de la administración de la garantía.</span></li>
+<li><span>Atender consultas y reclamos en relación con el servicio prestado por FMC o respecto del Tratamiento de sus Datos Personales.</span></li>
+</ol>
+</section>
+<section class="doc-section" id="autorizacion">
+<h2><span class="cap">VII.</span> Autorización del Titular</h2>
+<h3>7.1. Regla general</h3>
+<p>Para el Tratamiento de los Datos Personales, FMC solicitará y conservará la autorización previa, expresa e informada del Titular, de conformidad con los artículos 9 y 12 de la Ley 1581 de 2012. La autorización es informada cuando, al momento de obtenerla o con anterioridad, se pone en conocimiento del Titular el Tratamiento al que serán sometidos sus Datos Personales, la finalidad del mismo y los derechos que le asisten como Titular.</p>
+<p>La recolección de Datos Personales se limitará a aquellos que sean pertinentes, adecuados y necesarios para: (i) el desarrollo del objeto social de FMC; (ii) la atención y respuesta de las PQRS que se radiquen; (iii) el desarrollo de relaciones comerciales y financieras; (iv) la finalidad que el Titular se proponga conforme a la normatividad vigente; y (v) la atención de las solicitudes efectuadas por las autoridades y los entes de control.</p>
+<h3>7.2. Medios para otorgar y conservar la autorización</h3>
+<p>La autorización podrá obtenerse por cualquier medio que pueda ser objeto de consulta y verificación posterior; en particular, de manera verbal, escrita, electrónica o mediante conductas inequívocas del Titular que permitan concluir de forma razonable que otorgó su consentimiento. En ningún caso el silencio del Titular podrá asimilarse a la autorización.</p>
+<p>FMC conservará la prueba de la autorización otorgada por el Titular, así como del cumplimiento del deber de informar, mediante los mecanismos y soportes que disponga para tal efecto, durante el tiempo en que se mantenga el Tratamiento. Para la captación directa de autorizaciones, FMC adopta el Formato de Autorización FM-GA-PDP-002, asociado a este Manual.</p>
+<h3>7.3. Cadena de autorización captada por conducto del intermediario (mutual)</h3>
+<p>Dada la estructura del modelo de negocio de FMC como avalista y garante, el deudor beneficiario de la garantía no es, por regla general, cliente directo de la Empresa, sino asociado o cliente del intermediario financiero (mutual) que origina el crédito. En consecuencia, la cadena de autorización opera de la siguiente manera:</p>
+<ol>
+<li><span><strong>Captación por la mutual:</strong> El intermediario financiero (mutual), al momento de originar el crédito, capta del Titular la autorización previa, expresa e informada para el Tratamiento de sus Datos Personales.</span></li>
+<li><span><strong>Habilitación a FMC:</strong> Dicha autorización debe habilitar expresamente la comunicación de los datos del Titular a FMC, en su condición de avalista y garante, así como el Tratamiento de tales datos para las finalidades propias de la garantía y para la consulta y el reporte ante centrales de riesgo y operadores de información, en los términos de la Ley 1266 de 2008.</span></li>
+<li><span><strong>Calidad de Responsable:</strong> Respecto de las bases de datos que administra para la finalidad de la garantía, FMC actúa como Responsable del Tratamiento, en tanto decide sobre dichas bases y sobre las finalidades del Tratamiento.</span></li>
+</ol>
+<p>Para garantizar la validez del Tratamiento que efectúa FMC, la Empresa verificará y propenderá por estandarizar, con cada uno de los intermediarios financieros con convenio, que el texto de la autorización captada del Titular: (i) incluya expresamente a FMC como receptor y Responsable del Tratamiento; (ii) contemple las finalidades de administración de la garantía; y (iii) contemple las finalidades de Tratamiento de datos crediticios, incluida la consulta y el reporte a centrales de riesgo conforme a la Ley 1266 de 2008. Esta verificación constituye un control esencial para la legitimidad del Tratamiento y será objeto de seguimiento permanente por parte de la Empresa.</p>
+<h3>7.4. Casos en que no se requiere autorización</h3>
+<p>La autorización del Titular no será necesaria en los casos expresamente previstos en el artículo 10 de la Ley 1581 de 2012, a saber:</p>
+<ol class="alpha">
+<li><span>Información requerida por una entidad pública o administrativa en ejercicio de sus funciones legales o por orden judicial.</span></li>
+<li><span>Datos de naturaleza pública.</span></li>
+<li><span>Casos de urgencia médica o sanitaria.</span></li>
+<li><span>Tratamiento de información autorizado por la ley para fines históricos, estadísticos o científicos.</span></li>
+<li><span>Datos relacionados con el Registro Civil de las personas.</span></li>
+</ol>
+<p>Aun en los casos anteriores, FMC dará cumplimiento a los demás principios y deberes establecidos en la normatividad vigente, incluido el deber de informar al Titular. Se precisa que, en materia financiera y crediticia, la consulta y el reporte a centrales de riesgo no constituyen una excepción del artículo 10 citado, sino una finalidad legítima soportada en la autorización del Titular, conforme a la Ley 1266 de 2008.</p>
+<h3>7.5. Revocatoria de la autorización</h3>
+<p>El Titular podrá revocar en cualquier momento la autorización otorgada para el Tratamiento de sus Datos Personales y/o solicitar la supresión de los mismos. Esta revocatoria y/o supresión procederá: (i) cuando la Superintendencia de Industria y Comercio haya determinado que en el Tratamiento el Responsable o el Encargado han incurrido en conductas contrarias a la ley y a la Constitución; o (ii) cuando, no existiendo un deber legal o contractual que imponga al Titular la permanencia de sus datos en las bases de FMC, así lo solicite el Titular.</p>
+<p>La solicitud de revocatoria o supresión podrá presentarse a través del canal oficial de atención de Habeas Data, el correo electrónico <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a>, o mediante comunicación física radicada en la Calle 52 No. 49-28, Ed. La Lonja, Piso 10, Medellín, y será atendida conforme a los procedimientos y términos establecidos en este Manual. Tratándose de información crediticia reportada a operadores de información, la permanencia del dato se sujetará a las reglas especiales de la Ley 1266 de 2008, las cuales prevalecen sobre la mera voluntad del Titular.</p>
+</section>
+<section class="doc-section" id="derechos">
+<h2><span class="cap">VIII.</span> Derechos de los Titulares de la información</h2>
+<p>De conformidad con el artículo 8 de la Ley 1581 de 2012 y las disposiciones concordantes del Decreto 1074 de 2015, el Titular de los datos personales tiene, frente a FMC en su condición de Responsable del Tratamiento, los siguientes derechos:</p>
+<ol>
+<li><span>Conocer, actualizar y rectificar sus datos personales frente al Responsable del Tratamiento o ante los Encargados del Tratamiento. Este derecho podrá ejercerse, entre otros, respecto de datos parciales, inexactos, incompletos, fraccionados, que induzcan a error, o aquellos cuyo Tratamiento esté expresamente prohibido o no haya sido autorizado.</span></li>
+<li><span>Solicitar prueba de la autorización otorgada al Responsable del Tratamiento, salvo cuando expresamente se exceptúe como requisito para el Tratamiento, de conformidad con lo previsto en el artículo 10 de la Ley 1581 de 2012.</span></li>
+<li><span>Ser informado, previa solicitud, respecto del uso que se ha dado a sus datos personales.</span></li>
+<li><span>Presentar quejas ante la Superintendencia de Industria y Comercio por infracciones a lo dispuesto en la Ley 1581 de 2012 y las demás normas que la modifiquen, adicionen o complementen, una vez agotado el trámite de consulta o reclamo ante el Responsable del Tratamiento.</span></li>
+<li><span>Revocar la autorización y/o solicitar la supresión del dato. La revocatoria y/o supresión procederá: (i) cuando la Superintendencia de Industria y Comercio haya determinado que en el Tratamiento el Responsable o el Encargado han incurrido en conductas contrarias a la ley y a la Constitución; o (ii) cuando, no existiendo un deber legal o contractual de permanecer en la base de datos, así lo solicite el Titular.</span></li>
+<li><span>Acceder en forma gratuita a sus datos personales que hayan sido objeto de Tratamiento.</span></li>
+</ol>
+<h3>8.1. Tratamiento del dato financiero y crediticio (Ley 1266 de 2008)</h3>
+<p>En razón de que FMC consulta y reporta información a los operadores de información (centrales de riesgo), el Titular del dato financiero y crediticio goza, adicionalmente, de los derechos reconocidos en la Ley 1266 de 2008, en especial los siguientes:</p>
+<ol>
+<li><span>A ser informado previamente, antes del reporte de información negativa por incumplimiento de obligaciones, conforme al artículo 12 de la Ley 1266 de 2008, con la antelación mínima de veinte (20) días calendario establecida por la modulación de la Sentencia C-1011 de 2008 y la práctica de los operadores.</span></li>
+<li><span>A que la información reportada sea veraz, completa, exacta, actualizada y comprobable, y a solicitar su rectificación o actualización cuando ello no se cumpla.</span></li>
+<li><span>A que la información negativa permanezca reportada únicamente por el término legal de permanencia (caducidad del dato), conforme al principio de temporalidad y a las reglas del artículo 13 de la Ley 1266 de 2008 y las disposiciones de la Ley 2157 de 2021.</span></li>
+</ol>
+<h3>8.2. Personas legitimadas para recibir información</h3>
+<p>La información relacionada con el manejo y Tratamiento de los datos personales será suministrada únicamente a las siguientes personas:</p>
+<ol>
+<li><span>A los Titulares, sus causahabientes o sus representantes legales, previa acreditación de su identidad o de la representación.</span></li>
+<li><span>A las entidades públicas o administrativas en ejercicio de sus funciones legales o por orden judicial.</span></li>
+<li><span>A los terceros autorizados por el Titular o por la ley.</span></li>
+</ol>
+</section>
+<section class="doc-section" id="consultas-reclamos">
+<h2><span class="cap">IX.</span> Procedimientos para la atención de consultas y reclamos</h2>
+<p>El ejercicio de los derechos reconocidos en el capítulo anterior se canaliza a través de los procedimientos de consulta y reclamo aquí descritos. El canal oficial habilitado por FMC para la atención de estas solicitudes y, en general, para el ejercicio de los derechos de Habeas Data, es el correo electrónico <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a>; también podrán radicarse solicitudes físicas en la Calle 52 No. 49-28, Ed. La Lonja, Piso 10, Medellín (Antioquia). La vigilancia del cumplimiento de estos procedimientos está a cargo del Oficial de Protección de Datos, Adrian López Aisales, quien reporta a dicho canal; en todo caso, el responsable legal del Tratamiento es FONDO MUTUO DE COBERTURA S.A.S. como persona jurídica. Toda solicitud recibida se registra internamente para garantizar su trazabilidad.</p>
+<h3>9.1. Consultas</h3>
+<p>Los Titulares y las personas legitimadas podrán consultar los datos personales que reposen en las bases de datos administradas por FMC. Para ello deberán dirigirse al canal oficial señalado en este Manual y acreditar la calidad en la que actúan.</p>
+<ul>
+<li><span><strong>Legitimados:</strong> el Titular, sus causahabientes o su representante legal, previa acreditación de su identidad o de la representación. Cuando la solicitud sea formulada por persona distinta del Titular, deberá acreditarse en debida forma la personería o el mandato para actuar; en su defecto, la solicitud se tendrá por no presentada.</span></li>
+<li><span><strong>Término de respuesta:</strong> la consulta será atendida en un término máximo de diez (10) días hábiles contados a partir de la fecha de recibo de la misma.</span></li>
+<li><span><strong>Prórroga:</strong> cuando no fuere posible atender la consulta dentro de dicho término, se informará a la persona interesada, expresando los motivos de la demora y señalando la fecha en que se atenderá su consulta, la cual en ningún caso podrá superar los cinco (5) días hábiles siguientes al vencimiento del primer término.</span></li>
+</ul>
+<p>Este procedimiento se ajusta a lo dispuesto en el artículo 14 de la Ley 1581 de 2012 y, en materia de dato financiero y crediticio, en el artículo 16 de la Ley 1266 de 2008.</p>
+<h3>9.2. Reclamos</h3>
+<p>El Titular o sus causahabientes que consideren que la información contenida en una base de datos debe ser objeto de corrección, actualización o supresión, o cuando adviertan el presunto incumplimiento de cualquiera de los deberes contenidos en la ley, podrán presentar un reclamo ante FMC, conforme al artículo 15 de la Ley 1581 de 2012.</p>
+<p><strong>Legitimados.</strong> Los derechos de rectificación, actualización o supresión únicamente podrán ejercerse por:</p>
+<ol>
+<li><span>El Titular o sus causahabientes, previa acreditación de su identidad, o a través de instrumentos electrónicos que le permitan identificarse.</span></li>
+<li><span>Su representante, previa acreditación de la representación. Cuando la solicitud sea formulada por persona diferente del Titular, deberá acreditarse en debida forma la personería o el mandato para actuar; en caso de no acreditar tal calidad, la solicitud se tendrá por no presentada.</span></li>
+</ol>
+<p><strong>Requisitos mínimos del reclamo.</strong> La solicitud deberá presentarse a través del canal oficial <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a> (o físicamente en la dirección indicada) y contener, como mínimo, la siguiente información:</p>
+<ol>
+<li><span>Nombre y domicilio del Titular o cualquier otro medio para recibir la respuesta.</span></li>
+<li><span>Documentos que acrediten la identidad del Titular o la personalidad de su representante.</span></li>
+<li><span>La descripción clara y precisa de los datos personales respecto de los cuales el Titular busca ejercer alguno de sus derechos.</span></li>
+<li><span>En caso de ser necesario, otros elementos o documentos que faciliten la localización de los datos personales.</span></li>
+</ol>
+<p><strong>Subsanación del reclamo incompleto.</strong> Si el reclamo resulta incompleto, se requerirá a la persona interesada dentro de los cinco (5) días hábiles siguientes a su recepción para que subsane las fallas. Transcurridos dos (2) meses desde la fecha del requerimiento sin que se presente la información requerida, se entenderá que ha desistido del reclamo.</p>
+<p><strong>Término de respuesta.</strong> El término máximo para atender el reclamo será de quince (15) días hábiles contados a partir del día siguiente a la fecha de su recibo.</p>
+<p><strong>Prórroga.</strong> Cuando no fuere posible atender el reclamo dentro de dicho término, se informarán los motivos de la demora y la fecha en que se atenderá el reclamo, la cual en ningún caso podrá superar los ocho (8) días hábiles siguientes al vencimiento del primer término.</p>
+<p>Este procedimiento se ajusta a lo dispuesto en el artículo 15 de la Ley 1581 de 2012 y, en materia de dato financiero y crediticio, en el artículo 16 de la Ley 1266 de 2008.</p>
+<h3>9.3. Rectificación y actualización de datos</h3>
+<p>FMC está en la obligación de rectificar y actualizar, a solicitud del Titular, la información que resulte incompleta o inexacta, de conformidad con el procedimiento y los términos antes señalados. Para tal efecto:</p>
+<ol>
+<li><span>En las solicitudes de rectificación y actualización, el Titular deberá indicar las correcciones a realizar y aportar la documentación que respalde su solicitud.</span></li>
+<li><span>FMC podrá habilitar mecanismos electrónicos u otros que considere adecuados y eficaces para facilitar el ejercicio de este derecho, siempre que sean en beneficio del Titular.</span></li>
+<li><span>Cuando se trate de información financiera o crediticia reportada a operadores de información, FMC, en su condición de fuente, informará al operador que la información se encuentra en discusión por el Titular y procederá a su rectificación o actualización cuando haya lugar, en cumplimiento de la Ley 1266 de 2008.</span></li>
+</ol>
+<h3>9.4. Quejas ante la autoridad de control</h3>
+<p>El Titular podrá presentar quejas ante la Superintendencia de Industria y Comercio por infracciones a lo dispuesto en la normatividad de protección de datos, una vez haya agotado el trámite de consulta o reclamo ante FMC.</p>
+</section>
+<section class="doc-section" id="retencion">
+<h2><span class="cap">X.</span> Retención y supresión de los datos personales</h2>
+<h3>10.1. Política de retención y conservación</h3>
+<p>FMC conservará los datos personales únicamente durante el tiempo que resulte necesario para el cumplimiento de las finalidades informadas al Titular y de los deberes legales y contractuales a su cargo, en aplicación de los principios de finalidad y de temporalidad o caducidad del dato. Para tal efecto, se observarán los siguientes plazos de conservación:</p>
+<ul>
+<li><span><strong>Información financiera y crediticia:</strong> se conservará durante la vigencia de la obligación garantizada y, una vez extinguida ésta, por un periodo adicional de diez (10) años, en armonía con el deber comercial de conservar libros y papeles del comerciante previsto en el artículo 60 del Código de Comercio y con las normas tributarias y contables aplicables.</span></li>
+<li><span><strong>Datos de prospectos que no concretan la garantía:</strong> cuando no se concrete la relación de garantía, los datos se eliminarán o anonimizarán en un plazo máximo de doce (12) meses contados a partir de la última gestión. Este plazo de doce (12) meses constituye una decisión de política interna de FMC —no un plazo legal—, adoptada en aplicación de los principios de finalidad y temporalidad, a diferencia del plazo de diez (10) años, que sí tiene base legal.</span></li>
+</ul>
+<p>Vencidos los términos anteriores, opera la supresión o anonimización de los datos conforme al principio de temporalidad.</p>
+<p><strong>Concurrencia con la caducidad del dato negativo (Ley 1266 de 2008).</strong> El plazo de conservación comercial antes señalado es independiente y no sustituye las reglas propias de permanencia y caducidad del dato financiero negativo reportado a las centrales de riesgo. La información negativa reportada a los operadores de información se rige por su propio término de permanencia, conforme al artículo 13 de la Ley 1266 de 2008, modulado por la Sentencia C-1011 de 2008 y por las reglas de la Ley 2157 de 2021. Ambas reglas conviven: una gobierna la conservación interna de la información por parte de FMC, y la otra gobierna la permanencia del reporte en las bases de los operadores.</p>
+<h3>10.2. Derecho de supresión y su carácter no absoluto</h3>
+<p>El Titular tiene el derecho de solicitar a FMC la supresión (eliminación) de sus datos personales cuando:</p>
+<ol>
+<li><span>Considere que los mismos no están siendo tratados conforme con los principios, deberes y obligaciones previstas en la normatividad vigente.</span></li>
+<li><span>Hayan dejado de ser necesarios o pertinentes para la finalidad para la cual fueron obtenidos.</span></li>
+<li><span>Se haya superado el periodo necesario para el cumplimiento de los fines para los que fueron obtenidos.</span></li>
+</ol>
+<p>La supresión implica la eliminación total o parcial de la información personal, de acuerdo con lo solicitado por el Titular, en los registros, archivos, bases de datos o tratamientos realizados por FMC. En concordancia con lo previsto en los Capítulos VII y VIII, la supresión procede (i) cuando la Superintendencia de Industria y Comercio haya determinado infracción al régimen de protección de datos, o (ii) cuando, no existiendo deber legal o contractual de permanecer en la base de datos, así lo solicite el Titular.</p>
+<p><strong>Carácter no absoluto.</strong> Este derecho no es absoluto. FMC podrá negar el ejercicio de la supresión cuando:</p>
+<ol>
+<li><span>El Titular tenga un deber legal o contractual de permanecer en la base de datos.</span></li>
+<li><span>La eliminación de datos obstaculice actuaciones judiciales o administrativas vinculadas a obligaciones fiscales, a la investigación y persecución de delitos o a la actualización de sanciones administrativas.</span></li>
+<li><span>Los datos sean necesarios para proteger los intereses jurídicamente tutelados del Titular, para realizar una acción en función del interés público, o para cumplir con una obligación legalmente adquirida por el Titular.</span></li>
+<li><span>La petición no sea elevada en la forma indicada en el aviso de privacidad o en el presente Manual.</span></li>
+</ol>
+<p><strong>Prevalencia de la regla financiera.</strong> Tratándose de información financiera y crediticia reportada a las centrales de riesgo, la supresión no se rige por la mera voluntad del Titular sino por las reglas de caducidad y permanencia de la Ley 1266 de 2008. En consecuencia, mientras subsista la obligación o no se haya cumplido el término legal de permanencia del dato negativo, FMC mantendrá el reporte y el registro correspondiente, sin perjuicio de su deber de rectificar o actualizar la información cuando resulte inexacta o desactualizada.</p>
+</section>
+<section class="doc-section" id="seguridad">
+<h2><span class="cap">XI.</span> Seguridad de la información</h2>
+<p>En desarrollo de los principios de seguridad y confidencialidad consagrados en el artículo 4, literales g) y h), de la Ley 1581 de 2012, conforme a los principios rectores del Capítulo V, y en armonía con el principio de seguridad de la Ley 1266 de 2008, FMC ha adoptado medidas técnicas, humanas y administrativas razonables y proporcionales al riesgo, orientadas a otorgar seguridad a los registros, evitando su adulteración, pérdida, consulta, uso o acceso no autorizado o fraudulento. Estas medidas corresponden a la arquitectura real de los sistemas de FMC y son verificables y auditables.</p>
 
-    <div class="doc-section" id="alcance">
-      <h2>2. Ámbito de aplicación o alcance</h2>
-      <p>Esta Política será aplicable a las bases de datos que se encuentren bajo la administración de Fondo Mutuo de Cobertura S.A.S., o sean susceptibles de ser conocidas por éste en virtud de las relaciones laborales o comerciales desarrolladas con empleados, contratistas o proveedores.</p>
-      <p>La presente política se aplicará y obligará a las siguientes personas:</p>
-      <ul>
-        <li>Representantes legales y/o administradores societarios</li>
-        <li>Personal interno de Fondo Mutuo de Cobertura S.A.S., directivos o no, que custodien y traten bases de datos de carácter personal</li>
-        <li>Contratistas y personas naturales o jurídicas que presten sus servicios bajo cualquier tipo de modalidad contractual, en virtud de la cual se realice cualquier tratamiento de datos de carácter personal</li>
-        <li>Los accionistas, revisores fiscales y aquellas otras personas con las cuales exista una relación legal de orden estatutario</li>
-        <li>Personas públicas o privadas en condición de usuarios de los datos personales</li>
-        <li>Las demás personas que establezca la ley</li>
-      </ul>
-    </div>
+<h3>11.1. Medidas técnicas</h3>
+<p>El Tratamiento de datos en los sistemas de FMC se realiza bajo las siguientes salvaguardas técnicas:</p>
+<ol>
+<li><span><strong>Autenticación y gestión de identidad.</strong> El acceso exige autenticación de usuario mediante un servicio de identidad dedicado. El navegador del usuario nunca consulta la base de datos de forma directa: toda operación se canaliza a través de servicios autenticados del lado del servidor.</span></li>
+<li><span><strong>Doble factor de autenticación (2FA).</strong> Se soporta un segundo factor de autenticación mediante contraseñas de un solo uso basadas en tiempo, que puede exigirse de forma obligatoria a todos los usuarios.</span></li>
+<li><span><strong>Control de acceso por rol y aislamiento por entidad.</strong> El acceso está segmentado por perfiles y por módulos funcionales, y cada entidad intermediaria accede únicamente a sus propios datos, sin posibilidad de visualizar la información de otras entidades.</span></li>
+<li><span><strong>Defensa en la base de datos.</strong> Se aplica control de acceso a nivel de registro y se validan usuario y permisos en todas las operaciones, que se ejecutan exclusivamente del lado del servidor.</span></li>
+<li><span><strong>Validación de la información recibida.</strong> La información y los archivos cargados se validan y sanean antes de ser procesados.</span></li>
+<li><span><strong>Cifrado en tránsito y en reposo.</strong> La información viaja cifrada mediante protocolo seguro (TLS/HTTPS) y se almacena cifrada en reposo.</span></li>
+<li><span><strong>Endurecimiento de la capa web.</strong> Se aplican políticas de seguridad de contenido, control de tasa de peticiones para mitigar ataques de fuerza bruta y abuso, y cabeceras de seguridad.</span></li>
+<li><span><strong>Trazabilidad y registro de auditoría.</strong> Las acciones críticas quedan registradas en un registro de auditoría inmutable, que permite establecer quién realizó qué acción, sobre qué dato y en qué momento.</span></li>
+<li><span><strong>Cierre de sesión por inactividad.</strong> Las sesiones inactivas se cierran automáticamente.</span></li>
+<li><span><strong>Borrado lógico con conservación controlada.</strong> La eliminación de registros opera mediante borrado lógico, garantizando la conservación exigida por los deberes legales de retención (ver Capítulo X) y la trazabilidad.</span></li>
+<li><span><strong>Monitoreo.</strong> Se mantiene un sistema de monitoreo de errores y anomalías que facilita la detección temprana de incidentes.</span></li>
+</ol>
+<h3>11.2. Mejora continua</h3>
+<p>FMC entiende la seguridad de la información como un proceso de mejora continua y revisa periódicamente sus controles técnicos y organizativos para fortalecerlos.</p>
 
-    <div class="doc-section" id="conceptos">
-      <h2>3. Conceptos y definiciones</h2>
-      <ul>
-        <li><strong style="color:var(--navy)">Autorización:</strong> Consentimiento previo, expreso e informado del Titular para llevar a cabo el tratamiento de datos personales.</li>
-        <li><strong style="color:var(--navy)">Aviso de Privacidad:</strong> Comunicación verbal o escrita generada por el responsable, dirigida al Titular para el tratamiento de sus datos personales.</li>
-        <li><strong style="color:var(--navy)">Base de Datos:</strong> Conjunto organizado de datos personales objeto de tratamiento.</li>
-        <li><strong style="color:var(--navy)">Dato Personal:</strong> Cualquier información vinculada o que pueda asociarse a una o varias personas naturales determinadas o determinables.</li>
-        <li><strong style="color:var(--navy)">Datos Sensibles:</strong> Aquellos que afectan la intimidad del Titular o cuyo uso indebido puede generar su discriminación.</li>
-        <li><strong style="color:var(--navy)">Encargado del Tratamiento:</strong> Persona natural o jurídica que realice el tratamiento de datos personales por cuenta del responsable.</li>
-        <li><strong style="color:var(--navy)">Responsable del Tratamiento:</strong> Persona natural o jurídica que decida sobre la base de datos y/o el tratamiento de los datos.</li>
-        <li><strong style="color:var(--navy)">Titular:</strong> Persona natural o jurídica cuyos datos personales sean objeto de tratamiento.</li>
-        <li><strong style="color:var(--navy)">Tratamiento:</strong> Cualquier operación sobre datos personales, tales como la recolección, almacenamiento, uso, circulación o supresión.</li>
-        <li><strong style="color:var(--navy)">Transmisión:</strong> Tratamiento de datos personales que implica la comunicación de los mismos dentro o fuera del territorio de la República de Colombia.</li>
-        <li><strong style="color:var(--navy)">Transferencia:</strong> Envío de información o datos personales a un receptor que a su vez es responsable del tratamiento.</li>
-      </ul>
-    </div>
-
-    <div class="doc-section" id="principios">
-      <h2>4. Principios</h2>
-      <ul>
-        <li><strong style="color:var(--navy)">Legalidad:</strong> El tratamiento de datos personales debe sujetarse a lo establecido en las normas que reglamentan la materia.</li>
-        <li><strong style="color:var(--navy)">Finalidad:</strong> El tratamiento debe obedecer a una finalidad legítima de la cual debe ser informada al Titular.</li>
-        <li><strong style="color:var(--navy)">Libertad:</strong> El tratamiento solo puede llevarse a cabo con el consentimiento previo, expreso e informado del Titular.</li>
-        <li><strong style="color:var(--navy)">Veracidad o calidad:</strong> La información sujeta a tratamiento debe ser veraz, completa, exacta, actualizada, comprobable y comprensible.</li>
-        <li><strong style="color:var(--navy)">Transparencia:</strong> Se garantizará el derecho del Titular a obtener información acerca de la existencia de datos que le conciernan, en cualquier momento y sin restricciones.</li>
-        <li><strong style="color:var(--navy)">Acceso y circulación restringida:</strong> El tratamiento solo podrá hacerse por personas autorizadas por el Titular y/o por las personas previstas en la ley.</li>
-        <li><strong style="color:var(--navy)">Seguridad:</strong> La información se protegerá mediante medidas técnicas, humanas y administrativas necesarias para evitar adulteración, pérdida o acceso no autorizado.</li>
-        <li><strong style="color:var(--navy)">Confidencialidad:</strong> Todas las personas que intervengan en el tratamiento están obligadas a garantizar la reserva de la información.</li>
-        <li><strong style="color:var(--navy)">Temporalidad:</strong> El dato no podrá ser utilizado más allá del tiempo para el que fue previsto.</li>
-      </ul>
-    </div>
-
-    <div class="doc-section" id="finalidades">
-      <h2>5. Finalidades</h2>
-      <h3>5.1 Finalidades generales</h3>
-      <ul>
-        <li>Registro de la información personal en los sistemas de Fondo Mutuo de Cobertura S.A.S.</li>
-        <li>Pago de obligaciones contractuales</li>
-        <li>Transmisión y transferencia de datos personales con respecto a las garantías legales aplicables</li>
-        <li>Envío de información a entidades gubernamentales o judiciales por solicitud expresa</li>
-        <li>Soporte en procesos de auditorías externas o internas, nacionales o internacionales</li>
-        <li>Informar sobre cambios en la política adoptada por Fondo Mutuo de Cobertura S.A.S.</li>
-        <li>Establecer y gestionar la relación precontractual y contractual comercial, laboral o civil</li>
-        <li>Responder a las peticiones, consultas, reclamos y/o quejas de los Titulares</li>
-        <li>Control y prevención del fraude y lavado de activos, incluyendo consulta en listas restrictivas y todo lo requerido para el SARLAFT</li>
-        <li>Identificar al deudor beneficiario de la garantía y a sus codeudores</li>
-        <li>Consultar en centrales de riesgo la información relevante para conocer el desempeño como deudor y la capacidad de pago</li>
-        <li>Reportar a las centrales de riesgo el cumplimiento o incumplimiento de las obligaciones</li>
-        <li>Informar al intermediario financiero y terceros relacionados sobre el estado y comportamiento de las garantías</li>
-        <li>Transferir información personal a terceros adquirentes de cartera</li>
-        <li>Ofrecer productos y servicios que complementen el producto de garantía</li>
-      </ul>
-
-      <h3>5.2 Finalidades para el tratamiento de datos de intermediarios financieros</h3>
-      <ul>
-        <li>Registro histórico y estadístico como intermediario financiero vinculado</li>
-        <li>Uso de la información para la operación de las diferentes fases del ciclo de la garantía</li>
-        <li>Relacionamiento comercial y envío de políticas, procedimientos y documentos del Fondo como avalista</li>
-      </ul>
-
-      <h3>5.3 Finalidades para el tratamiento de datos de beneficiarios de garantías (personas naturales)</h3>
-      <ul>
-        <li>Ofrecer productos y servicios que complementen el producto de garantía</li>
-        <li>Actualizar, verificar y complementar los datos personales y de contacto del deudor</li>
-        <li>Realizar análisis de riesgos, estadísticos, de control, supervisión, encuestas y gestión de cobranza</li>
-        <li>Consulta y reporte en centrales de riesgo conforme a la Ley 1266 de 2008</li>
-        <li>Envío de comunicaciones comerciales relacionadas con los servicios prestados</li>
-        <li>Envío de comunicaciones sobre el estado de pago y posibles incumplimientos</li>
-        <li>Atender consultas y reclamos en relación con el servicio o el tratamiento de datos personales</li>
-      </ul>
-    </div>
-
-    <div class="doc-section" id="autorizacion">
-      <h2>6. Autorización</h2>
-      <p>Para el tratamiento de los datos personales, Fondo Mutuo de Cobertura S.A.S. solicitará la autorización previa, expresa e informada del Titular, la cual podrá ser obtenida de manera verbal, escrita, electrónica y/o por conductas inequívocas del Titular.</p>
-      <p>La recolección de datos personales se limitará a aquellos que sean pertinentes, adecuados y necesarios para: (i) el desarrollo del objeto social, (ii) la atención de PQRS, (iii) el desarrollo de relaciones comerciales y financieras, (iv) la intención conforme a la normatividad vigente y (v) la atención de solicitudes de autoridades y entes de control.</p>
-    </div>
-
-    <div class="doc-section" id="derechos">
-      <h2>7. Derechos de los titulares de la información</h2>
-      <p>De conformidad con el artículo 8 de la Ley 1581 de 2012, el Titular tiene los siguientes derechos:</p>
-      <ul>
-        <li>Conocer, actualizar y rectificar sus datos personales</li>
-        <li>Solicitar prueba de la autorización otorgada al responsable del tratamiento</li>
-        <li>Ser informado sobre el uso que se ha dado a sus datos personales</li>
-        <li>Presentar quejas ante la Superintendencia de Industria y Comercio por infracciones a la ley</li>
-        <li>Revocar la autorización y/o solicitar la supresión del dato cuando no se respeten los principios y derechos constitucionales</li>
-        <li>Acceder en forma gratuita a sus datos personales que hayan sido objeto de tratamiento</li>
-      </ul>
-    </div>
-
-    <div class="doc-section" id="procedimientos">
-      <h2>8. Procedimientos para la atención de consultas y reclamos</h2>
-      <h3>8.1 Consultas</h3>
-      <p>Los Titulares podrán realizar consultas sobre sus datos personales a través de los canales habilitados. La consulta será atendida en un término máximo de <strong>diez (10) días hábiles</strong> contados a partir de la fecha de recibo. Cuando no fuere posible atender la consulta dentro de dicho término, se informará al interesado y se indicará la fecha de respuesta, la cual no podrá superar cinco (5) días hábiles adicionales.</p>
-
-      <h3>8.2 Reclamos</h3>
-      <p>El Titular que considere que su información debe ser corregida, actualizada o suprimida, o que advierta incumplimiento de los deberes contenidos en la Ley, podrá presentar un reclamo. El término máximo para atenderlo será de <strong>quince (15) días hábiles</strong>, prorrogables por ocho (8) días hábiles adicionales con justificación.</p>
-      <p>La solicitud debe contener como mínimo:</p>
-      <ul>
-        <li>Nombre y domicilio del titular o medio para recibir respuesta</li>
-        <li>Documentos que acrediten la identidad o representación</li>
-        <li>Descripción clara y precisa de los datos con los cuales se ejerce el derecho</li>
-        <li>Otros documentos que faciliten la localización de los datos</li>
-      </ul>
-
-      <h3>8.3 Supresión de datos</h3>
-      <p>El Titular tiene el derecho de solicitar la supresión de sus datos personales cuando considere que no están siendo tratados conforme a la normatividad, hayan dejado de ser necesarios para la finalidad para la cual fueron obtenidos, o se haya superado el periodo necesario para el cumplimiento de los fines.</p>
-      <p>Fondo Mutuo de Cobertura S.A.S. podrá negar la supresión cuando el Titular tenga un deber legal o contractual de permanecer en la base de datos, o cuando los datos sean necesarios para proteger intereses jurídicamente tutelados.</p>
-    </div>
-
-    <div class="doc-section" id="seguridad">
-      <h2>9. Seguridad de la información y medidas de seguridad</h2>
-      <p>Fondo Mutuo de Cobertura S.A.S. adoptará las medidas técnicas, humanas y administrativas necesarias para otorgar seguridad a los registros, evitando su adulteración, pérdida, consulta, uso o acceso no autorizado o fraudulento, en desarrollo del principio de seguridad establecido en la normatividad vigente.</p>
-    </div>
-
-    <div class="doc-section" id="responsable">
-      <h2>10. Responsable de tratamiento de datos personales</h2>
-      <div class="id-card">
-        <p><strong>Entidad responsable:</strong> Fondo Mutuo de Cobertura S.A.S.</p>
-        <p><strong>Canal de contacto:</strong> admin@fondomutuodecobertura.com</p>
-        <p><strong>Teléfono:</strong> (+57) 310 448 6842</p>
-        <p><strong>Dirección:</strong> Calle 52 # 49-28, Medellín, Antioquia, Colombia</p>
-      </div>
-    </div>
-
-    <div class="doc-section" id="vigencia">
-      <h2>11. Vigencia</h2>
-      <p>La presente política entra en vigencia a partir del <strong>1 de enero de 2026</strong> y tendrá vigencia indefinida hasta que sea modificada o derogada por Fondo Mutuo de Cobertura S.A.S. Cualquier modificación sustancial será informada a los Titulares a través de los canales habilitados.</p>
-      <div class="vigencia-badge">✓ Vigente desde el 1 de enero de 2026</div>
-    </div>
+<h3>11.3. Medidas organizativas y humanas</h3>
+<ol>
+<li><span><strong>Deber de confidencialidad.</strong> Todas las personas que intervengan en el Tratamiento —administración, colaboradores, contratistas y demás vinculados bajo cualquier modalidad— están obligadas a garantizar la reserva de la información, obligación que subsiste aun después de finalizada su relación con FMC.</span></li>
+<li><span><strong>Acceso según el rol (mínimo privilegio).</strong> El acceso a los datos se concede conforme al rol y a las funciones de cada persona, bajo el principio de mínimo privilegio.</span></li>
+<li><span><strong>Capacitación.</strong> FMC promueve la capacitación periódica de su personal en materia de protección de datos personales y seguridad de la información.</span></li>
+<li><span><strong>Vinculación contractual de terceros.</strong> Los contratistas y proveedores que traten datos por cuenta de FMC quedan sujetos a obligaciones de seguridad y confidencialidad (ver Capítulo XII).</span></li>
+<li><span><strong>Uso exclusivo de canales institucionales.</strong> Se prohíbe el uso de cuentas de correo personales o de dominios gratuitos (incluidas cuentas @gmail) para tratar, remitir o almacenar información de Titulares. El correo institucional <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a> es el único canal autorizado para estas comunicaciones.</span></li>
+</ol>
+</section>
+<section class="doc-section" id="encargados">
+<h2><span class="cap">XII.</span> Encargados del Tratamiento y transmisión internacional de datos</h2>
+<h3>12.1. Encargados del Tratamiento</h3>
+<p>Para la operación del portal y la prestación de sus servicios, FMC se apoya en Encargados del Tratamiento: terceros que tratan datos personales por cuenta de FMC y conforme a sus instrucciones, sin decidir autónomamente sobre las finalidades del Tratamiento. FMC conserva, en todo caso, la calidad de Responsable del Tratamiento.</p>
+<h3>12.2. Encuadre legal: transmisión, no transferencia</h3>
+<p>De conformidad con el artículo 3 de la Ley 1581 de 2012 y las definiciones del Decreto 1074 de 2015, debe distinguirse entre:</p>
+<ul>
+<li><span><strong>Transmisión:</strong> comunicación de datos personales, dentro o fuera de Colombia, cuando tiene por objeto que un Encargado realice un Tratamiento por cuenta del Responsable, siguiendo sus instrucciones, sin que el destinatario decida sobre el dato.</span></li>
+<li><span><strong>Transferencia:</strong> envío de datos a un receptor que es, a su vez, Responsable del Tratamiento y que decide sobre el dato.</span></li>
+</ul>
+<p>La infraestructura tecnológica de FMC está alojada en proveedores ubicados en los Estados Unidos de América, que tratan los datos por cuenta y según las instrucciones de FMC. Por tanto, la operación constituye una transmisión internacional a Encargados, y no una transferencia internacional.</p>
+<p><strong>Consecuencia jurídica</strong> (artículo 26 de la Ley 1581 de 2012 —que regula las transferencias— y de los artículos 2.2.2.25.5.1 y 2.2.2.25.5.2 del Decreto 1074 de 2015 —que regulan la transmisión—): la transmisión internacional a un Encargado no requiere autorización adicional del Titular distinta de la ya otorgada, ni la declaración de país con nivel adecuado de protección que el artículo 26 de la Ley 1581 de 2012 exige para la transferencia, siempre que medie un contrato de transmisión que vincule al Encargado. El artículo 26 citado se invoca aquí únicamente como contraste: regula la transferencia, supuesto distinto al de FMC con sus proveedores.</p>
+<h3>12.3. Listado de Encargados internacionales</h3>
+<p>FMC declara que realiza transmisión internacional de datos a los siguientes Encargados, todos ubicados en los Estados Unidos de América. Este listado constituye la fuente maestra de Encargados para todo el Manual:</p>
+<div class="table-wrap"><table class="doc-table enc"><thead><tr><th>Encargado</th><th>País</th><th>Finalidad del Tratamiento por cuenta de FMC</th></tr></thead><tbody>
+<tr><td>Supabase</td><td>Estados Unidos</td><td>Base de datos (PostgreSQL), autenticación y almacenamiento de archivos</td></tr>
+<tr><td>Vercel</td><td>Estados Unidos</td><td>Hospedaje (hosting) de la aplicación</td></tr>
+<tr><td>Resend</td><td>Estados Unidos</td><td>Envío de correos transaccionales</td></tr>
+<tr><td>Upstash</td><td>Estados Unidos</td><td>Control de tasa de peticiones (rate limiting)</td></tr>
+<tr><td>Sentry</td><td>Estados Unidos</td><td>Monitoreo de errores de la aplicación</td></tr>
+<tr><td>Anthropic</td><td>Estados Unidos</td><td>Inteligencia artificial para informes ejecutivos. Procesa únicamente datos agregados, sin información personal identificable (ver nota)</td></tr>
+</tbody></table></div>
+<p><strong>Nota sobre Anthropic.</strong> Anthropic procesa exclusivamente datos agregados, sin información personal identificable. En consecuencia, su inclusión en este listado es meramente informativa y, en rigor, no constituye una transmisión de datos personales. FMC lo mantiene en la relación por transparencia.</p>
+<p>FMC verificará la región del centro de datos efectivamente utilizada con cada proveedor, dado que algunos ofrecen regiones fuera de los Estados Unidos de América, y actualizará este listado cuando corresponda.</p>
+<h3>12.4. Contratos de transmisión y obligaciones</h3>
+<ol>
+<li><span>FMC suscribirá y mantendrá vigente con cada Encargado un contrato de transmisión / Acuerdo de Tratamiento de Datos (Data Processing Agreement — DPA) que contenga, como mínimo, el alcance y las actividades del Tratamiento, las obligaciones del Encargado de actuar conforme a las instrucciones de FMC, y los deberes de seguridad y confidencialidad exigidos por el Decreto 1074 de 2015.</span></li>
+<li><span>FMC informa a los Titulares, mediante el presente Manual y el aviso de privacidad, sobre la existencia de esta transmisión internacional y la identidad de los Encargados.</span></li>
+<li><span>FMC verificará que cada Encargado adopte medidas de seguridad equivalentes o superiores a las propias y que trate los datos exclusivamente para las finalidades autorizadas.</span></li>
+</ol>
+</section>
+<section class="doc-section" id="incidentes">
+<h2><span class="cap">XIII.</span> Gestión de incidentes y brechas de seguridad</h2>
+<p>FMC cuenta con un procedimiento para la atención de incidentes de seguridad que comprometan, o puedan comprometer, datos personales bajo su Tratamiento, en cumplimiento del deber de informar a la autoridad las violaciones a los códigos de seguridad y los riesgos en la administración de la información (Ley 1581 de 2012, artículos 17 literal n) y 18 literal k)).</p>
+<h3>13.1. Procedimiento ante un incidente</h3>
+<ol>
+<li><span><strong>Contención.</strong> Adopción inmediata de medidas para detener o limitar el incidente: cierre de accesos, revocación y cambio de credenciales, aislamiento de los sistemas o componentes afectados.</span></li>
+<li><span><strong>Evaluación.</strong> Determinación del alcance del incidente: número de registros afectados, tipología y categoría de los datos comprometidos (datos privados, semiprivados, financieros, sensibles) y nivel de riesgo para los Titulares.</span></li>
+<li><span><strong>Notificación a la autoridad.</strong> Cuando FMC esté obligada a inscribirse en el RNBD —o mantenga voluntariamente su registro—, el reporte del incidente a la Superintendencia de Industria y Comercio (SIC) se efectuará a través del módulo de "Reporte de incidentes de seguridad" del RNBD, sin dilación injustificada y, a más tardar, dentro de los quince (15) días hábiles siguientes al hallazgo del incidente, conforme al estándar vigente de la Circular Única de la SIC. En ausencia de registro, FMC documentará internamente el incidente, notificará a los Titulares afectados cuando proceda y atenderá los requerimientos que formule la SIC.</span></li>
+<li><span><strong>Notificación a los Titulares afectados.</strong> Cuando el incidente comporte un riesgo para los derechos de los Titulares, FMC les comunicará el hecho y las medidas adoptadas, por el canal de contacto disponible.</span></li>
+<li><span><strong>Documentación y mejora.</strong> Registro interno del incidente, de su gestión y de las acciones correctivas adoptadas para evitar su repetición.</span></li>
+</ol>
+<h3>13.2. Articulación con el RNBD</h3>
+<p>El reporte de incidentes a la SIC a través del módulo del RNBD presupone, en rigor, la inscripción en dicho registro. En consecuencia, el deber de reporte por ese canal se coordina con la situación de FMC frente al RNBD (ver Capítulo XV): si FMC no resultare obligada a inscribirse y no mantuviere el registro voluntario, igualmente documentará internamente el incidente, notificará a los Titulares afectados cuando proceda y atenderá los requerimientos que formule la SIC.</p>
+</section>
+<section class="doc-section" id="roles">
+<h2><span class="cap">XIV.</span> Roles, responsabilidades y régimen sancionatorio</h2>
+<h3>14.1. Responsable del Tratamiento</h3>
+<p>El Responsable del Tratamiento es FONDO MUTUO DE COBERTURA S.A.S., persona jurídica identificada con NIT 901.678.530-0, con domicilio en Calle 52 No. 49-28, Ed. La Lonja, Piso 10, Medellín (Antioquia). La responsabilidad legal por el cumplimiento del régimen de protección de datos personales recae en la empresa como persona jurídica, y no en la persona natural que ejerza funciones de vigilancia o coordinación interna.</p>
+<h3>14.2. Oficial de Protección de Datos</h3>
+<p>FMC designa a Adrian López Aisales como Oficial de Protección de Datos, con el encargo de coordinar y vigilar el cumplimiento de este Manual y de la normativa aplicable, atender las consultas y reclamos de los Titulares, gestionar la relación con los Encargados y servir de enlace con la Superintendencia de Industria y Comercio.</p>
+<p>Se precisa que la designación del Oficial de Protección de Datos es una medida organizativa interna y no traslada ni diluye la responsabilidad legal, que permanece en cabeza de FONDO MUTUO DE COBERTURA S.A.S. como Responsable del Tratamiento. El Oficial de Protección de Datos reporta y se apoya en el canal oficial <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a>.</p>
+<h3>14.3. Deberes de FMC en su doble condición frente a centrales de riesgo</h3>
+<p>Dado que FMC consulta y reporta información a las centrales de riesgo, ostenta una doble condición bajo la Ley 1266 de 2008, con deberes correlativos:</p>
+<ul>
+<li><span>Como FUENTE de información (artículo 8 de la Ley 1266 de 2008): garantizar la calidad de la información reportada (veraz, completa, exacta, actualizada y comprobable); reportar de forma periódica y oportuna; rectificar y actualizar la información cuando haya lugar; informar al operador cuando un dato esté "en discusión" por el Titular; resolver los reclamos y solicitudes de rectificación; y cumplir el deber de notificación previa al Titular antes de reportar negativamente un incumplimiento (artículo 12 de la Ley 1266 de 2008), con la antelación mínima de veinte (20) días calendario conforme a la modulación de la Sentencia C-1011 de 2008. La omisión de esta notificación vicia el reporte.</span></li>
+<li><span>Como USUARIO de información (artículo 9 de la Ley 1266 de 2008): guardar reserva sobre la información obtenida y usarla solo para la finalidad autorizada de valoración de riesgo crediticio; informar al Titular, a su solicitud, el origen de la información cuando esta haya sido determinante de una decisión; y conservar la prueba de la autorización para consultar.</span></li>
+</ul>
+<h3>14.4. Régimen sancionatorio</h3>
+<p>El incumplimiento del régimen de protección de datos personales faculta a la Superintendencia de Industria y Comercio, a través de la Delegatura para la Protección de Datos Personales, para imponer las sanciones previstas en el artículo 23 de la Ley 1581 de 2012, a saber:</p>
+<ol>
+<li><span>Multas de carácter personal e institucional de hasta dos mil (2.000) salarios mínimos mensuales legales vigentes (SMMLV).</span></li>
+<li><span>Suspensión de las actividades relacionadas con el Tratamiento hasta por seis (6) meses.</span></li>
+<li><span>Cierre temporal de las operaciones de Tratamiento mientras no se adopten los correctivos exigidos.</span></li>
+<li><span>Cierre inmediato y definitivo de la operación que implique el Tratamiento de datos sensibles.</span></li>
+</ol>
+<p>Lo anterior se gradúa conforme a los criterios del artículo 24 de la misma ley y se entiende sin perjuicio de la responsabilidad civil o penal a que haya lugar y de las sanciones disciplinarias internas aplicables a quienes colaboren o contraten con FMC e incumplan este Manual.</p>
+</section>
+<section class="doc-section" id="rnbd-aviso">
+<h2><span class="cap">XV.</span> Registro Nacional de Bases de Datos (RNBD) y aviso de privacidad</h2>
+<h3>15.1. Registro Nacional de Bases de Datos (cláusula condicionada)</h3>
+<p>La inscripción de las bases de datos en el Registro Nacional de Bases de Datos (RNBD) administrado por la Superintendencia de Industria y Comercio no constituye una obligación general. Conforme al Decreto 1074 de 2015, modificado por el Decreto 090 de 2018, en concordancia con el artículo 25 de la Ley 1581 de 2012 y la Circular Única de la SIC (Título V), únicamente están obligadas a inscribir sus bases de datos: (i) las sociedades y entidades sin ánimo de lucro cuyos activos totales superen las cien mil (100.000) Unidades de Valor Tributario (UVT); y (ii) las personas jurídicas de naturaleza pública.</p>
+<p>En consecuencia, esta obligación se predica de FMC de manera condicionada:</p>
+<ol>
+<li><span>FMC verificará sus activos totales del año inmediatamente anterior frente al valor de la UVT vigente.</span></li>
+<li><span>Si los activos totales superan el umbral de 100.000 UVT, FMC procederá a inscribir sus bases de datos en el RNBD, a actualizar la información dentro de los dos (2) primeros meses de cada año y a reportar las novedades, reclamos e incidentes de seguridad a través de la plataforma del RNBD.</span></li>
+<li><span>Si los activos totales no superan dicho umbral, FMC queda exenta del deber de inscripción, sin perjuicio del cumplimiento íntegro de los demás deberes de la Ley 1581 de 2012 y de la Ley 1266 de 2008.</span></li>
+</ol>
+<p>Sin perjuicio de lo anterior, FMC mantiene voluntariamente la inscripción de sus bases de datos en el RNBD, revisa anualmente el cumplimiento del umbral y procederá a la inscripción obligatoria si en algún ejercicio llegare a superarlo.</p>
+<h3>15.2. Aviso de privacidad</h3>
+<p>Cuando no sea posible poner a disposición del Titular el presente Manual al momento de recolectar el dato, FMC empleará un aviso de privacidad (físico, electrónico o verbal), conforme al formato FM-GA-PDP-001, <a href="/aviso-privacidad">disponible en este sitio web</a>. De conformidad con el Decreto 1074 de 2015 (artículos 2.2.2.25.3.2 y 2.2.2.25.3.3), el aviso de privacidad contendrá, como mínimo:</p>
+<ol>
+<li><span>La identidad, domicilio y datos de contacto del Responsable: FONDO MUTUO DE COBERTURA S.A.S., NIT 901.678.530-0, Calle 52 No. 49-28, Ed. La Lonja, Piso 10, Medellín (Antioquia), correo electrónico <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a>.</span></li>
+<li><span>El Tratamiento al que serán sometidos los datos y su finalidad.</span></li>
+<li><span>Cuando se traten datos sensibles, la mención del carácter facultativo de la respuesta a las preguntas que versen sobre ellos.</span></li>
+<li><span>Los derechos que asisten al Titular (artículo 8 de la Ley 1581 de 2012).</span></li>
+<li><span>Los mecanismos y el canal dispuestos para conocer la política de Tratamiento y los cambios sustanciales que se produzcan en ella.</span></li>
+</ol>
+<p>FMC conservará el modelo del aviso de privacidad y la prueba del cumplimiento del deber de informar mientras se mantenga el Tratamiento de los datos.</p>
+</section>
+<section class="doc-section" id="vigencia">
+<h2><span class="cap">XVI.</span> Vigencia, aprobación y control de versiones</h2>
+<h3>16.1. Adopción y vigencia</h3>
+<p>En cumplimiento del artículo 18, literal f), de la Ley 1581 de 2012, FONDO MUTUO DE COBERTURA S.A.S. adopta el presente Manual, el cual entra en vigencia a partir de la fecha de su aprobación por la Representación Legal y permanecerá vigente mientras no sea modificado o sustituido por una versión posterior debidamente aprobada. Desde esa misma fecha operan las derogatorias del numeral 1.5.</p>
+<p>Las bases de datos sujetas a Tratamiento se mantendrán vigentes durante el tiempo necesario para cumplir las finalidades aquí descritas y los plazos legales de conservación y caducidad aplicables (ver Capítulo X, sobre retención, y demás disposiciones de la Ley 1266 de 2008 sobre permanencia del dato financiero).</p>
+<h3>16.2. Modificaciones y comunicación a los Titulares</h3>
+<p>FMC se reserva el derecho de modificar este Manual en cualquier momento. Cualquier cambio sustancial relativo a la identidad del Responsable o a la finalidad del Tratamiento será comunicado a los Titulares por los canales dispuestos antes de o a más tardar al momento de implementar la modificación, conforme a la normativa vigente. Las versiones del Manual quedarán a disposición de los Titulares a través de los canales oficiales de FMC.</p>
+<h3>16.3. Control de cambios</h3>
+<div class="id-card">
+<p><strong>Versión:</strong> 01</p>
+<p><strong>Fecha de aprobación:</strong> 1 de enero de 2026</p>
+<p><strong>Elaboró / Revisó:</strong> Adrian López Aisales — Oficial de Protección de Datos</p>
+<p><strong>Aprobó:</strong> Edwin Fernando Cardona Guisao — Representante Legal</p>
+<p><strong>Descripción del cambio:</strong> Expedición del Manual consolidado MA-GA-PDP-001. Consolida y deroga expresamente las versiones anteriores. Fija <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a> como canal único de Habeas Data. Incorpora el Aviso de Privacidad (FM-GA-PDP-001) y el Formato de Autorización (FM-GA-PDP-002).</p>
+</div>
+<div class="vigencia-badge">✓ Vigente desde el 1 de enero de 2026</div>
+</section>
 
   </main>
 </div>
 
 <footer>
   <p>© 2026 Fondo Mutuo de Cobertura S.A.S. · NIT 901.678.530-0 · <a href="/">Volver al inicio</a> · <a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a></p>
+  <p class="footer-links"><a href="/politica-datos">Política de tratamiento de datos</a> · <a href="/aviso-privacidad">Aviso de privacidad</a> · <a href="/aviso-legal">Aviso legal</a></p>
 </footer>
 
 </body>
