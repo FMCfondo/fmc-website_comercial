@@ -232,20 +232,15 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ben p{color:#b9c8ea;font-size:15.5px;line-height:1.7}
 
 /* ============ NOSOTROS ============ */
-.nos-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,64px);margin-top:56px;align-items:start}
-.timeline{list-style:none;position:relative;display:grid;gap:30px;padding-left:34px}
-.timeline::before{content:'';position:absolute;left:8px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--royal),var(--sky),var(--gold))}
+.timeline{list-style:none;position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,48px);margin-top:64px;padding-top:40px}
+.timeline::before{content:'';position:absolute;left:0;right:0;top:14px;height:2px;background:linear-gradient(90deg,var(--royal),var(--sky),var(--gold))}
 .timeline li{position:relative}
-.timeline li::before{content:'';position:absolute;left:-34px;top:6px;width:18px;height:9px;border:3px solid var(--royal);border-bottom:0;border-radius:18px 18px 0 0;background:#fff;box-shadow:0 -4px 0 4px #fff}
+.timeline li::before{content:'';position:absolute;left:0;top:-38px;width:22px;height:11px;border:3px solid var(--royal);border-bottom:0;border-radius:22px 22px 0 0;background:#fff;box-shadow:0 0 0 6px #fff}
+.timeline li:nth-child(2)::before{border-color:var(--sky)}
 .timeline li:last-child::before{border-color:var(--gold)}
 .tl-when{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--royal)}
 .timeline h3{font-family:var(--display);font-weight:600;font-size:20px;margin:4px 0 6px}
 .timeline p{color:var(--muted);font-size:15.5px}
-.ally{border-radius:28px;background:var(--royal-50);border:1px solid #DCE4FA;padding:34px;position:relative;overflow:hidden}
-.ally::before{content:'';position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;border:2px solid rgba(30,64,175,.12)}
-.ally .mini-lbl{color:var(--royal)}
-.ally h3{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.2;letter-spacing:-.01em}
-.ally p{color:var(--muted);margin:12px 0 22px;font-size:15.5px}
 .mvv{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:20px;margin-top:64px}
 .mvv-card{border:1px solid var(--line);border-radius:24px;padding:30px}
 .mvv-card h3{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--royal);margin-bottom:14px}
@@ -358,7 +353,10 @@ footer ul a:hover{color:#fff}
   .rec-caption{padding-top:10px}
   .rec-steps{gap:42vh;padding-bottom:30vh}
   .rec-step{opacity:.55}
-  .garantias-grid,.pq-grid,.nos-grid,.as-grid,.ct-grid{grid-template-columns:1fr}
+  .garantias-grid,.pq-grid,.as-grid,.ct-grid{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr;gap:30px;padding:0 0 0 36px;margin-top:48px}
+  .timeline::before{left:9px;right:auto;top:10px;bottom:10px;width:2px;height:auto;background:linear-gradient(var(--royal),var(--sky),var(--gold))}
+  .timeline li::before{left:-36px;top:5px}
   .mvv{grid-template-columns:1fr}
   .ben-grid{grid-template-columns:1fr}
   .ben,.ben+.ben{padding:30px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.12)}
@@ -702,19 +700,11 @@ footer ul a:hover{color:#fff}
       <h2 class="h2" id="nos-title">Nacimos del mutualismo. Existimos para fortalecerlo.</h2>
       <p class="lead">Somos el primer fondo de cobertura creado desde adentro del sector mutual colombiano: no un proveedor externo, sino una iniciativa nacida de las mismas organizaciones que hoy respaldamos.</p>
     </div>
-    <div class="nos-grid">
-      <ol class="timeline" data-reveal>
-        <li><span class="tl-when">Finales de 2022</span><h3>Nace FMC</h3><p>Como resultado de la visión estratégica de la Federación de Mutuales de Antioquia y las asociaciones mutuales fundadoras.</p></li>
-        <li><span class="tl-when">Abril de 2023</span><h3>Iniciamos operaciones</h3><p>Con un propósito claro: transformar el sector mutualista proporcionando garantías crediticias bajo condiciones de equidad y respaldo técnico, para que las mutuales crezcan su cartera con mayor confianza y sus asociados accedan más fácilmente al crédito.</p></li>
-        <li><span class="tl-when">Hoy</span><h3>Un ecosistema de confianza en expansión</h3><p>Más de $65.000 millones garantizados y cerca de 22.000 créditos respaldados: un modelo que demuestra que el sector mutual puede construir sus propias herramientas de respaldo.</p></li>
-      </ol>
-      <aside class="ally" data-reveal="2" aria-label="Aliado fundador">
-        <div class="mini-lbl">Aliado fundador y accionista</div>
-        <h3>Federación de Mutuales de Antioquia</h3>
-        <p>Junto con las mutuales fundadoras, la Federación impulsó la creación de FMC y hace parte de sus accionistas. Es el organismo de integración del mutualismo en Antioquia.</p>
-        <a class="btn btn-ghost" href="https://www.fedemutuales.org/" target="_blank" rel="noopener">Visitar fedemutuales.org <svg><use href="#i-arrow"/></svg></a>
-      </aside>
-    </div>
+    <ol class="timeline" data-reveal>
+      <li><span class="tl-when">Finales de 2022</span><h3>Nace FMC</h3><p>Como resultado de la visión estratégica de la Federación de Mutuales de Antioquia y las asociaciones mutuales fundadoras.</p></li>
+      <li><span class="tl-when">Abril de 2023</span><h3>Iniciamos operaciones</h3><p>Con un propósito claro: transformar el sector mutualista proporcionando garantías crediticias bajo condiciones de equidad y respaldo técnico, para que las mutuales crezcan su cartera con mayor confianza y sus asociados accedan más fácilmente al crédito.</p></li>
+      <li><span class="tl-when">Hoy</span><h3>Un ecosistema de confianza en expansión</h3><p>Más de $65.000 millones garantizados y cerca de 22.000 créditos respaldados: un modelo que demuestra que el sector mutual puede construir sus propias herramientas de respaldo.</p></li>
+    </ol>
     <div class="mvv">
       <div class="mvv-card" data-reveal><h3>Misión</h3><p>Somos un fondo de cobertura que acompaña a las organizaciones solidarias en la gestión de su riesgo crediticio, facilitando el acceso al crédito de sus grupos de interés.</p></div>
       <div class="mvv-card" data-reveal="2"><h3>Visión</h3><p>Ser el referente de respaldo crediticio del sector mutualista colombiano, reconocidos por fortalecer la competitividad y sostenibilidad de las organizaciones solidarias que confían en nosotros.</p></div>
@@ -743,9 +733,9 @@ footer ul a:hover{color:#fff}
       </div>
     </div>
     <div class="as-card" data-reveal="2">
-      <div class="as-item as-ok"><svg><use href="#i-check"/></svg><div><b>Es solo informativa</b><span>La factura se genera a su nombre porque el crédito es suyo, pero la paga su mutual directamente a FMC.</span></div></div>
-      <div class="as-item as-ok"><svg><use href="#i-check"/></svg><div><b>Usted no debe hacer ningún pago</b><span>No tiene que pagarle nada a FMC ni a ninguna otra entidad por este concepto.</span></div></div>
-      <div class="as-item as-warn"><svg><use href="#i-alert"/></svg><div><b>Si alguien le pide un pago por este motivo</b><span>No lo realice y contáctenos de inmediato por PQR, WhatsApp o a admin@fondomutuodecobertura.com.</span></div></div>
+      <div class="as-item as-ok"><svg><use href="#i-check"/></svg><div><b>Es solo informativa</b><span>Refleja el servicio de garantía que respalda su crédito. El recurso correspondiente se gestiona directamente con su mutual.</span></div></div>
+      <div class="as-item as-ok"><svg><use href="#i-check"/></svg><div><b>Usted no debe pagarnos directamente</b><span>Todas las gestiones de la garantía las hacemos con su mutual. No tiene que realizar ningún pago a FMC ni a ninguna otra entidad por este concepto.</span></div></div>
+      <div class="as-item as-warn"><svg><use href="#i-alert"/></svg><div><b>FMC nunca le solicitará pagos por esta factura</b><span>Ni por llamada, mensaje, correo ni ningún otro medio. Si alguien le pide un pago a nombre de FMC por este concepto, no lo realice y contáctenos de inmediato por PQR, WhatsApp o a admin@fondomutuodecobertura.com.</span></div></div>
     </div>
   </div>
 </section>
@@ -850,7 +840,7 @@ footer ul a:hover{color:#fff}
       </div>
       <div>
         <h4>Empresa</h4>
-        <ul><li><a href="#nosotros">Quiénes somos</a></li><li><a href="#asociados">Información para asociados</a></li><li><a href="/pqr">PQR</a></li><li><a class="ext" href="https://portalintermediarios.fondomutuodecobertura.com" target="_blank" rel="noopener">Portal intermediarios</a></li><li><a class="ext" href="https://www.fedemutuales.org/" target="_blank" rel="noopener">Federación de Mutuales de Antioquia</a></li></ul>
+        <ul><li><a href="#nosotros">Quiénes somos</a></li><li><a href="#asociados">Información para asociados</a></li><li><a href="/pqr">PQR</a></li><li><a class="ext" href="https://portalintermediarios.fondomutuodecobertura.com" target="_blank" rel="noopener">Portal intermediarios</a></li></ul>
       </div>
       <div>
         <h4>Contacto</h4>
