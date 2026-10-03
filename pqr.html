@@ -7,21 +7,21 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-<meta name="description" content="Radique sus peticiones, quejas o reclamos ante Fondo Mutuo de Cobertura S.A.S. Genere su número de radicado y reciba respuesta dentro de los términos de ley."/>
+<meta name="description" content="Radique sus peticiones, quejas, reclamos, solicitudes o felicitaciones ante Fondo Mutuo de Cobertura S.A.S. Genere su número de radicado y reciba respuesta dentro de los términos de ley."/>
 <link rel="canonical" href="https://www.fondomutuodecobertura.com/pqr"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Fondo Mutuo de Cobertura S.A.S."/>
-<meta property="og:title" content="PQR – Peticiones, Quejas y Reclamos | Fondo Mutuo de Cobertura S.A.S."/>
-<meta property="og:description" content="Radique sus peticiones, quejas o reclamos ante Fondo Mutuo de Cobertura S.A.S. Genere su número de radicado y reciba respuesta dentro de los términos de ley."/>
+<meta property="og:title" content="PQR – Peticiones, Quejas, Reclamos, Solicitudes y Felicitaciones | Fondo Mutuo de Cobertura S.A.S."/>
+<meta property="og:description" content="Radique sus peticiones, quejas, reclamos, solicitudes o felicitaciones ante Fondo Mutuo de Cobertura S.A.S. Genere su número de radicado y reciba respuesta dentro de los términos de ley."/>
 <meta property="og:url" content="https://www.fondomutuodecobertura.com/pqr"/>
 <meta property="og:image" content="https://www.fondomutuodecobertura.com/og-image.jpg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="PQR – Peticiones, Quejas y Reclamos | Fondo Mutuo de Cobertura S.A.S."/>
-<meta name="twitter:description" content="Radique sus peticiones, quejas o reclamos ante Fondo Mutuo de Cobertura S.A.S. Genere su número de radicado y reciba respuesta dentro de los términos de ley."/>
+<meta name="twitter:title" content="PQR – Peticiones, Quejas, Reclamos, Solicitudes y Felicitaciones | Fondo Mutuo de Cobertura S.A.S."/>
+<meta name="twitter:description" content="Radique sus peticiones, quejas, reclamos, solicitudes o felicitaciones ante Fondo Mutuo de Cobertura S.A.S. Genere su número de radicado y reciba respuesta dentro de los términos de ley."/>
 <meta name="twitter:image" content="https://www.fondomutuodecobertura.com/og-image.jpg"/>
-<title>PQR – Peticiones, Quejas y Reclamos | Fondo Mutuo de Cobertura S.A.S.</title>
+<title>PQR – Peticiones, Quejas, Reclamos, Solicitudes y Felicitaciones | Fondo Mutuo de Cobertura S.A.S.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -136,11 +136,11 @@ nav{background:#fff!important;border-bottom:1px solid var(--line)!important;box-
 <div class="hero">
   <div class="hero-inner">
     <div class="badge">Atención al usuario</div>
-    <h1>Peticiones, Quejas y Reclamos</h1>
+    <h1>Peticiones, Quejas, Reclamos, Solicitudes y Felicitaciones</h1>
     <p>Recibimos y atendemos todas sus solicitudes de acuerdo con la normatividad colombiana vigente. Su mensaje es importante para nosotros.</p>
     <div class="hero-meta">
-      <div class="meta-item"><strong>Consultas</strong>Respuesta en 10 días hábiles</div>
-      <div class="meta-item"><strong>Reclamos</strong>Respuesta en 15 días hábiles</div>
+      <div class="meta-item"><strong>Peticiones</strong>Respuesta en 10 días hábiles</div>
+      <div class="meta-item"><strong>Solicitudes, quejas y reclamos</strong>Respuesta en 15 días hábiles</div>
       <div class="meta-item"><strong>Canal escrito</strong>admin@fondomutuodecobertura.com</div>
     </div>
   </div>
@@ -155,6 +155,11 @@ nav{background:#fff!important;border-bottom:1px solid var(--line)!important;box-
         <p>Solicitud de información, documentos o explicaciones sobre nuestros servicios y procesos.</p>
         <div class="plazo">⏱ Respuesta: 10 días hábiles</div>
       </div>
+      <div class="tipo-card" onclick="selectTipo(this, 'Solicitud')">
+        <h3>Solicitud</h3>
+        <p>Requerimiento de un trámite o servicio, como certificados, paz y salvos, estados de cuenta o actualización de datos.</p>
+        <div class="plazo">⏱ Respuesta: 15 días hábiles</div>
+      </div>
       <div class="tipo-card" onclick="selectTipo(this, 'Queja')">
         <h3>Queja</h3>
         <p>Manifestación de inconformidad con la conducta o el servicio prestado por FMC.</p>
@@ -164,6 +169,11 @@ nav{background:#fff!important;border-bottom:1px solid var(--line)!important;box-
         <h3>Reclamo</h3>
         <p>Solicitud de corrección, actualización o supresión de información, o incumplimiento de obligaciones.</p>
         <div class="plazo">⏱ Respuesta: 15 días hábiles</div>
+      </div>
+      <div class="tipo-card" onclick="selectTipo(this, 'Felicitación')">
+        <h3>Felicitación</h3>
+        <p>Reconocimiento a la atención, el servicio o la gestión de nuestro equipo. Nos ayuda a saber qué estamos haciendo bien.</p>
+        <div class="plazo">✓ Confirmación de recibido por correo</div>
       </div>
       <div class="tipo-card" onclick="selectTipo(this, 'Solicitud de supresión de datos')">
         <h3>Supresión de datos personales</h3>
@@ -184,12 +194,12 @@ nav{background:#fff!important;border-bottom:1px solid var(--line)!important;box-
   <div class="form-card" id="pqr-form-container">
     <div class="pqr-success" id="pqr-success">
       <div class="pqr-success-icon"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" style="display:inline-block;vertical-align:middle;color:var(--sky-deep)" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M7 12.4l3.3 3.3L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <h3>Su solicitud ha sido radicada</h3>
+      <h3 id="pqr-success-title">Su solicitud ha sido radicada</h3>
       <div class="radicado-box">
         <div class="radicado-label">Número de radicado</div>
         <div class="radicado-num" id="radicado-display">—</div>
       </div>
-      <p>Hemos recibido su solicitud. Le responderemos al correo registrado dentro de los plazos establecidos por la Ley 1581 de 2012. <strong>Conserve su número de radicado como referencia.</strong></p>
+      <p id="pqr-success-text">Hemos recibido su solicitud. Le responderemos al correo registrado dentro de los plazos establecidos por la ley. <strong>Conserve su número de radicado como referencia.</strong></p>
       <button class="pqr-success-btn" onclick="resetPqrForm()">Enviar otra solicitud</button>
     </div>
     <div id="pqr-form-inner">
@@ -220,14 +230,16 @@ nav{background:#fff!important;border-bottom:1px solid var(--line)!important;box-
         <label>Tipo de solicitud *</label>
         <select name="tipo" id="tipo_select" required>
           <option value="Petición">Petición</option>
+          <option value="Solicitud">Solicitud</option>
           <option value="Queja">Queja</option>
           <option value="Reclamo">Reclamo</option>
+          <option value="Felicitación">Felicitación</option>
           <option value="Solicitud de supresión de datos">Supresión de datos personales</option>
         </select>
       </div>
       <div class="fg">
         <label>Descripción detallada *</label>
-        <textarea name="descripcion" placeholder="Describa su solicitud de manera clara y detallada. Incluya toda la información relevante que nos permita atenderle adecuadamente." required></textarea>
+        <textarea name="descripcion" id="descripcion" placeholder="Describa su solicitud de manera clara y detallada. Incluya toda la información relevante que nos permita atenderle adecuadamente." required></textarea>
       </div>
       <div class="fg">
         <label>Número de radicado o crédito (si aplica)</label>
@@ -250,12 +262,25 @@ nav{background:#fff!important;border-bottom:1px solid var(--line)!important;box-
 </footer>
 
 <script>
-function selectTipo(card, tipo) {
-  document.querySelectorAll('.tipo-card').forEach(c => c.classList.remove('active'));
-  card.classList.add('active');
+const PH_DEFAULT = 'Describa su solicitud de manera clara y detallada. Incluya toda la información relevante que nos permita atenderle adecuadamente.';
+const PH_FELICITACION = 'Cuéntenos qué quiere destacar: la persona, el área o la gestión que le gustó.';
+
+function applyTipo(tipo) {
   document.getElementById('tipo_hidden').value = tipo;
   document.getElementById('tipo_select').value = tipo;
+  document.querySelectorAll('.tipo-card').forEach(c => {
+    c.classList.toggle('active', c.getAttribute('onclick').indexOf("'" + tipo + "'") !== -1);
+  });
+  document.getElementById('descripcion').placeholder = tipo === 'Felicitación' ? PH_FELICITACION : PH_DEFAULT;
 }
+
+function selectTipo(card, tipo) {
+  applyTipo(tipo);
+}
+
+document.getElementById('tipo_select').addEventListener('change', function () {
+  applyTipo(this.value);
+});
 
 function generateRadicado() {
   const now = new Date();
@@ -314,6 +339,13 @@ if(pqrForm) {
 
       // Show success
       document.getElementById('radicado-display').textContent = radicado;
+      if (tipo === 'Felicitación') {
+        document.getElementById('pqr-success-title').textContent = '¡Gracias por su felicitación!';
+        document.getElementById('pqr-success-text').innerHTML = 'La compartiremos con nuestro equipo. Le enviamos una confirmación al correo registrado. <strong>Conserve su número de radicado como referencia.</strong>';
+      } else {
+        document.getElementById('pqr-success-title').textContent = 'Su solicitud ha sido radicada';
+        document.getElementById('pqr-success-text').innerHTML = 'Hemos recibido su solicitud. Le responderemos al correo registrado dentro de los plazos establecidos por la ley. <strong>Conserve su número de radicado como referencia.</strong>';
+      }
       document.getElementById('pqr-form-inner').style.display = 'none';
       document.getElementById('pqr-success').classList.add('show');
 
@@ -330,6 +362,7 @@ function resetPqrForm() {
   document.getElementById('pqr-form-inner').style.display = 'block';
   const form = document.getElementById('pqr-form');
   form.reset();
+  applyTipo('Petición');
   document.getElementById('pqr-submit-btn').textContent = 'Enviar solicitud →';
   document.getElementById('pqr-submit-btn').disabled = false;
 }
