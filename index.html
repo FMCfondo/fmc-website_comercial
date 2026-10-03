@@ -22,250 +22,372 @@
 <meta name="twitter:image" content="https://www.fondomutuodecobertura.com/og-image.jpg"/>
 <title>Fondo Mutuo de Cobertura S.A.S. – Garantías sólidas que fortalecen su cartera</title>
 <meta name="description" content="Primer fondo de cobertura creado desde el mutualismo colombiano. Respaldamos su cartera, ampliamos su colocación y le damos acceso a beneficios exclusivos."/>
+<meta name="theme-color" content="#0D1B4F"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
 <style>
+/* ============ TOKENS ============ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --royal:#1E40AF;--royal-deep:#13286E;--royal-light:#2C53D4;--royal-50:#EEF2FD;
+  --royal:#1E40AF;--royal-2:#2C53D4;--royal-50:#EEF2FD;
+  --deep:#0D1B4F;--deep-2:#13286E;
   --sky:#45B6E8;--sky-soft:#E8F4FC;
-  --gold:#E6A41E;--gold-deep:#C2860F;--gold-soft:#FBF1DC;--gold-bright:#F4C969;
-  --ink:#11213F;--muted:#586580;--soft:#7C8AA3;--line:#E5E9F1;--bg:#F6F8FC;--white:#fff;
-  --navy:#13286E;--navy-mid:#1E40AF;--sky-mid:#B7D4F5;--sky-deep:#1E40AF;--gold-dark:#C2860F;--gray:#F2F5FA;--pale:#F6F9FD;--text:#11213F;--border:#E5E9F1;
+  --gold:#E6A41E;--gold-bright:#F4C969;--gold-soft:#FBF1DC;--gold-ink:#2B1D00;
+  --ink:#0E1A36;--muted:#55627D;--soft:#8592AA;--line:#E2E8F3;--paper:#F4F7FC;--white:#fff;
+  --display:'Space Grotesk','Inter',sans-serif;--body:'Inter',system-ui,sans-serif;--mono:'Space Mono',ui-monospace,monospace;
+  --wrap:1180px;--gutter:clamp(16px,5vw,48px);--radius:20px;
+  --ease:cubic-bezier(.22,.8,.24,1);
 }
-html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;font-weight:400;color:var(--ink);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4,h5,.stat-num,.cifra-num,.flow-bubble,.logo-name,.footer-logo-name{font-family:'Space Grotesk','Inter',sans-serif}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:calc(var(--wrap) + var(--gutter)*2);margin:0 auto;padding:0 var(--gutter)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-.topbar{background:var(--royal-deep);height:40px;display:flex;align-items:center;justify-content:flex-end;padding:0 5vw;gap:20px}
-.topbar-link{font-size:12px;font-weight:500;color:rgba(255,255,255,.82);text-decoration:none;display:flex;align-items:center;gap:7px;transition:color .2s}
-.topbar-link:hover{color:var(--gold-bright)}
-.topbar-divider{color:rgba(255,255,255,.25);font-size:12px}
-.topbar-disabled{font-size:12px;font-weight:400;color:rgba(255,255,255,.5);cursor:default;display:flex;align-items:center;gap:7px}
-.soon-badge{background:rgba(244,201,105,.18);color:var(--gold-bright);font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;letter-spacing:.5px}
-.topbar svg{width:14px;height:14px}
+/* ============ TIPOGRAFIA COMUN ============ */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--royal)}
+.eyebrow::before{content:'';width:16px;height:8px;border:2px solid currentColor;border-bottom:0;border-radius:16px 16px 0 0;flex-shrink:0}
+.h2{font-family:var(--display);font-weight:600;font-size:clamp(32px,4.3vw,54px);line-height:1.06;letter-spacing:-.025em;color:var(--ink);margin:16px 0 18px;text-wrap:balance}
+.lead{font-size:clamp(16.5px,1.5vw,18.5px);line-height:1.65;color:var(--muted);max-width:640px}
+.sec{padding:clamp(80px,10vw,132px) 0;position:relative}
+.sec-head{max-width:760px}
 
-nav{background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:78px;position:sticky;top:0;z-index:100;box-shadow:0 6px 28px -22px rgba(17,33,63,.5)}
-.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
-.nav-logo img{height:58px;width:auto}
-.logo-text{display:flex;flex-direction:column;line-height:1.2}
-.logo-name{font-size:14px;font-weight:600;color:var(--royal);letter-spacing:-.2px}
-.logo-sub{font-size:9px;font-weight:500;letter-spacing:1.5px;color:var(--soft);text-transform:uppercase}
-.nav-center{display:flex;gap:4px;list-style:none;align-items:center}
-.nav-center li a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink);transition:all .2s;padding:8px 14px;border-radius:8px}
-.nav-center li a:hover{color:var(--royal);background:var(--royal-50)}
-.nav-right{display:flex;gap:8px;align-items:center;flex-shrink:0}
-.nav-cta{background:var(--gold);color:#3a2600;text-decoration:none;font-size:13.5px;font-weight:700;padding:11px 22px;border-radius:30px;transition:all .2s;white-space:nowrap;box-shadow:0 10px 22px -10px rgba(230,164,30,.7)}
-.nav-cta:hover{background:var(--gold-deep);color:#fff;transform:translateY(-1px)}
-
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:none}
-.hamburger span{width:24px;height:2px;background:var(--royal);border-radius:2px;transition:all .3s}
-.mobile-menu{display:none;position:fixed;top:78px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:16px 5vw;z-index:99;box-shadow:0 12px 28px rgba(17,33,63,.12)}
-.mobile-menu.open{display:flex;flex-direction:column;gap:4px}
-.mobile-menu a{text-decoration:none;font-size:15px;font-weight:500;color:var(--ink);padding:13px 16px;border-radius:8px;border-bottom:1px solid var(--line)}
-.mobile-menu a:hover{background:var(--royal-50);color:var(--royal)}
-.mobile-menu a:last-child{border-bottom:none;background:var(--gold);color:#3a2600;text-align:center;font-weight:700;margin-top:8px;border-radius:30px}
-
-.hero{min-height:100vh;background:radial-gradient(900px 540px at 86% -12%,rgba(69,182,232,.22),transparent 60%),radial-gradient(740px 520px at -6% 116%,rgba(230,164,30,.13),transparent 60%),linear-gradient(158deg,#1E40AF 0%,#13286E 100%);position:relative;overflow:hidden;display:flex;align-items:center;padding:120px 5vw 92px}
-.hero-waves{display:none}
-.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;max-width:1180px;margin:0 auto;width:100%}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#cfe0f3;font-size:11.5px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;padding:8px 16px;border-radius:30px;margin-bottom:26px}
-h1{font-size:clamp(31px,3.7vw,52px);font-weight:700;line-height:1.12;color:#fff;letter-spacing:-1px;margin-bottom:22px}
-h1 strong{font-weight:700;background:linear-gradient(90deg,#F4C969,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-desc{font-size:17px;font-weight:400;line-height:1.7;color:#aec1da;max-width:500px;margin-bottom:36px}
-.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#3a2600;font-size:14px;font-weight:700;letter-spacing:.2px;text-decoration:none;padding:15px 30px;border-radius:30px;transition:all .2s;box-shadow:0 16px 32px -12px rgba(230,164,30,.65)}
+/* ============ BOTONES ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:700;font-size:15px;letter-spacing:.01em;text-decoration:none;border-radius:40px;padding:15px 28px;transition:transform .25s var(--ease),background .25s,box-shadow .25s,border-color .25s,color .25s;white-space:nowrap}
+.btn svg{width:18px;height:18px;transition:transform .25s var(--ease)}
+.btn:hover svg{transform:translateX(3px)}
+.btn-gold{background:var(--gold);color:var(--gold-ink);box-shadow:0 18px 36px -16px rgba(230,164,30,.75)}
 .btn-gold:hover{background:var(--gold-bright);transform:translateY(-2px)}
-.btn-outline{display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(255,255,255,.3);color:#fff;font-size:14px;font-weight:600;letter-spacing:.2px;text-decoration:none;padding:15px 28px;border-radius:30px;background:transparent;transition:all .2s}
-.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-.hero-panel{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:18px;overflow:hidden;backdrop-filter:blur(10px);box-shadow:0 36px 70px -30px rgba(0,0,0,.55)}
-.hero-panel-head{background:rgba(255,255,255,.04);padding:16px 22px;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#9fb6cc}
-.stat-grid{display:grid;grid-template-columns:1fr 1fr}
-.stat-cell{padding:22px;border-bottom:1px solid rgba(255,255,255,.09);border-right:1px solid rgba(255,255,255,.09)}
-.stat-cell:nth-child(2n){border-right:none}
-.stat-cell:nth-last-child(-n+2){border-bottom:none}
-.stat-num{font-size:19px;font-weight:700;color:var(--gold-bright);margin-bottom:5px;letter-spacing:-.3px}
-.stat-lbl{font-size:12px;font-weight:400;color:#b9c9dc;line-height:1.45}
-.hero-tagline{background:linear-gradient(90deg,var(--gold),#d99a2b);padding:16px 22px;font-size:13px;font-weight:400;font-style:italic;color:#3a2600;text-align:center;line-height:1.5}
+.btn-line{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.6)}
+.btn-royal{background:var(--royal);color:#fff;box-shadow:0 16px 30px -18px rgba(30,64,175,.8)}
+.btn-royal:hover{background:var(--royal-2);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink);background:#fff}
+.btn-ghost:hover{border-color:var(--royal);color:var(--royal)}
 
-.gold-bar{background:var(--gold);padding:15px 5vw;display:flex;align-items:center;justify-content:center;gap:34px;flex-wrap:wrap}
-.gold-bar-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#3a2600}
-.gold-bar-item::before{content:'';width:5px;height:5px;border-radius:50%;background:rgba(58,38,0,.45);flex-shrink:0}
+/* ============ REVELADO AL HACER SCROLL ============ */
+.js [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js [data-reveal].in{opacity:1;transform:none}
+.js [data-reveal="2"]{transition-delay:.08s}.js [data-reveal="3"]{transition-delay:.16s}.js [data-reveal="4"]{transition-delay:.24s}
 
-section{padding:96px 5vw;position:relative}
-.inner{max-width:1180px;margin:0 auto}
-.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--royal);display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.eyebrow::before{content:'';width:26px;height:2px;background:var(--royal)}
-h2{font-size:clamp(26px,2.9vw,38px);font-weight:700;line-height:1.18;margin-bottom:16px;color:var(--ink);letter-spacing:-.6px}
-.lead{font-size:16.5px;font-weight:400;line-height:1.7;color:var(--muted);max-width:640px;margin-bottom:52px}
+/* ============ TOPBAR ============ */
+.topbar{background:var(--deep);color:#c9d6f3;font-size:13px}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:40px}
+.topbar a{text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:color .2s}
+.topbar a:hover{color:#fff}
+.topbar svg{width:15px;height:15px;flex-shrink:0}
+.tb-factura strong{color:var(--gold-bright);font-weight:600}
+.tb-right{display:flex;align-items:center;gap:22px}
+.tb-portal{color:#fff;font-weight:600}
+.tb-portal::after{content:'↗';font-size:12px;opacity:.7}
 
-.wave-div,.footer-wave,.nosotros-waves,.cta-waves{display:none}
+/* ============ NAV ============ */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s}
+.nav.scrolled{border-color:var(--line);box-shadow:0 10px 30px -24px rgba(14,26,54,.55)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:78px;transition:height .3s var(--ease)}
+.nav.scrolled .wrap{height:66px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:50px;width:auto;transition:height .3s var(--ease)}
+.nav.scrolled .brand img{height:42px}
+.brand-name{display:block;font-family:var(--display);font-weight:600;font-size:15px;color:var(--royal);line-height:1.15}
+.brand-sub{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+.nav-links{display:flex;align-items:center;gap:clamp(16px,2vw,28px);list-style:none}
+.nav-links a{position:relative;text-decoration:none;font-size:14.5px;font-weight:500;color:var(--ink);padding:6px 0;transition:color .2s}
+.nav-links a::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--gold);border-radius:2px;transform:scaleX(0);transition:transform .3s var(--ease)}
+.nav-links a:hover{color:var(--royal)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-cta{padding:11px 22px;font-size:14px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mmenu{display:none;position:fixed;inset:66px 0 auto 0;z-index:99;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 24px 40px -24px rgba(14,26,54,.35);padding:12px var(--gutter) 22px}
+.mmenu.open{display:grid;gap:2px}
+.mmenu a{text-decoration:none;font-weight:500;font-size:16px;padding:14px 10px;border-bottom:1px solid var(--line)}
+.mmenu .btn{margin-top:14px;border-bottom:0}
 
-.proceso-section{background:var(--bg)}
-.flow-wrap{margin-top:42px;display:flex;flex-direction:column}
-.flow-step{display:grid;grid-template-columns:80px 1fr;position:relative}
-.flow-step:not(:last-child)::after{content:'';position:absolute;left:39px;top:60px;bottom:-1px;width:2px;background:linear-gradient(var(--royal),rgba(30,64,175,.15))}
-.flow-num{width:80px;display:flex;flex-direction:column;align-items:center;padding-top:4px}
-.flow-bubble{width:52px;height:52px;border-radius:50%;background:linear-gradient(150deg,var(--royal-light),var(--royal));color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-bottom:6px;box-shadow:0 12px 22px -8px rgba(30,64,175,.6)}
-.flow-actor{font-size:11px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--soft);margin-bottom:7px}
-.flow-content{padding:0 0 38px 24px}
-.flow-content h4{font-size:13px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--royal);margin-bottom:8px}
-.flow-content p{font-size:14.5px;font-weight:400;line-height:1.7;color:var(--muted)}
-.actors{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
-.actor-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 20px;text-align:center;box-shadow:0 14px 34px -22px rgba(17,33,63,.4);transition:transform .2s,box-shadow .2s}
-.actor-card:hover{transform:translateY(-3px);box-shadow:0 22px 40px -22px rgba(17,33,63,.4)}
-.actor-icon{margin-bottom:12px}
-.actor-name{font-size:14.5px;font-weight:600;color:var(--ink);margin-bottom:6px}
-.actor-desc{font-size:12.5px;font-weight:400;color:var(--muted);line-height:1.55}
+/* ============ HERO ============ */
+.hero{position:relative;overflow:hidden;color:#fff;text-align:center;background:radial-gradient(1100px 620px at 50% 118%,rgba(44,83,212,.95),transparent 62%),linear-gradient(180deg,#0B1847 0%,var(--deep-2) 100%)}
+.hero::before{content:'';position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 52% 46% at 50% 40%,rgba(11,24,71,.82),transparent 72%);pointer-events:none}
+.guilloche{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.guilloche path.g{fill:none;stroke-width:1;vector-effect:non-scaling-stroke}
+.js .guilloche path.g{transition:stroke-dashoffset 2.2s var(--ease)}
+.guilloche .node{fill:var(--sky);animation:twinkle 4s ease-in-out infinite}
+.guilloche .pulse{fill:var(--gold-bright)}
+@keyframes twinkle{0%,100%{opacity:.35}50%{opacity:1}}
+.hero-copy{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:clamp(64px,9vw,118px) var(--gutter) 0}
+.hero-pill{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#cfe0ff;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);padding:8px 16px;border-radius:40px}
+.hero-pill i{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(230,164,30,.22)}
+.hero h1{font-family:var(--display);font-weight:600;font-size:clamp(42px,7.4vw,96px);line-height:.98;letter-spacing:-.035em;margin:26px auto 24px;text-wrap:balance}
+.hero h1 .gold{color:var(--gold-bright)}
+.hero h1 .h1-lead{display:block;font-size:.5em;font-weight:500;letter-spacing:-.02em;color:#fff;margin-bottom:.22em}
+.hero-sub{font-size:clamp(16.5px,1.6vw,19px);line-height:1.65;color:#c3d1f0;max-width:660px;margin:0 auto}
+.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.js .hero-copy>*{opacity:0;transform:translateY(18px);animation:rise .9s var(--ease) forwards}
+.js .hero-copy>*:nth-child(2){animation-delay:.12s}.js .hero-copy>*:nth-child(3){animation-delay:.24s}.js .hero-copy>*:nth-child(4){animation-delay:.36s}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero-stats{position:relative;z-index:2;margin-top:clamp(60px,8vw,104px);border-top:1px solid rgba(255,255,255,.14);background:linear-gradient(180deg,rgba(11,24,71,0),rgba(11,24,71,.6))}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);text-align:left}
+.stat{padding:30px 24px 34px;border-left:1px solid rgba(255,255,255,.12)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat-num{font-family:var(--display);font-weight:600;font-size:clamp(28px,3.4vw,44px);letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.stat-num .u{color:var(--gold-bright)}
+.stat-lbl{margin-top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#9fb3e0;line-height:1.5;max-width:220px}
 
-.garantias-section{background:#fff}
-.garantias-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.garantia-card{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--royal);border-radius:14px;padding:30px 26px}
-.garantia-card h3{font-size:18px;font-weight:600;color:var(--ink);margin-bottom:12px}
-.garantia-card p{font-size:14.5px;font-weight:400;line-height:1.7;color:var(--muted)}
-.lineas-flex{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
-.linea-chip{display:inline-block;background:var(--royal-50);color:var(--royal);font-size:12px;font-weight:600;padding:6px 14px;border-radius:20px}
-.cond-list{list-style:none;display:flex;flex-direction:column;gap:13px;margin-top:14px}
-.cond-list li{display:flex;gap:11px;font-size:14.5px;font-weight:400;line-height:1.55;color:var(--muted);align-items:flex-start}
-.cond-check{width:21px;height:21px;border-radius:50%;background:var(--royal);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700}
+/* ============ RECORRIDO (COMO FUNCIONA) ============ */
+.recorrido{background:var(--paper)}
+.rec-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(32px,5vw,72px);align-items:start;margin-top:56px}
+.rec-stage{position:sticky;top:96px;background:#fff;border:1px solid var(--line);border-radius:28px;padding:22px 22px 18px;box-shadow:0 40px 80px -60px rgba(14,26,54,.45)}
+.rec-stage svg{width:100%;height:auto;overflow:visible}
+.rec-caption{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:14px;margin-top:6px}
+.rec-now{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.rec-now b{color:var(--royal)}
+.rec-now em{font-style:normal;color:var(--ink);font-weight:700}
+.rec-dots{display:flex;gap:8px}
+.rec-dots button{width:30px;height:30px;border-radius:50%;font-family:var(--mono);font-size:12px;font-weight:700;color:var(--soft);border:1.5px solid var(--line);background:#fff;transition:all .25s}
+.rec-dots button:hover{border-color:var(--royal);color:var(--royal)}
+.rec-dots button.on{background:var(--royal);border-color:var(--royal);color:#fff}
+.d-base{fill:none;stroke:#D6DEEC;stroke-width:2;stroke-dasharray:2 7;stroke-linecap:round}
+.d-live{fill:none;stroke-width:3.5;stroke-linecap:round;opacity:0}
+.d-node circle.ring{fill:var(--royal);opacity:0;transition:opacity .4s}
+.d-node circle.disc{fill:#fff;stroke:#D6DEEC;stroke-width:2;transition:stroke .4s}
+.d-node .ico{color:var(--soft);transition:color .4s}
+.d-node.on circle.disc{stroke:var(--royal);stroke-width:2.5}
+.d-node.on circle.ring{opacity:.1;animation:ring 2.4s ease-out infinite}
+.d-node.on .ico{color:var(--royal)}
+@keyframes ring{0%{transform:scale(.9);opacity:.18}100%{transform:scale(1.25);opacity:0}}
+.d-node circle.ring{transform-box:fill-box;transform-origin:center}
+.d-name{font-family:var(--display);font-weight:600;font-size:16px;fill:var(--ink)}
+.d-role{font-family:var(--mono);font-size:10px;letter-spacing:.06em;fill:var(--soft);text-transform:uppercase}
+.d-canopy{fill:none;stroke:var(--gold);stroke-width:3;stroke-linecap:round;opacity:.55;transition:opacity .4s,filter .4s}
+.d-canopy.glow{opacity:1;filter:drop-shadow(0 0 6px rgba(230,164,30,.7))}
+.d-token{fill:var(--gold);stroke:#fff;stroke-width:3}
+.rec-steps{list-style:none;display:grid;gap:clamp(56px,14vh,140px);padding-bottom:12vh}
+.rec-step{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:26px 26px 24px;border-radius:22px;border:1px solid transparent;opacity:.42;transition:opacity .5s,background .5s,border-color .5s,box-shadow .5s;cursor:pointer}
+.rec-step.on{opacity:1;background:#fff;border-color:var(--line);box-shadow:0 30px 60px -48px rgba(14,26,54,.5)}
+.rec-num{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--mono);font-weight:700;font-size:15px;color:var(--royal);background:var(--royal-50);transition:background .4s,color .4s}
+.rec-step.on .rec-num{background:var(--royal);color:#fff}
+.rec-tag{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.rec-step h3{font-family:var(--display);font-weight:600;font-size:21px;line-height:1.25;letter-spacing:-.01em;margin:6px 0 8px}
+.rec-step p{font-size:15.5px;line-height:1.7;color:var(--muted)}
+.rec-step .free{display:inline-block;margin-top:12px;font-weight:600;color:var(--gold-ink);background:var(--gold-soft);border-radius:10px;padding:8px 12px;font-size:14.5px}
 
-.paraquien-section{background:var(--bg)}
-.paraquien-grid{display:grid;grid-template-columns:2fr 1fr;gap:34px;align-items:start}
-.paraquien-main{background:linear-gradient(155deg,var(--royal),var(--royal-deep));border-radius:18px;padding:42px;border:none;box-shadow:0 30px 60px -30px rgba(30,64,175,.6)}
-.paraquien-main h3{font-size:23px;font-weight:700;color:#fff;margin-bottom:16px;letter-spacing:-.4px}
-.paraquien-main p{font-size:14.5px;font-weight:400;line-height:1.75;color:#bcccdf;margin-bottom:22px}
-.doc-label{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--gold-bright);margin-bottom:14px}
-.doc-list{list-style:none;display:flex;flex-direction:column;gap:11px}
-.doc-list li{display:flex;gap:11px;font-size:13.5px;font-weight:400;color:#cdd9e8;align-items:flex-start}
-.doc-list li::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px}
-.paraquien-sec{background:#fff;border-radius:16px;padding:30px;border:1px solid var(--line);margin-bottom:20px;box-shadow:0 14px 34px -24px rgba(17,33,63,.4)}
-.paraquien-sec h3{font-size:18px;font-weight:600;color:var(--ink);margin-bottom:12px}
-.paraquien-sec p{font-size:14px;font-weight:400;line-height:1.7;color:var(--muted)}
-.sector-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-.sector-chip{background:var(--sky-soft);color:var(--royal);font-size:12px;font-weight:600;padding:6px 13px;border-radius:20px}
+/* ============ GARANTIAS ============ */
+.garantias-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,48px);margin-top:56px;align-items:stretch}
+.gauge-card{position:relative;overflow:hidden;border-radius:28px;padding:40px 36px 36px;color:#fff;background:radial-gradient(500px 300px at 50% 100%,rgba(44,83,212,.9),transparent 70%),linear-gradient(160deg,var(--deep-2),var(--deep));display:flex;flex-direction:column;align-items:center;text-align:center}
+.gauge{width:100%;max-width:380px}
+.g-track{fill:none;stroke:rgba(255,255,255,.12);stroke-width:18;stroke-linecap:round}
+.g-val{fill:none;stroke:url(#gGrad);stroke-width:18;stroke-linecap:round}
+.js .g-val{transition:stroke-dashoffset 1.8s var(--ease)}
+.g-num{font-family:var(--display);font-weight:600;font-size:76px;letter-spacing:-.04em;fill:#fff}
+.g-end{font-family:var(--mono);font-size:11px;fill:#9fb3e0}
+.gauge-cap{font-family:var(--display);font-size:20px;font-weight:600;margin-top:4px}
+.gauge-sub{font-size:15px;color:#b9c8ea;margin-top:6px}
+.super{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:40px;padding:10px 18px;font-size:14px;font-weight:500}
+.super svg{width:18px;height:18px;color:var(--gold-bright)}
+.g-panel{border:1px solid var(--line);border-radius:28px;padding:36px;background:#fff;display:grid;gap:30px;align-content:start}
+.g-panel h3{font-family:var(--display);font-weight:600;font-size:20px;margin-bottom:12px}
+.g-panel p{color:var(--muted);font-size:15.5px;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:14px;font-weight:600;color:var(--royal);background:var(--royal-50);border-radius:40px;padding:8px 16px}
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px 24px}
+.checks li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.45}
+.checks svg{width:22px;height:22px;flex-shrink:0;color:var(--royal)}
 
-.beneficios-section{background:#fff}
-.beneficios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.ben-card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--royal);border-radius:14px;padding:32px 26px;transition:box-shadow .25s,transform .25s}
-.ben-card:hover{box-shadow:0 22px 44px -24px rgba(30,64,175,.45);transform:translateY(-3px)}
-.ben-icon{margin-bottom:18px}
-.ben-card h4{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:11px;line-height:1.35}
-.ben-card p{font-size:13.5px;font-weight:400;line-height:1.7;color:var(--muted)}
+/* ============ PARA QUIEN ============ */
+.paraquien{background:var(--paper)}
+.pq-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(20px,3vw,32px);margin-top:56px}
+.pq-main{border-radius:28px;padding:clamp(28px,4vw,46px);color:#fff;background:linear-gradient(150deg,var(--royal) 0%,var(--deep-2) 100%);position:relative;overflow:hidden}
+.pq-main::after{content:'';position:absolute;right:-120px;bottom:-200px;width:420px;height:420px;border-radius:50%;border:2px solid rgba(255,255,255,.08);box-shadow:0 0 0 40px rgba(255,255,255,.03),0 0 0 80px rgba(255,255,255,.025)}
+.pq-main h3,.pq-side h3{font-family:var(--display);font-weight:600;font-size:clamp(22px,2.4vw,28px);letter-spacing:-.01em}
+.pq-main p{color:#cdd9f3;margin:12px 0 26px;max-width:560px;font-size:16px}
+.docs-lbl{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:14px}
+.docs{list-style:none;display:grid;gap:10px;position:relative;z-index:1}
+.docs li{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:12px 16px;font-size:15px}
+.docs svg{width:20px;height:20px;flex-shrink:0;color:var(--gold-bright)}
+.pq-side{border-radius:28px;padding:clamp(28px,4vw,40px);background:#fff;border:1px solid var(--line)}
+.pq-side p{color:var(--muted);margin:12px 0 22px;font-size:15.5px}
+.pq-side strong{color:var(--ink)}
+.mini-lbl{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--royal);margin-bottom:12px}
 
-.nosotros-section{background:radial-gradient(800px 460px at 90% 0%,rgba(69,182,232,.16),transparent 60%),linear-gradient(160deg,#1E40AF 0%,#13286E 100%);color:#fff;position:relative;overflow:hidden}
-.nosotros-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto}
-.nosotros-section h2{color:#fff}
-.nosotros-section .eyebrow{color:var(--gold-bright)}
-.nosotros-section .eyebrow::before{background:var(--gold-bright)}
-.nosotros-intro{font-size:16.5px;font-weight:400;line-height:1.75;color:#bcccdf;max-width:700px;margin-bottom:50px}
-.cifras-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:56px}
-.cifra-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:30px 24px;text-align:center;backdrop-filter:blur(6px)}
-.cifra-num{font-size:30px;font-weight:700;color:var(--gold-bright);margin-bottom:6px;letter-spacing:-.5px}
-.cifra-lbl{font-size:13px;font-weight:400;color:#aebfd6;line-height:1.45}
-.nosotros-historia{display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:56px}
-.historia-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:34px}
-.historia-card h3{font-size:19px;font-weight:600;color:var(--gold-bright);margin-bottom:14px}
-.historia-card p{font-size:14.5px;font-weight:400;line-height:1.8;color:#bccadd}
-.mvv-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:40px}
-.mvv-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:30px 26px}
-.mvv-icon{margin-bottom:14px}
-.mvv-card h3{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold-bright);margin-bottom:12px}
-.mvv-card p{font-size:13.5px;font-weight:400;line-height:1.75;color:#bccadd}
-.valores-list{display:flex;flex-direction:column;gap:12px;margin-top:8px}
-.valor-item{display:flex;gap:11px;align-items:flex-start}
-.valor-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px}
-.valor-text{font-size:13px;font-weight:400;color:#bccadd;line-height:1.5}
-.valor-text strong{color:#fff;font-weight:600;display:block;margin-bottom:2px}
+/* ============ BENEFICIOS ============ */
+.beneficios{background:linear-gradient(180deg,var(--deep) 0%,#0A1640 100%);color:#fff;overflow:hidden}
+.beneficios .eyebrow{color:var(--gold-bright)}
+.beneficios .h2{color:#fff}
+.beneficios .lead{color:#b9c8ea}
+.ben-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.free-pill{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);background:var(--gold);border-radius:40px;padding:10px 18px}
+.ben-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:60px;border-top:1px solid rgba(255,255,255,.12)}
+.ben{padding:36px 32px 8px 0}
+.ben+.ben{padding-left:32px;border-left:1px solid rgba(255,255,255,.12)}
+.ben-ico{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:rgba(244,201,105,.1);border:1px solid rgba(244,201,105,.25);color:var(--gold-bright);margin-bottom:22px}
+.ben-ico svg{width:26px;height:26px}
+.ben h3{font-family:var(--display);font-weight:600;font-size:20px;line-height:1.3;margin-bottom:10px}
+.ben p{color:#b9c8ea;font-size:15.5px;line-height:1.7}
 
-.faq-section{background:var(--bg)}
-.faq-groups{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.faq-group h3{font-size:19px;font-weight:600;color:var(--ink);margin-bottom:22px;padding-bottom:12px;border-bottom:2px solid var(--royal)}
-.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
-.faq-item:last-child{border-bottom:none}
-.faq-q{font-size:14.5px;font-weight:500;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;line-height:1.5}
-.faq-q::after{content:'+';font-size:20px;color:var(--royal);flex-shrink:0;transition:transform .2s}
-.faq-item.open .faq-q::after{transform:rotate(45deg)}
-.faq-a{font-size:13.5px;font-weight:400;line-height:1.75;color:var(--muted);display:none;padding-top:12px}
-.faq-item.open .faq-a{display:block}
+/* ============ NOSOTROS ============ */
+.nos-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,64px);margin-top:56px;align-items:start}
+.timeline{list-style:none;position:relative;display:grid;gap:30px;padding-left:34px}
+.timeline::before{content:'';position:absolute;left:8px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--royal),var(--sky),var(--gold))}
+.timeline li{position:relative}
+.timeline li::before{content:'';position:absolute;left:-34px;top:6px;width:18px;height:9px;border:3px solid var(--royal);border-bottom:0;border-radius:18px 18px 0 0;background:#fff;box-shadow:0 -4px 0 4px #fff}
+.timeline li:last-child::before{border-color:var(--gold)}
+.tl-when{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--royal)}
+.timeline h3{font-family:var(--display);font-weight:600;font-size:20px;margin:4px 0 6px}
+.timeline p{color:var(--muted);font-size:15.5px}
+.ally{border-radius:28px;background:var(--royal-50);border:1px solid #DCE4FA;padding:34px;position:relative;overflow:hidden}
+.ally::before{content:'';position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;border:2px solid rgba(30,64,175,.12)}
+.ally .mini-lbl{color:var(--royal)}
+.ally h3{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.2;letter-spacing:-.01em}
+.ally p{color:var(--muted);margin:12px 0 22px;font-size:15.5px}
+.mvv{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:20px;margin-top:64px}
+.mvv-card{border:1px solid var(--line);border-radius:24px;padding:30px}
+.mvv-card h3{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--royal);margin-bottom:14px}
+.mvv-card h3::before{content:'';width:14px;height:7px;border:2px solid var(--gold);border-bottom:0;border-radius:14px 14px 0 0}
+.mvv-card>p{font-family:var(--display);font-size:18.5px;line-height:1.5;color:var(--ink)}
+.valores{display:grid;gap:12px}
+.valores div{font-size:14.5px;color:var(--muted);line-height:1.5}
+.valores strong{display:block;color:var(--ink);font-weight:600;font-size:15px}
 
-.cta-section{background:radial-gradient(820px 460px at 10% 0%,rgba(69,182,232,.16),transparent 60%),linear-gradient(160deg,#1E40AF 0%,#13286E 100%);position:relative;overflow:hidden;padding:104px 5vw}
-.cta-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto}
-.cta-section h2{color:#fff;text-align:center;margin-bottom:16px}
-.cta-section .eyebrow{justify-content:center;color:var(--gold-bright)}
-.cta-section .eyebrow::before{background:var(--gold-bright)}
-.cta-lead{font-size:16.5px;font-weight:400;line-height:1.7;color:#bcccdf;text-align:center;max-width:580px;margin:0 auto 52px}
-.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.cta-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:36px;backdrop-filter:blur(10px)}
-.cta-info h3{font-size:21px;font-weight:600;color:#fff;margin-bottom:16px}
-.cta-info p{font-size:14.5px;font-weight:400;line-height:1.75;color:#bcccdf;margin-bottom:24px}
-.cta-detail{display:flex;gap:13px;align-items:flex-start;margin-bottom:16px}
-.cta-icon{width:40px;height:40px;border-radius:50%;background:rgba(69,182,232,.2);border:1px solid rgba(69,182,232,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff}
-.cta-detail-text{font-size:13.5px;font-weight:400;color:#cdd9e8;line-height:1.5}
-.cta-detail-text strong{display:block;font-weight:700;color:var(--gold-bright);font-size:11px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
-.cta-form{display:flex;flex-direction:column;gap:14px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.fg{display:flex;flex-direction:column;gap:6px}
-.fg label{font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:#aebfd6}
-.fg input,.fg textarea,.fg select{font-family:'Inter',sans-serif;font-size:14px;font-weight:400;color:var(--ink);background:rgba(255,255,255,.95);border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:12px 14px;outline:none;transition:box-shadow .2s,border-color .2s;-webkit-appearance:none}
-.fg input::placeholder,.fg textarea::placeholder{color:#9aa7bd}
-.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(69,182,232,.3);background:#fff}
-.fg textarea{min-height:104px;resize:none}
-.fg select option{color:var(--ink);background:#fff}
-.submit-btn{background:var(--gold);color:#3a2600;font-family:'Inter',sans-serif;font-size:14px;font-weight:700;letter-spacing:.3px;padding:15px 32px;border:none;border-radius:30px;cursor:pointer;transition:all .2s;align-self:flex-start;box-shadow:0 16px 30px -12px rgba(230,164,30,.6)}
-.submit-btn:hover{background:var(--gold-bright);transform:translateY(-2px)}
-.form-consent{font-size:12px;line-height:1.6;color:#aebfd6;margin-top:-2px}
-.form-consent a{color:var(--gold-bright);text-decoration:underline;text-underline-offset:2px}
+/* ============ ASOCIADOS ============ */
+.asociados{background:var(--sky-soft)}
+.as-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.as-card{background:#fff;border-radius:28px;padding:clamp(26px,3.5vw,38px);box-shadow:0 40px 80px -60px rgba(14,26,54,.45);display:grid;gap:18px}
+.as-item{display:flex;gap:14px;align-items:flex-start}
+.as-item svg{width:26px;height:26px;flex-shrink:0;margin-top:2px}
+.as-item b{display:block;font-family:var(--display);font-size:17px;font-weight:600;margin-bottom:2px}
+.as-item span{color:var(--muted);font-size:15px;line-height:1.6}
+.as-ok svg{color:var(--royal)}
+.as-warn{background:var(--gold-soft);border-radius:16px;padding:16px}
+.as-warn svg{color:var(--gold-deep,#C2860F)}
+.as-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
 
-footer{background:linear-gradient(160deg,#13286E,#0E1F52);padding:54px 5vw 30px;position:relative;overflow:hidden}
-.footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:24px;position:relative;z-index:1}
-.footer-brand p{font-size:13px;font-weight:400;line-height:1.7;color:rgba(255,255,255,.5);margin-top:14px;max-width:290px}
-.footer-logo-name{font-size:14px;font-weight:600;color:#fff}
-.footer-logo-sub{font-size:10px;font-weight:500;letter-spacing:1.5px;color:var(--gold-bright);text-transform:uppercase}
-.footer-col h5{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold-bright);margin-bottom:16px}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:11px}
-.footer-col ul li a{font-size:13px;font-weight:400;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
-.footer-col ul li a:hover{color:var(--gold-bright)}
-.footer-bottom{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;position:relative;z-index:1}
-.footer-bottom p{font-size:11.5px;font-weight:400;color:rgba(255,255,255,.4)}
-.footer-legal{display:flex;gap:20px}
-.footer-legal a{font-size:11.5px;font-weight:400;color:rgba(255,255,255,.4);text-decoration:none}
-.footer-legal a:hover{color:var(--gold-bright)}
+/* ============ FAQ ============ */
+.faq{background:#fff}
+.tabs{display:inline-flex;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:40px;padding:5px;margin-top:36px}
+.tab{padding:11px 22px;border-radius:40px;font-weight:600;font-size:15px;color:var(--muted);transition:background .25s,color .25s,box-shadow .25s}
+.tab[aria-selected="true"]{background:#fff;color:var(--royal);box-shadow:0 6px 18px -10px rgba(14,26,54,.4)}
+.faq-panel{margin-top:28px;max-width:880px;border-top:1px solid var(--line)}
+.faq-panel[hidden]{display:none}
+.qa{border-bottom:1px solid var(--line)}
+.qa-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;padding:22px 4px;font-family:var(--display);font-weight:500;font-size:18px;line-height:1.4;color:var(--ink);transition:color .2s}
+.qa-q:hover{color:var(--royal)}
+.qa-q i{position:relative;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);flex-shrink:0;transition:transform .35s var(--ease),background .3s,border-color .3s}
+.qa-q i::before,.qa-q i::after{content:'';position:absolute;left:50%;top:50%;width:11px;height:1.8px;background:currentColor;transform:translate(-50%,-50%)}
+.qa-q i::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .35s var(--ease)}
+.qa-q[aria-expanded="true"] i{background:var(--royal);border-color:var(--royal);color:#fff}
+.qa-q[aria-expanded="true"] i::after{transform:translate(-50%,-50%) rotate(0)}
+.qa-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
+.qa-a>div{overflow:hidden}
+.qa-a p{padding:0 48px 24px 4px;color:var(--muted);font-size:16px;line-height:1.75}
+.qa-q[aria-expanded="true"]+.qa-a{grid-template-rows:1fr}
 
-@media(max-width:900px){
-  .nav-center,.nav-right{display:none}
-  .hamburger{display:flex}
-  .topbar{display:none}
-  .hero{min-height:auto;padding:108px 5vw 72px}
-  .hero-inner{grid-template-columns:1fr;gap:44px;padding-top:10px}
-  .garantias-grid,.nosotros-historia,.mvv-grid,.cifras-grid,.paraquien-grid{grid-template-columns:1fr}
-  .actors,.beneficios-grid{grid-template-columns:1fr 1fr}
-  .faq-groups{grid-template-columns:1fr;gap:32px}
-  .cta-grid{grid-template-columns:1fr;gap:28px}
-  .footer-inner{grid-template-columns:1fr 1fr}
-  section{padding:72px 5vw}
-}
-@media(max-width:560px){
-  .actors,.beneficios-grid{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr}
-  .footer-inner{grid-template-columns:1fr}
-  .stat-grid{grid-template-columns:1fr 1fr}
-  .paraquien-main,.cta-card{padding:28px}
-}
-
-.whatsapp-btn{position:fixed;bottom:28px;left:28px;z-index:999;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;padding:12px 20px 12px 16px;border-radius:50px;box-shadow:0 10px 28px rgba(37,211,102,.45);transition:all .25s;font-family:'Inter',sans-serif;font-size:14px;font-weight:600}
-.whatsapp-btn:hover{background:#1ebe5d;box-shadow:0 14px 32px rgba(37,211,102,.5);transform:translateY(-2px)}
-.whatsapp-btn svg{width:24px;height:24px;flex-shrink:0}
-.whatsapp-label{white-space:nowrap}
-@media(max-width:560px){.whatsapp-label{display:none}.whatsapp-btn{padding:14px;border-radius:50%;left:16px;bottom:16px}}
-
-.form-success{display:none;background:rgba(255,255,255,.95);border:1px solid var(--sky);border-radius:16px;padding:34px 26px;text-align:center}
+/* ============ CONTACTO ============ */
+.contacto{color:#fff;overflow:hidden;background:radial-gradient(900px 500px at 85% 0%,rgba(69,182,232,.28),transparent 60%),linear-gradient(160deg,var(--royal) 0%,var(--deep-2) 100%)}
+.contacto .eyebrow{color:var(--gold-bright)}
+.contacto .h2{color:#fff;max-width:720px}
+.contacto .lead{color:#cbd8f4}
+.ct-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,64px);margin-top:48px;align-items:start}
+.ct-info h3{font-family:var(--display);font-weight:600;font-size:22px;margin-bottom:10px}
+.ct-info>p{color:#cbd8f4;font-size:15.5px;margin-bottom:28px}
+.ct-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px;text-decoration:none}
+.ct-ico{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);flex-shrink:0}
+.ct-ico svg{width:20px;height:20px}
+.ct-row small{display:block;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:2px}
+.ct-row span{font-size:15.5px;color:#eef3ff;word-break:break-word}
+.form-card{background:#fff;color:var(--ink);border-radius:28px;padding:clamp(24px,3.5vw,40px);box-shadow:0 50px 90px -50px rgba(5,12,40,.7)}
+.cta-form{display:flex;flex-direction:column;gap:16px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fg{display:flex;flex-direction:column;gap:7px}
+.fg label{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fg input,.fg textarea,.fg select{font-family:var(--body);font-size:15px;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;outline:none;transition:border-color .2s,box-shadow .2s,background .2s;-webkit-appearance:none;appearance:none}
+.fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%2355627D' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+.fg input::placeholder,.fg textarea::placeholder{color:#9AA6BC}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--royal);background:#fff;box-shadow:0 0 0 4px rgba(30,64,175,.12)}
+.fg textarea{min-height:110px;resize:vertical}
+.form-consent{font-size:12.5px;line-height:1.6;color:var(--muted)}
+.form-consent a{color:var(--royal);font-weight:600}
+.submit-btn{align-self:flex-start;border:0;cursor:pointer}
+.submit-btn:disabled{opacity:.7;cursor:wait}
+.form-success{display:none;text-align:center;padding:30px 10px}
 .form-success.show{display:flex;flex-direction:column;align-items:center;gap:12px}
-.form-success-icon{line-height:0}
-.form-success h3{font-size:20px;font-weight:600;color:var(--ink)}
-.form-success p{font-size:14px;font-weight:400;color:var(--muted);line-height:1.7}
-.form-success-btn{margin-top:8px;background:none;border:1.5px solid var(--royal);color:var(--royal);font-size:13px;font-weight:600;padding:9px 22px;border-radius:30px;cursor:pointer;transition:all .2s}
+.form-success svg{width:56px;height:56px;color:var(--royal)}
+.form-success h3{font-family:var(--display);font-size:22px;font-weight:600}
+.form-success p{color:var(--muted);font-size:15px;max-width:420px}
+.form-success-btn{margin-top:6px;border:1.5px solid var(--royal);color:var(--royal);font-weight:600;font-size:14px;padding:10px 22px;border-radius:40px;transition:all .2s}
 .form-success-btn:hover{background:var(--royal);color:#fff}
+
+/* ============ FOOTER ============ */
+footer{background:#081236;color:#aebcde;padding:72px 0 32px;font-size:14.5px}
+.ft-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px}
+.ft-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.ft-logo{background:#fff;border-radius:16px;padding:8px 10px}
+.ft-logo img{height:44px;width:auto}
+.ft-brand b{display:block;font-family:var(--display);color:#fff;font-size:16px;font-weight:600}
+.ft-brand small{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-bright)}
+.ft-about{margin-top:18px;max-width:320px;line-height:1.7}
+footer h4{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a{text-decoration:none;transition:color .2s}
+footer ul a:hover{color:#fff}
+.ext::after{content:' ↗';font-size:12px}
+.ft-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);margin-top:56px;padding-top:24px;font-size:13px;color:#8394bd}
+.ft-bottom nav{display:flex;gap:20px;flex-wrap:wrap}
+.ft-bottom a{text-decoration:none}
+.ft-bottom a:hover{color:#fff}
+
+/* ============ WHATSAPP ============ */
+.whatsapp-btn{position:fixed;bottom:24px;left:24px;z-index:90;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;padding:12px 20px 12px 16px;border-radius:50px;box-shadow:0 14px 30px -10px rgba(37,211,102,.6);font-weight:600;font-size:14px;transition:transform .2s,box-shadow .2s}
+.whatsapp-btn:hover{transform:translateY(-2px);box-shadow:0 18px 34px -10px rgba(37,211,102,.7)}
+.whatsapp-btn svg{width:24px;height:24px;flex-shrink:0}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1120px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+}
+@media(max-width:960px){
+  .rec-grid{grid-template-columns:1fr;gap:28px}
+  .rec-stage{top:74px;z-index:5;padding:12px 12px 10px;border-radius:22px}
+  .rec-caption{padding-top:10px}
+  .rec-steps{gap:42vh;padding-bottom:30vh}
+  .rec-step{opacity:.55}
+  .garantias-grid,.pq-grid,.nos-grid,.as-grid,.ct-grid{grid-template-columns:1fr}
+  .mvv{grid-template-columns:1fr}
+  .ben-grid{grid-template-columns:1fr}
+  .ben,.ben+.ben{padding:30px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .tb-right{display:none}
+  .topbar .wrap{justify-content:center}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat{padding:22px 16px 24px}
+  .stat:nth-child(odd){border-left:0;padding-left:0}
+  .stat:nth-child(n+3){border-top:1px solid rgba(255,255,255,.12)}
+  .checks{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .rec-dots button{width:26px;height:26px;font-size:11px}
+  .d-role{display:none}
+  .d-name{font-size:25px}
+  .pill-x{display:none}
+  .rec-now{font-size:10.5px}
+  .whatsapp-btn span{display:none}
+  .whatsapp-btn{padding:14px;border-radius:50%;left:16px;bottom:16px}
+  .ft-grid{grid-template-columns:1fr}
+  .qa-a p{padding-right:4px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js [data-reveal],.js .hero-copy>*{opacity:1;transform:none}
+}
 </style>
 <script src="https://www.google.com/recaptcha/api.js?render=6LcOFpwsAAAAAKnZJ00rSsHCC1mZy6klWccH8rhN"></script>
 <script type="application/ld+json">
@@ -299,405 +421,403 @@ footer{background:linear-gradient(160deg,#13286E,#0E1F52);padding:54px 5vw 30px;
 </head>
 <body>
 
+<!-- ICONOS REUTILIZABLES -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M7.5 12.3l3 3 6-6.3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></g></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V4a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v17"/><path d="M15 21V9h4a1 1 0 0 1 1 1v11"/><path d="M2 21h20"/><path d="M7 7h4M7 11h4M7 15h4"/></g></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></g></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></g></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></g></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></g></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></g></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+</svg>
+
 <!-- TOPBAR -->
 <div class="topbar">
-  <a href="#contacto" class="topbar-link"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle" aria-hidden="true" focusable="false"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg> Pague su deuda</a>
-  <span class="topbar-divider">|</span>
-  <span class="topbar-disabled"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle" aria-hidden="true" focusable="false"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Portal intermediarios <span class="soon-badge">Próximamente</span></span>
+  <div class="wrap">
+    <a class="tb-factura" href="#asociados"><svg><use href="#i-info"/></svg>¿Recibió una factura de FMC? <strong>Conozca por qué →</strong></a>
+    <div class="tb-right">
+      <a href="#contacto"><svg><use href="#i-card"/></svg>Pague su deuda</a>
+      <a class="tb-portal" href="https://portalintermediarios.fondomutuodecobertura.com" target="_blank" rel="noopener"><svg><use href="#i-lock"/></svg>Portal intermediarios</a>
+    </div>
+  </div>
 </div>
 
 <!-- NAV -->
-<nav>
-  <a class="nav-logo" href="#">
-    <img src="/logo-fmc.png" alt="Fondo Mutuo de Cobertura" width="270" height="190"/>
-    <div class="logo-text">
-      <span class="logo-name">Fondo Mutuo de Cobertura</span>
-      <span class="logo-sub">S.A.S. · Colombia</span>
-    </div>
-  </a>
-  <ul class="nav-center">
-    <li><a href="#proceso">Cómo funciona</a></li>
-    <li><a href="#garantias">Garantías</a></li>
-    <li><a href="#nosotros">Nosotros</a></li>
-    <li><a href="/pqr">PQR</a></li>
-  </ul>
-  <div class="nav-right">
-    <a href="#contacto" class="nav-cta">Contáctenos →</a>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Fondo Mutuo de Cobertura — inicio">
+      <img src="/logo-fmc.png" alt="" width="270" height="190"/>
+      <span><span class="brand-name">Fondo Mutuo de Cobertura</span><span class="brand-sub">S.A.S. · Colombia</span></span>
+    </a>
+    <nav aria-label="Principal">
+      <ul class="nav-links">
+        <li><a href="#proceso">Cómo funciona</a></li>
+        <li><a href="#garantias">Garantías</a></li>
+        <li><a href="#paraquien">Para quién</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="/pqr">PQR</a></li>
+      </ul>
+    </nav>
+    <a href="#contacto" class="btn btn-gold nav-cta">Contáctenos</a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mmenu"><span></span><span></span><span></span></button>
   </div>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#proceso" onclick="toggleMenu()">Cómo funciona</a>
-  <a href="#garantias" onclick="toggleMenu()">Garantías</a>
-  <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
+</header>
+<div class="mmenu" id="mmenu">
+  <a href="#proceso">Cómo funciona</a>
+  <a href="#garantias">Garantías</a>
+  <a href="#paraquien">Para quién</a>
+  <a href="#beneficios">Beneficios</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#asociados">¿Recibió una factura de FMC?</a>
   <a href="/pqr">PQR</a>
-  <a href="#contacto" onclick="toggleMenu()" style="background:var(--gold);color:#3a2600;text-align:center;font-weight:600;border-bottom:none;margin-top:8px;border-radius:4px">Contáctenos →</a>
+  <a href="https://portalintermediarios.fondomutuodecobertura.com" target="_blank" rel="noopener">Portal intermediarios ↗</a>
+  <a href="#contacto" class="btn btn-gold">Contáctenos</a>
 </div>
+
+<main id="inicio">
 
 <!-- HERO -->
-<section class="hero">
-  <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-    <path d="M0,300 C180,180 360,420 540,300 C720,180 900,420 1080,300 C1260,180 1350,320 1440,260 L1440,0 L0,0 Z" fill="rgba(255,255,255,0.35)"/>
-    <path d="M0,500 C200,380 400,600 600,480 C800,360 1000,580 1200,460 C1320,400 1380,480 1440,440 L1440,900 L0,900 Z" fill="rgba(129,212,250,0.3)"/>
-    <path d="M0,650 C150,580 300,700 500,620 C700,540 900,680 1100,600 C1250,540 1360,600 1440,570 L1440,900 L0,900 Z" fill="rgba(255,255,255,0.2)"/>
-    <path d="M0,780 C200,720 400,820 600,760 C800,700 1050,800 1250,740 C1350,710 1400,750 1440,730 L1440,900 L0,900 Z" fill="rgba(179,229,252,0.25)"/>
-  </svg>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-eyebrow">Fiador institucional · Sector mutual colombiano</div>
-      <h1>El fondo de garantías construido <strong>por el mutualismo, para el mutualismo.</strong></h1>
-      <p class="hero-desc">FMC es el primer fondo de cobertura creado por mutuales colombianas. Proteja su cartera, amplíe su colocación y acceda a beneficios exclusivos — sin barreras de entrada y sin mínimos de colocación.</p>
-      <div class="hero-btns">
-        <a href="#contacto" class="btn-gold">Solicitar información →</a>
-        <a href="#proceso" class="btn-outline">Cómo funciona</a>
-      </div>
+<section class="hero" aria-labelledby="hero-title">
+  <svg class="guilloche" id="guilloche" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+  <div class="hero-copy">
+    <div class="hero-pill"><i></i>Fiador institucional<span class="pill-x"> · Sector mutual colombiano</span></div>
+    <h1 id="hero-title"><span class="h1-lead">El fondo de garantías construido</span> <span class="gold">por el mutualismo,<br/>para el mutualismo.</span></h1>
+    <p class="hero-sub">FMC es el primer fondo de cobertura creado por mutuales colombianas. Proteja su cartera, amplíe su colocación y acceda a beneficios exclusivos, sin barreras de entrada y sin mínimos de colocación.</p>
+    <div class="hero-ctas">
+      <a href="#contacto" class="btn btn-gold">Solicitar información <svg><use href="#i-arrow"/></svg></a>
+      <a href="#proceso" class="btn btn-line">Ver cómo funciona</a>
     </div>
-    <div>
-      <div class="hero-panel">
-        <div class="hero-panel-head">Características clave</div>
-        <div class="stat-grid">
-          <div class="stat-cell"><div class="stat-num">100%</div><div class="stat-lbl">Cobertura sobre el monto total del crédito</div></div>
-          <div class="stat-cell"><div class="stat-num">Supersolidaria</div><div class="stat-lbl">Garantía aceptada por la Supersolidaria</div></div>
-          <div class="stat-cell"><div class="stat-num">Sin mínimos</div><div class="stat-lbl">Sin mínimos de colocación para vincularse</div></div>
-          <div class="stat-cell"><div class="stat-num">Reserva propia</div><div class="stat-lbl">Cada entidad mantiene su propia reserva</div></div>
+  </div>
+  <div class="hero-stats">
+    <div class="wrap">
+      <dl class="stats">
+        <div class="stat"><dt class="sr-only">Monto garantizado</dt><dd><div class="stat-num"><span class="u">+$</span><span data-count="65000">65.000</span><span class="u">M</span></div><div class="stat-lbl">Garantizados desde nuestro origen</div></dd></div>
+        <div class="stat"><dt class="sr-only">Créditos respaldados</dt><dd><div class="stat-num"><span class="u">~</span><span data-count="22000">22.000</span></div><div class="stat-lbl">Créditos respaldados desde abril de 2023</div></dd></div>
+        <div class="stat"><dt class="sr-only">Cobertura</dt><dd><div class="stat-num"><span data-count="100">100</span><span class="u">%</span></div><div class="stat-lbl">De cobertura sobre el monto del crédito</div></dd></div>
+        <div class="stat"><dt class="sr-only">Mínimos</dt><dd><div class="stat-num">Sin mínimos</div><div class="stat-lbl">De colocación para vincularse</div></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA: RECORRIDO -->
+<section class="sec recorrido" id="proceso" aria-labelledby="rec-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">Cómo funciona</span>
+      <h2 class="h2" id="rec-title">El recorrido de un crédito con garantía FMC</h2>
+      <p class="lead">Simple para la entidad, ágil para el asociado. Un solo documento vincula cada crédito a la garantía FMC.</p>
+    </div>
+
+    <div class="rec-grid">
+      <div class="rec-stage" aria-hidden="true">
+        <svg id="diagram" viewBox="0 0 640 286">
+          <!-- caminos base: arriba van hacia adelante, abajo regresan -->
+          <path class="d-base" id="p1" d="M142,158 C174,92 246,92 278,158"/>
+          <path class="d-base" id="p2" d="M362,158 C394,92 466,92 498,158"/>
+          <path class="d-base" id="p3" d="M278,184 C246,240 174,240 142,184"/>
+          <path class="d-base" id="p4" d="M498,184 C466,240 394,240 362,184"/>
+          <path class="d-base" id="p6" d="M540,114 C470,6 170,6 100,126"/>
+          <!-- trazo activo -->
+          <path class="d-live" id="live"/>
+          <path class="d-live" id="live2" stroke-dasharray="7 7"/>
+          <!-- nodos -->
+          <g class="d-node" id="n-asociado">
+            <circle class="ring" cx="100" cy="170" r="44"/>
+            <circle class="disc" cx="100" cy="170" r="42"/>
+            <svg class="ico" x="83" y="153" width="34" height="34"><use href="#i-person"/></svg>
+            <text class="d-name" x="100" y="246" text-anchor="middle">Asociado</text>
+            <text class="d-role" x="100" y="264" text-anchor="middle">Solicita el crédito</text>
+          </g>
+          <g class="d-node" id="n-mutual">
+            <circle class="ring" cx="320" cy="170" r="44"/>
+            <circle class="disc" cx="320" cy="170" r="42"/>
+            <svg class="ico" x="303" y="153" width="34" height="34"><use href="#i-building"/></svg>
+            <text class="d-name" x="320" y="246" text-anchor="middle">Mutual</text>
+            <text class="d-role" x="320" y="264" text-anchor="middle">Otorga el crédito</text>
+          </g>
+          <g class="d-node" id="n-fmc">
+            <path class="d-canopy" id="canopy" d="M486,170 A54,54 0 0 1 594,170"/>
+            <circle class="ring" cx="540" cy="170" r="44"/>
+            <circle class="disc" cx="540" cy="170" r="42"/>
+            <svg class="ico" x="523" y="153" width="34" height="34"><use href="#i-shield"/></svg>
+            <text class="d-name" x="540" y="246" text-anchor="middle">FMC</text>
+            <text class="d-role" x="540" y="264" text-anchor="middle">Respalda el crédito</text>
+          </g>
+          <!-- ficha que viaja -->
+          <circle class="d-token" id="token" r="8" opacity="0"/>
+        </svg>
+        <div class="rec-caption">
+          <span class="rec-now" id="recNow" aria-hidden="true">Paso <b>1</b> de 5</span>
+          <div class="rec-dots" id="recDots">
+            <button type="button" data-go="1" aria-label="Paso 1">1</button><button type="button" data-go="2" aria-label="Paso 2">2</button><button type="button" data-go="3" aria-label="Paso 3">3</button><button type="button" data-go="4" aria-label="Paso 4">4</button><button type="button" data-go="5" aria-label="Paso 5">5</button>
+          </div>
         </div>
-        <div class="hero-tagline">"Unirnos en proyectos que nos fortalezcan a todos es la garantía de ser más competitivos cada día."</div>
       </div>
+
+      <ol class="rec-steps" id="recSteps">
+        <li class="rec-step" data-step="1">
+          <span class="rec-num">1</span>
+          <div><span class="rec-tag">Asociado → Mutual</span><h3>Solicitud de crédito</h3><p>El asociado acude a la mutual en busca de financiación y la mutual evalúa su viabilidad crediticia.</p></div>
+        </li>
+        <li class="rec-step" data-step="2">
+          <span class="rec-num">2</span>
+          <div><span class="rec-tag">Mutual → FMC</span><h3>Vinculación de la garantía FMC</h3><p>La mutual vincula la garantía FMC al crédito. El asociado firma el anexo de aceptación —un solo documento— y autoriza el tratamiento de sus datos personales.</p></div>
+        </li>
+        <li class="rec-step" data-step="3">
+          <span class="rec-num">3</span>
+          <div><span class="rec-tag">Mutual → Asociado</span><h3>Desembolso del crédito</h3><p>Se aprueba el crédito con fianza. La comisión de garantía se descuenta en un único pago al momento del desembolso, y la reserva individual de la entidad crece con cada operación vinculada.</p></div>
+        </li>
+        <li class="rec-step" data-step="4">
+          <span class="rec-num">4</span>
+          <div><span class="rec-tag">FMC → Mutual</span><h3>Seguimiento y reporte mensual</h3><p>FMC reporta mensualmente a la entidad el estado de su reserva acumulada. El asociado continúa pagando normalmente a la mutual.</p></div>
+        </li>
+        <li class="rec-step" data-step="5">
+          <span class="rec-num">5</span>
+          <div><span class="rec-tag">FMC → Mutual · si hay incumplimiento</span><h3>Activación de la garantía</h3><p>Ante una mora superior a 90 días, la mutual activa la garantía. FMC paga al intermediario el saldo garantizado, asume la posición de acreedor frente al deudor y continúa el proceso de cobro.</p><span class="free">La mutual queda libre de esa obligación.</span></div>
+        </li>
+      </ol>
     </div>
   </div>
 </section>
-
-<!-- GOLD BAR -->
-<div class="gold-bar">
-  <div class="gold-bar-item">Garantía aceptada por la Supersolidaria</div>
-  <div class="gold-bar-item">Accionistas: mutuales y la Federación de Mutuales de Antioquia</div>
-  <div class="gold-bar-item">Sin mínimos de colocación</div>
-  <div class="gold-bar-item">Beneficios exclusivos para vinculadas</div>
-</div>
-
-<!-- WAVE -->
-<div class="wave-div" style="background:var(--gold)">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60">
-    <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill="var(--pale)"/>
-  </svg>
-</div>
-
-<!-- COMO FUNCIONA -->
-<section class="proceso-section" id="proceso">
-  <div class="inner">
-    <div class="eyebrow">Cómo funciona</div>
-    <h2>El proceso, paso a paso</h2>
-    <p class="lead">Simple para la entidad, ágil para el asociado. Un solo documento vincula cada crédito a la garantía FMC.</p>
-    <div class="actors">
-      <div class="actor-card"><div class="actor-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:var(--sky-deep)" aria-hidden="true" focusable="false"><path d="M4 21V4a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v17"/><path d="M15 21V9h4a1 1 0 0 1 1 1v11"/><path d="M2 21h20"/><path d="M7 7h4M7 11h4M7 15h4"/></svg></div><div class="actor-name">La Mutual</div><div class="actor-desc">Entidad vinculada que otorga el crédito al asociado</div></div>
-      <div class="actor-card"><div class="actor-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:var(--sky-deep)" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></div><div class="actor-name">El Asociado</div><div class="actor-desc">Persona que solicita el crédito a la mutual</div></div>
-      <div class="actor-card"><div class="actor-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:var(--sky-deep)" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><div class="actor-name">FMC</div><div class="actor-desc">Fiador institucional que respalda el crédito</div></div>
-    </div>
-    <div class="flow-wrap" style="margin-top:48px">
-      <div class="flow-step">
-        <div class="flow-num"><div class="flow-bubble">1</div></div>
-        <div class="flow-content"><div class="flow-actor">Asociado → Mutual</div><h4>Solicitud de crédito</h4><p>El asociado acude a la mutual en busca de financiación y la mutual evalúa su viabilidad crediticia.</p></div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num"><div class="flow-bubble">2</div></div>
-        <div class="flow-content"><div class="flow-actor">Mutual → FMC</div><h4>Vinculación de la garantía FMC</h4><p>La mutual vincula la garantía FMC al crédito. El asociado firma el anexo de aceptación — un solo documento — y autoriza el tratamiento de sus datos personales.</p></div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num"><div class="flow-bubble">3</div></div>
-        <div class="flow-content"><div class="flow-actor">Mutual → Asociado</div><h4>Desembolso del crédito</h4><p>Se aprueba el crédito con fianza. La comisión de garantía se descuenta en un único pago al momento del desembolso, y la reserva individual de la entidad crece con cada operación vinculada.</p></div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num"><div class="flow-bubble">4</div></div>
-        <div class="flow-content"><div class="flow-actor">FMC → Mutual</div><h4>Seguimiento y reporte mensual</h4><p>FMC reporta mensualmente a la entidad el estado de su reserva acumulada. El asociado continúa pagando normalmente a la mutual.</p></div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num"><div class="flow-bubble">5</div></div>
-        <div class="flow-content"><div class="flow-actor">FMC → Mutual</div><h4>Activación de la garantía (si hay incumplimiento)</h4><p>Ante una mora superior a 90 días, la mutual activa la garantía. FMC paga al intermediario el saldo garantizado, asume la posición de acreedor frente al deudor y continúa el proceso de cobro. <strong style="color:var(--sky-deep)">La mutual queda libre de esa obligación.</strong></p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div style="background:var(--pale);padding:0 5vw"><div style="max-width:1160px;margin:0 auto;height:2px;background:linear-gradient(90deg,var(--sky-deep),var(--sky),transparent)"></div></div>
 
 <!-- GARANTIAS -->
-<section class="garantias-section" id="garantias">
-  <div class="inner">
-    <div class="eyebrow">Nuestras garantías</div>
-    <h2>Todo lo que necesita para respaldar su cartera</h2>
-    <p class="lead">Respaldamos hasta el 100% del monto del crédito — incluyendo capital, intereses y otros conceptos — en todas las líneas de crédito reglamentadas.</p>
+<section class="sec" id="garantias" aria-labelledby="gar-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">Nuestras garantías</span>
+      <h2 class="h2" id="gar-title">Todo lo que necesita para respaldar su cartera</h2>
+      <p class="lead">Respaldamos hasta el 100% del monto del crédito —capital, intereses y otros conceptos— en todas las líneas de crédito reglamentadas.</p>
+    </div>
     <div class="garantias-grid">
-      <div class="garantia-card">
-        <h3>Líneas de crédito respaldadas</h3>
-        <p>Se respaldan todas las líneas de crédito que puedan consolidarse dentro de las líneas reglamentadas:</p>
-        <div class="lineas-flex">
-          <span class="linea-chip">Consumo</span>
-          <span class="linea-chip">Vivienda</span>
-          <span class="linea-chip">Comercial</span>
-          <span class="linea-chip">Microcrédito</span>
-          <span class="linea-chip">Crédito productivo</span>
-        </div>
+      <div class="gauge-card" data-reveal>
+        <svg class="gauge" viewBox="0 0 400 230" aria-hidden="true">
+          <defs><linearGradient id="gGrad" x1="0" x2="1"><stop offset="0" stop-color="#45B6E8"/><stop offset=".55" stop-color="#F4C969"/><stop offset="1" stop-color="#E6A41E"/></linearGradient></defs>
+          <path class="g-track" d="M40,200 A160,160 0 0 1 360,200"/>
+          <path class="g-val" id="gVal" d="M40,200 A160,160 0 0 1 360,200"/>
+          <text class="g-num" x="200" y="186" text-anchor="middle"><tspan id="gNum">100</tspan>%</text>
+          <text class="g-end" x="40" y="226" text-anchor="middle">0</text>
+          <text class="g-end" x="360" y="226" text-anchor="middle">100</text>
+        </svg>
+        <p class="gauge-cap">del monto del crédito</p>
+        <p class="gauge-sub">Capital, intereses y otros conceptos</p>
+        <span class="super"><svg><use href="#i-shield"/></svg>Garantía aceptada por la Supersolidaria</span>
       </div>
-      <div class="garantia-card">
-        <h3>Condiciones generales</h3>
-        <ul class="cond-list">
-          <li><span class="cond-check">✓</span>Garantía aceptada por la Supersolidaria</li>
-          <li><span class="cond-check">✓</span>Cobertura hasta el 100% del monto total</li>
-          <li><span class="cond-check">✓</span>Reclamación a partir de 90 días de mora</li>
-          <li><span class="cond-check">✓</span>Tarifas competitivas según perfil de riesgo</li>
-          <li><span class="cond-check">✓</span>Posibilidad de combinar garantías</li>
-          <li><span class="cond-check">✓</span>Reserva individual — sin subsidio cruzado</li>
-        </ul>
+      <div class="g-panel" data-reveal="2">
+        <div>
+          <h3>Líneas de crédito respaldadas</h3>
+          <p>Se respaldan todas las líneas de crédito que puedan consolidarse dentro de las líneas reglamentadas:</p>
+          <div class="chips"><span class="chip">Consumo</span><span class="chip">Vivienda</span><span class="chip">Comercial</span><span class="chip">Microcrédito</span><span class="chip">Crédito productivo</span></div>
+        </div>
+        <div>
+          <h3>Condiciones generales</h3>
+          <ul class="checks">
+            <li><svg><use href="#i-check"/></svg>Cobertura hasta el 100% del monto total</li>
+            <li><svg><use href="#i-check"/></svg>Reclamación a partir de 90 días de mora</li>
+            <li><svg><use href="#i-check"/></svg>Tarifas competitivas según perfil de riesgo</li>
+            <li><svg><use href="#i-check"/></svg>Posibilidad de combinar garantías</li>
+            <li><svg><use href="#i-check"/></svg>Reserva individual, sin subsidio cruzado</li>
+            <li><svg><use href="#i-check"/></svg>Sin mínimos de colocación</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PARA QUIEN -->
-<div style="background:var(--white);padding:0 5vw"><div style="max-width:1160px;margin:0 auto;height:2px;background:linear-gradient(90deg,var(--sky-deep),var(--sky),transparent)"></div></div>
-<section class="paraquien-section" id="paraquien">
-  <div class="inner">
-    <div class="eyebrow">¿Su entidad puede vincularse?</div>
-    <h2>Para quién es FMC</h2>
-    <p class="lead">FMC fue creado para las asociaciones mutuales de ahorro y crédito, aunque el modelo está abierto a otras entidades que otorguen crédito de manera legal en Colombia.</p>
-    <div class="paraquien-grid">
-      <div class="paraquien-main">
+<section class="sec paraquien" id="paraquien" aria-labelledby="pq-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">¿Su entidad puede vincularse?</span>
+      <h2 class="h2" id="pq-title">Para quién es FMC</h2>
+      <p class="lead">FMC fue creado para las asociaciones mutuales de ahorro y crédito, aunque el modelo está abierto a otras entidades que otorguen crédito de manera legal en Colombia.</p>
+    </div>
+    <div class="pq-grid">
+      <div class="pq-main" data-reveal>
         <h3>Mutuales de ahorro y crédito</h3>
         <p>Si su mutual coloca créditos a sus asociados, puede vincularse a FMC independientemente de su tamaño o volumen de cartera. Sin mínimos de colocación y sin barreras de entrada.</p>
-        <div class="doc-label">Documentación requerida para vincularse:</div>
-        <ul class="doc-list">
-          <li>Documento para conocimiento de la cartera</li>
-          <li>Contrato de vinculación persona jurídica, debidamente firmado</li>
-          <li>Cámara de Comercio o registro mercantil reciente</li>
-          <li>RUT</li>
-          <li>Fotocopia del documento de identidad del Representante Legal</li>
+        <div class="docs-lbl">Documentación para vincularse</div>
+        <ul class="docs">
+          <li><svg><use href="#i-doc"/></svg>Documento para conocimiento de la cartera</li>
+          <li><svg><use href="#i-doc"/></svg>Contrato de vinculación persona jurídica, debidamente firmado</li>
+          <li><svg><use href="#i-doc"/></svg>Cámara de Comercio o registro mercantil reciente</li>
+          <li><svg><use href="#i-doc"/></svg>RUT</li>
+          <li><svg><use href="#i-doc"/></svg>Documento de identidad del Representante Legal</li>
         </ul>
       </div>
-      <div>
-        <div class="paraquien-sec">
-          <h3>¿Su entidad otorga crédito?</h3>
-          <p>FMC está abierto a vincularse con cualquier entidad que otorgue crédito de forma legal en Colombia. Si su organización coloca créditos a sus asociados, empleados o clientes, <strong style="color:var(--navy)">conversemos</strong>: el modelo FMC puede adaptarse a su realidad.</p>
-          <p style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--sky-deep);margin-top:16px;margin-bottom:10px">Sectores de interés</p>
-          <div class="sector-chips">
-            <span class="sector-chip">Fondos de empleados</span>
-            <span class="sector-chip">Fintech de crédito</span>
-            <span class="sector-chip">Cooperativas de trabajo asociado</span>
-            <span class="sector-chip">Empresas con cartera a empleados</span>
-            <span class="sector-chip">Cajas de compensación</span>
-          </div>
-        </div>
+      <div class="pq-side" data-reveal="2">
+        <h3>¿Su entidad otorga crédito?</h3>
+        <p>FMC está abierto a vincularse con cualquier entidad que otorgue crédito de forma legal en Colombia. Si su organización coloca créditos a sus asociados, empleados o clientes, <strong>conversemos</strong>: el modelo FMC puede adaptarse a su realidad.</p>
+        <div class="mini-lbl">Sectores de interés</div>
+        <div class="chips"><span class="chip">Fondos de empleados</span><span class="chip">Fintech de crédito</span><span class="chip">Cooperativas de trabajo asociado</span><span class="chip">Empresas con cartera a empleados</span><span class="chip">Cajas de compensación</span></div>
+        <a href="#contacto" class="btn btn-royal" style="margin-top:28px">Conversemos <svg><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
-<div style="background:var(--white);padding:0 5vw"><div style="max-width:1160px;margin:0 auto;height:2px;background:linear-gradient(90deg,var(--sky-deep),var(--sky),transparent)"></div></div>
-
 <!-- BENEFICIOS -->
-<section class="beneficios-section" id="beneficios">
-  <div class="inner">
-    <div class="eyebrow">Beneficios exclusivos</div>
-    <h2>Vincularse trae más que una garantía</h2>
-    <p class="lead">Las entidades vinculadas a FMC acceden a servicios de valor adicional sin costo, porque entendemos lo que necesita una mutual para operar de manera eficiente.</p>
-    <div class="beneficios-grid">
-      <div class="ben-card">
-        <div class="ben-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:var(--sky-deep)" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-        <h4>Consulta masiva en listas restrictivas (SARLAFT)</h4>
+<section class="sec beneficios" id="beneficios" aria-labelledby="ben-title">
+  <div class="wrap">
+    <div class="ben-head" data-reveal>
+      <div class="sec-head">
+        <span class="eyebrow">Beneficios exclusivos</span>
+        <h2 class="h2" id="ben-title">Vincularse trae más que una garantía</h2>
+        <p class="lead">Las entidades vinculadas a FMC acceden a servicios de valor adicional, porque entendemos lo que necesita una mutual para operar de manera eficiente.</p>
+      </div>
+      <span class="free-pill">Sin costo para entidades vinculadas</span>
+    </div>
+    <div class="ben-grid">
+      <div class="ben" data-reveal>
+        <div class="ben-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg></div>
+        <h3>Consulta masiva en listas restrictivas (SARLAFT)</h3>
         <p>La consulta en listas restrictivas es obligatoria para el cumplimiento del SARLAFT y tiene costo en el mercado. Como entidad vinculada, FMC la realiza para usted como valor agregado, mínimo una vez al año.</p>
       </div>
-      <div class="ben-card">
-        <div class="ben-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:var(--sky-deep)" aria-hidden="true" focusable="false"><path d="M3 21h18"/><rect x="5" y="11" width="3.4" height="7" rx="1"/><rect x="10.3" y="6" width="3.4" height="12" rx="1"/><rect x="15.6" y="9" width="3.4" height="9" rx="1"/></svg></div>
-        <h4>Evaluación de cartera en centrales de riesgo (SARC)</h4>
+      <div class="ben" data-reveal="2">
+        <div class="ben-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="11" width="3.4" height="7" rx="1"/><rect x="10.3" y="6" width="3.4" height="12" rx="1"/><rect x="15.6" y="9" width="3.4" height="9" rx="1"/></svg></div>
+        <h3>Evaluación de cartera en centrales de riesgo (SARC)</h3>
         <p>Conocer el comportamiento crediticio de su cartera es clave para una buena gestión del riesgo. FMC incluye una evaluación anual en centrales de riesgo como beneficio para sus entidades vinculadas.</p>
       </div>
-      <div class="ben-card">
-        <div class="ben-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:var(--sky-deep)" aria-hidden="true" focusable="false"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
-        <h4>Espacios de formación</h4>
+      <div class="ben" data-reveal="3">
+        <div class="ben-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
+        <h3>Espacios de formación</h3>
         <p>Charlas, talleres y capacitaciones en temas de relevancia para el sector solidario. Una mutual más capacitada toma mejores decisiones y gestiona mejor su riesgo.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div style="background:var(--pale);padding:0 5vw"><div style="max-width:1160px;margin:0 auto;height:2px;background:linear-gradient(90deg,var(--sky-deep),var(--sky),transparent)"></div></div>
-<div style="background:var(--pale);height:0"></div>
-
 <!-- NOSOTROS -->
-<section class="nosotros-section" id="nosotros" style="padding-top:70px">
-  <svg class="nosotros-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice">
-    <path d="M0,200 C300,100 600,300 900,200 C1100,130 1300,250 1440,180 L1440,0 L0,0 Z" fill="rgba(255,255,255,1)"/>
-    <path d="M0,600 C250,520 550,680 850,580 C1050,510 1280,630 1440,560 L1440,800 L0,800 Z" fill="rgba(255,255,255,1)"/>
-  </svg>
-  <div class="nosotros-inner inner">
-    <div class="eyebrow">Quiénes somos</div>
-    <h2>Nacimos del mutualismo. Existimos para fortalecerlo.</h2>
-    <p class="nosotros-intro">Somos el primer fondo de cobertura creado desde adentro del sector mutual colombiano — no un proveedor externo, sino una iniciativa nacida de las mismas organizaciones que hoy respaldamos.</p>
-
-    <!-- CIFRAS -->
-    <div class="cifras-grid">
-      <div class="cifra-card">
-        <div class="cifra-num">+$65.000M</div>
-        <div class="cifra-lbl">Garantizados desde nuestro origen, protegiendo el progreso de miles de familias</div>
-      </div>
-      <div class="cifra-card">
-        <div class="cifra-num">~22.000</div>
-        <div class="cifra-lbl">Operaciones crediticias respaldadas desde abril de 2023</div>
-      </div>
-      <div class="cifra-card">
-        <div class="cifra-num">Desde 2023</div>
-        <div class="cifra-lbl">Inicio de operaciones — con crecimiento sostenido año tras año</div>
-      </div>
+<section class="sec" id="nosotros" aria-labelledby="nos-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">Quiénes somos</span>
+      <h2 class="h2" id="nos-title">Nacimos del mutualismo. Existimos para fortalecerlo.</h2>
+      <p class="lead">Somos el primer fondo de cobertura creado desde adentro del sector mutual colombiano: no un proveedor externo, sino una iniciativa nacida de las mismas organizaciones que hoy respaldamos.</p>
     </div>
-
-    <!-- HISTORIA -->
-    <div class="nosotros-historia">
-      <div class="historia-card">
-        <h3>Nuestro origen</h3>
-        <p>FMC nació a finales de 2022 como resultado de la visión estratégica de la Federación de Mutuales de Antioquia y las asociaciones mutuales fundadoras. Iniciamos operaciones en abril de 2023 con un propósito claro: transformar el sector mutualista proporcionando garantías crediticias bajo condiciones de equidad y respaldo técnico, para que las mutuales puedan crecer su cartera con mayor confianza y sus asociados accedan más fácilmente al crédito. Lo que comenzó como una unión de entidades pioneras se ha consolidado como un ecosistema de confianza en expansión — un modelo que ha demostrado que el sector mutual puede construir sus propias herramientas de respaldo.</p>
-      </div>
+    <div class="nos-grid">
+      <ol class="timeline" data-reveal>
+        <li><span class="tl-when">Finales de 2022</span><h3>Nace FMC</h3><p>Como resultado de la visión estratégica de la Federación de Mutuales de Antioquia y las asociaciones mutuales fundadoras.</p></li>
+        <li><span class="tl-when">Abril de 2023</span><h3>Iniciamos operaciones</h3><p>Con un propósito claro: transformar el sector mutualista proporcionando garantías crediticias bajo condiciones de equidad y respaldo técnico, para que las mutuales crezcan su cartera con mayor confianza y sus asociados accedan más fácilmente al crédito.</p></li>
+        <li><span class="tl-when">Hoy</span><h3>Un ecosistema de confianza en expansión</h3><p>Más de $65.000 millones garantizados y cerca de 22.000 créditos respaldados: un modelo que demuestra que el sector mutual puede construir sus propias herramientas de respaldo.</p></li>
+      </ol>
+      <aside class="ally" data-reveal="2" aria-label="Aliado fundador">
+        <div class="mini-lbl">Aliado fundador y accionista</div>
+        <h3>Federación de Mutuales de Antioquia</h3>
+        <p>Junto con las mutuales fundadoras, la Federación impulsó la creación de FMC y hace parte de sus accionistas. Es el organismo de integración del mutualismo en Antioquia.</p>
+        <a class="btn btn-ghost" href="https://www.fedemutuales.org/" target="_blank" rel="noopener">Visitar fedemutuales.org <svg><use href="#i-arrow"/></svg></a>
+      </aside>
     </div>
-
-    <!-- MISION VISION VALORES -->
-    <div class="mvv-grid">
-      <div class="mvv-card">
-        <div class="mvv-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:var(--gold)" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg></div>
-        <h3>Misión</h3>
-        <p>Somos un fondo de cobertura que acompaña a las organizaciones solidarias en la gestión de su riesgo crediticio, facilitando el acceso al crédito de sus grupos de interés.</p>
-      </div>
-      <div class="mvv-card">
-        <div class="mvv-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:var(--gold)" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><polygon points="16.5 7.5 14 14 7.5 16.5 10 10"/></svg></div>
-        <h3>Visión</h3>
-        <p>Ser el referente de respaldo crediticio del sector mutualista colombiano, reconocidos por fortalecer la competitividad y sostenibilidad de las organizaciones solidarias que confían en nosotros.</p>
-      </div>
-      <div class="mvv-card">
-        <div class="mvv-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:var(--gold)" aria-hidden="true" focusable="false"><polygon points="12 3 14.6 8.5 20.6 9.3 16.2 13.5 17.3 19.4 12 16.5 6.7 19.4 7.8 13.5 3.4 9.3 9.4 8.5"/></svg></div>
-        <h3>Valores</h3>
-        <div class="valores-list">
-          <div class="valor-item"><span class="valor-dot"></span><div class="valor-text"><strong>Integración solidaria</strong>Somos la consolidación de un trabajo conjunto entre el sector mutual.</div></div>
-          <div class="valor-item"><span class="valor-dot"></span><div class="valor-text"><strong>Responsabilidad empresarial</strong>Administración honesta desde las buenas prácticas de gobernanza.</div></div>
-          <div class="valor-item"><span class="valor-dot"></span><div class="valor-text"><strong>Transparencia</strong>En el manejo de los recursos, las operaciones y el actuar institucional.</div></div>
-          <div class="valor-item"><span class="valor-dot"></span><div class="valor-text"><strong>Diferenciación</strong>Adaptamos nuestros servicios a las necesidades de cada cliente.</div></div>
+    <div class="mvv">
+      <div class="mvv-card" data-reveal><h3>Misión</h3><p>Somos un fondo de cobertura que acompaña a las organizaciones solidarias en la gestión de su riesgo crediticio, facilitando el acceso al crédito de sus grupos de interés.</p></div>
+      <div class="mvv-card" data-reveal="2"><h3>Visión</h3><p>Ser el referente de respaldo crediticio del sector mutualista colombiano, reconocidos por fortalecer la competitividad y sostenibilidad de las organizaciones solidarias que confían en nosotros.</p></div>
+      <div class="mvv-card" data-reveal="3"><h3>Valores</h3>
+        <div class="valores">
+          <div><strong>Integración solidaria</strong>Somos la consolidación de un trabajo conjunto entre el sector mutual.</div>
+          <div><strong>Responsabilidad empresarial</strong>Administración honesta desde las buenas prácticas de gobernanza.</div>
+          <div><strong>Transparencia</strong>En el manejo de los recursos, las operaciones y el actuar institucional.</div>
+          <div><strong>Diferenciación</strong>Adaptamos nuestros servicios a las necesidades de cada cliente.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WAVE -->
-<div class="wave-div" style="background:var(--navy)">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60">
-    <path d="M0,20 C400,60 800,0 1200,40 C1320,55 1400,20 1440,15 L1440,60 L0,60 Z" fill="var(--gray)"/>
-  </svg>
-</div>
+<!-- ASOCIADOS -->
+<section class="sec asociados" id="asociados" aria-labelledby="as-title">
+  <div class="wrap as-grid">
+    <div data-reveal>
+      <span class="eyebrow">Para asociados</span>
+      <h2 class="h2" id="as-title">¿Recibió una factura de Fondo Mutuo de Cobertura?</h2>
+      <p class="lead">No se preocupe, es completamente normal. Significa que el crédito que tomó con su mutual cuenta con nuestra garantía como respaldo.</p>
+      <div class="as-btns">
+        <a href="#faq" class="btn btn-royal" data-faq-tab="asociado">Preguntas para asociados <svg><use href="#i-arrow"/></svg></a>
+        <a href="/pqr" class="btn btn-ghost">Radicar una PQR</a>
+      </div>
+    </div>
+    <div class="as-card" data-reveal="2">
+      <div class="as-item as-ok"><svg><use href="#i-check"/></svg><div><b>Es solo informativa</b><span>La factura se genera a su nombre porque el crédito es suyo, pero la paga su mutual directamente a FMC.</span></div></div>
+      <div class="as-item as-ok"><svg><use href="#i-check"/></svg><div><b>Usted no debe hacer ningún pago</b><span>No tiene que pagarle nada a FMC ni a ninguna otra entidad por este concepto.</span></div></div>
+      <div class="as-item as-warn"><svg><use href="#i-alert"/></svg><div><b>Si alguien le pide un pago por este motivo</b><span>No lo realice y contáctenos de inmediato por PQR, WhatsApp o a admin@fondomutuodecobertura.com.</span></div></div>
+    </div>
+  </div>
+</section>
 
 <!-- FAQ -->
-<section class="faq-section">
-  <div class="inner">
-    <div class="eyebrow">Preguntas frecuentes</div>
-    <h2>Resolvemos sus dudas</h2>
-    <div class="faq-groups">
-      <div class="faq-group">
-        <h3>Para la mutual</h3>
-        <div class="faq-item">
-          <div class="faq-q">¿Qué hace diferente a FMC?</div>
-          <div class="faq-a">FMC fue diseñado desde el sector mutual y para el sector mutual colombiano. Sus accionistas son las mismas mutuales y la Federación de Mutuales de Antioquia. Ofrecemos tarifas competitivas, sin mínimos de colocación, y cada entidad mantiene su propia reserva individual — el riesgo no se comparte entre entidades vinculadas. Adicionalmente, las entidades vinculadas acceden a beneficios exclusivos sin costo adicional, como la consulta masiva en listas restrictivas (SARLAFT), evaluación de cartera en centrales de riesgo y espacios de formación para el sector.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">¿Cómo se activa la garantía cuando un asociado incumple?</div>
-          <div class="faq-a">Cuando un crédito supera los 90 días de mora, la mutual analiza internamente y reporta el caso a FMC si así lo decide, con la documentación correspondiente. FMC evalúa la reclamación, paga al intermediario el saldo garantizado y asume la posición de acreedor frente al deudor.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">¿Hay un volumen mínimo de cartera para vincularse?</div>
-          <div class="faq-a">No. FMC no exige ningún mínimo de colocación. Su entidad puede iniciar con el volumen de créditos que hoy maneja, sin compromisos adicionales. Es importante tener en cuenta que el crecimiento de la reserva individual dependerá del volumen de créditos garantizados y de la calidad de los perfiles de riesgo — a mayor volumen y mejor calidad de cartera, mayor será el respaldo acumulado.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">¿Cómo mejora esto las provisiones contables?</div>
-          <div class="faq-a">Al trasladar el riesgo crediticio a FMC, la mutual mejora la proyección de sus provisiones contables y reduce el impacto de los incumplimientos en el estado de resultados. La garantía actúa como un escudo que protege el balance antes de que la mora genere el mayor deterioro.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">¿Qué pasa con mi reserva si me desvinculo de FMC?</div>
-          <div class="faq-a">Su reserva no desaparece. Al desvincularse, la cobertura continúa vigente para todos los créditos activos que fueron garantizados mientras estuvo vinculado, hasta que cada uno finalice su ciclo. Si al cierre de esos créditos quedan saldos disponibles en su reserva y no se han presentado reclamaciones, esos recursos le son retornados a su organización para que disponga de ellos.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">¿FMC cubre créditos que ya están en mora?</div>
-          <div class="faq-a">No. FMC respalda únicamente los créditos que fueron garantizados desde el momento de su desembolso, con el anexo de aceptación debidamente firmado por el asociado. Un crédito que no cuente con ese documento no tiene posibilidad de reclamación ante FMC, independientemente de su estado de mora.</div>
-        </div>
-      </div>
-      <div class="faq-group">
-        <h3>Para el asociado</h3>
-        <div class="faq-item">
-          <div class="faq-q">¿Qué es FMC y para qué sirve?</div>
-          <div class="faq-a">FMC es un fondo de garantías que respalda su crédito ante la mutual. En lugar de exigirle un codeudor o garantía adicional, FMC contribuye a que su crédito sea aprobado de manera más ágil y segura, actuando como respaldo institucional.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">¿Por qué me llegó una factura de Fondo Mutuo de Cobertura?</div>
-          <div class="faq-a">No se preocupe, es completamente normal. Si recibió una factura o comunicación de FMC, significa que el crédito que tomó con su mutual contó con nuestra garantía como respaldo. El valor que aparece reflejado corresponde al servicio de garantía, gestionado directamente entre su mutual y FMC — usted no debe realizar ningún pago a FMC ni a ninguna otra entidad por este concepto. Si alguien le solicita un pago por este motivo, le recomendamos no realizarlo y contactarnos de inmediato. Puede escribirnos a través del formulario de contacto, la sección de PQR, por WhatsApp o a admin@fondomutuodecobertura.com — con gusto le ayudamos.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">¿Qué pasa si no puedo pagar mi crédito?</div>
-          <div class="faq-a">Si usted incumple con el pago de su crédito, FMC paga la deuda a la mutual y se convierte en su nuevo acreedor. La obligación no desaparece: usted seguirá debiendo el dinero, ahora a FMC. El uso de la garantía no lo exime del pago.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">¿Puedo cancelar la garantía o solicitar el reembolso de su valor?</div>
-          <div class="faq-a">Entendemos que esta puede ser una duda válida. El valor de la garantía corresponde a un servicio que se activó desde el momento en que su crédito fue evaluado y aprobado — FMC respaldó su solicitud desde el primer día, contribuyendo a que accediera al crédito. Por esa razón, ese valor no es reembolsable, independientemente del tiempo que tome en pagar o si decide cancelar el crédito anticipadamente.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">¿Debo hacer algo especial para acceder?</div>
-          <div class="faq-a">Solo debe firmar el anexo de aceptación al momento de tomar el crédito. Es un documento simple y sin trámites adicionales. La mutual se encarga de gestionar todo el proceso con FMC.</div>
-        </div>
-      </div>
+<section class="sec faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2 class="h2" id="faq-title">Resolvemos sus dudas</h2>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Tipo de pregunta">
+      <button class="tab" role="tab" id="tab-mutual" aria-controls="faq-mutual" aria-selected="true">Para la mutual</button>
+      <button class="tab" role="tab" id="tab-asociado" aria-controls="faq-asociado" aria-selected="false" tabindex="-1">Para el asociado</button>
+    </div>
+    <div class="faq-panel" id="faq-mutual" role="tabpanel" aria-labelledby="tab-mutual">
+      <div class="qa"><button class="qa-q" aria-expanded="false">¿Qué hace diferente a FMC?<i></i></button><div class="qa-a"><div><p>FMC fue diseñado desde el sector mutual y para el sector mutual colombiano. Sus accionistas son las mismas mutuales y la Federación de Mutuales de Antioquia. Ofrecemos tarifas competitivas, sin mínimos de colocación, y cada entidad mantiene su propia reserva individual: el riesgo no se comparte entre entidades vinculadas. Adicionalmente, las entidades vinculadas acceden a beneficios exclusivos sin costo adicional, como la consulta masiva en listas restrictivas (SARLAFT), evaluación de cartera en centrales de riesgo y espacios de formación para el sector.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false">¿Cómo se activa la garantía cuando un asociado incumple?<i></i></button><div class="qa-a"><div><p>Cuando un crédito supera los 90 días de mora, la mutual analiza internamente y reporta el caso a FMC si así lo decide, con la documentación correspondiente. FMC evalúa la reclamación, paga al intermediario el saldo garantizado y asume la posición de acreedor frente al deudor.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false">¿Hay un volumen mínimo de cartera para vincularse?<i></i></button><div class="qa-a"><div><p>No. FMC no exige ningún mínimo de colocación. Su entidad puede iniciar con el volumen de créditos que hoy maneja, sin compromisos adicionales. Es importante tener en cuenta que el crecimiento de la reserva individual dependerá del volumen de créditos garantizados y de la calidad de los perfiles de riesgo: a mayor volumen y mejor calidad de cartera, mayor será el respaldo acumulado.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false">¿Cómo mejora esto las provisiones contables?<i></i></button><div class="qa-a"><div><p>Al trasladar el riesgo crediticio a FMC, la mutual mejora la proyección de sus provisiones contables y reduce el impacto de los incumplimientos en el estado de resultados. La garantía actúa como un escudo que protege el balance antes de que la mora genere el mayor deterioro.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false">¿Qué pasa con mi reserva si me desvinculo de FMC?<i></i></button><div class="qa-a"><div><p>Su reserva no desaparece. Al desvincularse, la cobertura continúa vigente para todos los créditos activos que fueron garantizados mientras estuvo vinculado, hasta que cada uno finalice su ciclo. Si al cierre de esos créditos quedan saldos disponibles en su reserva y no se han presentado reclamaciones, esos recursos le son retornados a su organización para que disponga de ellos.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false">¿FMC cubre créditos que ya están en mora?<i></i></button><div class="qa-a"><div><p>No. FMC respalda únicamente los créditos que fueron garantizados desde el momento de su desembolso, con el anexo de aceptación debidamente firmado por el asociado. Un crédito que no cuente con ese documento no tiene posibilidad de reclamación ante FMC, independientemente de su estado de mora.</p></div></div></div>
+    </div>
+    <div class="faq-panel" id="faq-asociado" role="tabpanel" aria-labelledby="tab-asociado" hidden>
+      <div class="qa"><button class="qa-q" aria-expanded="false">¿Qué es FMC y para qué sirve?<i></i></button><div class="qa-a"><div><p>FMC es un fondo de garantías que respalda su crédito ante la mutual. En lugar de exigirle un codeudor o garantía adicional, FMC contribuye a que su crédito sea aprobado de manera más ágil y segura, actuando como respaldo institucional.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false">¿Por qué me llegó una factura de Fondo Mutuo de Cobertura?<i></i></button><div class="qa-a"><div><p>No se preocupe, es completamente normal. Si recibió una factura o comunicación de FMC, significa que el crédito que tomó con su mutual contó con nuestra garantía como respaldo. El valor que aparece reflejado corresponde al servicio de garantía, gestionado directamente entre su mutual y FMC: usted no debe realizar ningún pago a FMC ni a ninguna otra entidad por este concepto. Si alguien le solicita un pago por este motivo, le recomendamos no realizarlo y contactarnos de inmediato. Puede escribirnos a través del formulario de contacto, la sección de PQR, por WhatsApp o a admin@fondomutuodecobertura.com; con gusto le ayudamos.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false">¿Qué pasa si no puedo pagar mi crédito?<i></i></button><div class="qa-a"><div><p>Si usted incumple con el pago de su crédito, FMC paga la deuda a la mutual y se convierte en su nuevo acreedor. La obligación no desaparece: usted seguirá debiendo el dinero, ahora a FMC. El uso de la garantía no lo exime del pago.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false">¿Puedo cancelar la garantía o solicitar el reembolso de su valor?<i></i></button><div class="qa-a"><div><p>Entendemos que esta puede ser una duda válida. El valor de la garantía corresponde a un servicio que se activó desde el momento en que su crédito fue evaluado y aprobado: FMC respaldó su solicitud desde el primer día, contribuyendo a que accediera al crédito. Por esa razón, ese valor no es reembolsable, independientemente del tiempo que tome en pagar o si decide cancelar el crédito anticipadamente.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false">¿Debo hacer algo especial para acceder?<i></i></button><div class="qa-a"><div><p>Solo debe firmar el anexo de aceptación al momento de tomar el crédito. Es un documento simple y sin trámites adicionales. La mutual se encarga de gestionar todo el proceso con FMC.</p></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="cta-section" id="contacto">
-  <svg class="cta-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice">
-    <path d="M0,150 C200,80 450,220 700,130 C900,60 1150,200 1440,120 L1440,0 L0,0 Z" fill="rgba(255,255,255,0.3)"/>
-    <path d="M0,450 C300,380 600,520 900,420 C1100,360 1300,480 1440,400 L1440,600 L0,600 Z" fill="rgba(129,212,250,0.2)"/>
-    <path d="M0,550 C250,500 550,580 800,520 C1050,460 1280,540 1440,500 L1440,600 L0,600 Z" fill="rgba(255,255,255,0.15)"/>
-  </svg>
-  <div class="cta-inner">
-    <div class="eyebrow">Contáctenos</div>
-    <h2>¿Listo para proteger su cartera y crecer con tranquilidad?</h2>
-    <p class="cta-lead">Solicite información sin compromiso. Un asesor de FMC revisará su caso y le explicará el proceso de vinculación paso a paso.</p>
-    <div class="cta-grid">
-      <div class="cta-card">
-        <div class="cta-info">
-          <h3>Estamos en Medellín, Colombia</h3>
-          <p>Si representa una mutual u otra entidad interesada en nuestros servicios de garantía, escríbanos. Le responderemos dentro de las próximas 24 horas hábiles.</p>
-          <div class="cta-detail"><div class="cta-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:#ffffff" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="cta-detail-text"><strong>Dirección</strong>Calle 52 #49-28, Edificio La Lonja, Medellín</div></div>
-          <div class="cta-detail"><div class="cta-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:#ffffff" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></div><div class="cta-detail-text"><strong>Correo</strong>admin@fondomutuodecobertura.com</div></div>
-          <div class="cta-detail"><div class="cta-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:#ffffff" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.8.4 1.6.7 2.3a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.7-1.3a2 2 0 0 1 2.1-.4c.7.3 1.5.6 2.3.7a2 2 0 0 1 1.7 2z"/></svg></div><div class="cta-detail-text"><strong>Teléfono</strong>+57 310 448 6842</div></div>
-        </div>
+<!-- CONTACTO -->
+<section class="sec contacto" id="contacto" aria-labelledby="ct-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">Contáctenos</span>
+      <h2 class="h2" id="ct-title">¿Listo para proteger su cartera y crecer con tranquilidad?</h2>
+      <p class="lead">Solicite información sin compromiso. Un asesor de FMC revisará su caso y le explicará el proceso de vinculación paso a paso.</p>
+    </div>
+    <div class="ct-grid">
+      <div class="ct-info" data-reveal>
+        <h3>Estamos en Medellín, Colombia</h3>
+        <p>Si representa una mutual u otra entidad interesada en nuestros servicios de garantía, escríbanos. Le responderemos dentro de las próximas 24 horas hábiles.</p>
+        <div class="ct-row"><span class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><small>Dirección</small><span>Calle 52 #49-28, Edificio La Lonja, Medellín</span></div></div>
+        <a class="ct-row" href="mailto:admin@fondomutuodecobertura.com"><span class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></span><div><small>Correo</small><span>admin@fondomutuodecobertura.com</span></div></a>
+        <a class="ct-row" href="tel:+573104486842"><span class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.8.4 1.6.7 2.3a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.7-1.3a2 2 0 0 1 2.1-.4c.7.3 1.5.6 2.3.7a2 2 0 0 1 1.7 2z"/></svg></span><div><small>Teléfono</small><span>+57 310 448 6842</span></div></a>
       </div>
-      <div class="cta-card" id="form-container">
-        <div class="form-success" id="form-success">
-          <div class="form-success-icon"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" style="display:inline-block;vertical-align:middle;color:var(--sky-deep)" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M7 12.4l3.3 3.3L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="form-card" id="form-container" data-reveal="2">
+        <div class="form-success" id="form-success" role="status">
+          <svg><use href="#i-check"/></svg>
           <h3>¡Mensaje enviado!</h3>
           <p>Gracias por contactarnos. Un asesor de FMC revisará su solicitud y le responderá dentro de las próximas 24 horas hábiles.</p>
-          <button class="form-success-btn" onclick="resetForm()">Enviar otro mensaje</button>
+          <button type="button" class="form-success-btn" onclick="resetForm()">Enviar otro mensaje</button>
         </div>
         <form class="cta-form" id="contact-form" action="https://formspree.io/f/mlgoggog" method="POST">
           <input type="hidden" name="_subject" value="Nueva solicitud desde fondomutuodecobertura.com"/>
           <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response"/>
           <div class="form-row">
-            <div class="fg"><label>Nombre</label><input type="text" name="nombre" placeholder="Su nombre completo" required/></div>
-            <div class="fg"><label>Cargo</label><input type="text" name="cargo" placeholder="Representante Legal, Gerente..."/></div>
+            <div class="fg"><label for="f-nombre">Nombre</label><input id="f-nombre" type="text" name="nombre" placeholder="Su nombre completo" autocomplete="name" required/></div>
+            <div class="fg"><label for="f-cargo">Cargo</label><input id="f-cargo" type="text" name="cargo" placeholder="Representante Legal, Gerente…" autocomplete="organization-title"/></div>
           </div>
-          <div class="fg"><label>Entidad</label><input type="text" name="entidad" placeholder="Razón social de la mutual o empresa" required/></div>
+          <div class="fg"><label for="f-entidad">Entidad</label><input id="f-entidad" type="text" name="entidad" placeholder="Razón social de la mutual o empresa" autocomplete="organization" required/></div>
           <div class="form-row">
-            <div class="fg"><label>Correo electrónico</label><input type="email" name="email" placeholder="correo@entidad.com.co" required/></div>
-            <div class="fg"><label>Teléfono de contacto</label><input type="tel" name="telefono" placeholder="+57 300 000 0000"/></div>
+            <div class="fg"><label for="f-email">Correo electrónico</label><input id="f-email" type="email" name="email" placeholder="correo@entidad.com.co" autocomplete="email" required/></div>
+            <div class="fg"><label for="f-tel">Teléfono de contacto</label><input id="f-tel" type="tel" name="telefono" placeholder="+57 300 000 0000" autocomplete="tel"/></div>
           </div>
           <div class="fg">
-            <label>Tipo de entidad</label>
-            <select name="tipo_entidad">
-              <option value="">Seleccione su tipo de organización...</option>
+            <label for="f-tipo">Tipo de entidad</label>
+            <select id="f-tipo" name="tipo_entidad">
+              <option value="">Seleccione su tipo de organización…</option>
               <option>Mutual de ahorro y crédito</option>
               <option>Cooperativa financiera</option>
               <option>Caja de compensación</option>
@@ -705,104 +825,173 @@ footer{background:linear-gradient(160deg,#13286E,#0E1F52);padding:54px 5vw 30px;
               <option>Otra entidad del sector solidario</option>
             </select>
           </div>
-          <div class="fg"><label>Mensaje</label><textarea name="mensaje" placeholder="Cuéntenos sobre su cartera o su necesidad de cobertura..."></textarea></div>
+          <div class="fg"><label for="f-msg">Mensaje</label><textarea id="f-msg" name="mensaje" placeholder="Cuéntenos sobre su cartera o su necesidad de cobertura…"></textarea></div>
           <p class="form-consent">Al enviar este formulario usted autoriza a Fondo Mutuo de Cobertura S.A.S. a tratar sus datos personales para atender su solicitud, conforme a nuestro <a href="/aviso-privacidad">Aviso de Privacidad</a> y nuestra <a href="/politica-datos">Política de Tratamiento de Datos</a>.</p>
-          <button type="submit" class="submit-btn" id="submit-btn">Enviar solicitud →</button>
+          <button type="submit" class="btn btn-gold submit-btn" id="submit-btn">Enviar solicitud →</button>
         </form>
       </div>
     </div>
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
-  <svg class="footer-wave" viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,80 C300,160 700,20 1100,100 C1280,140 1380,60 1440,80 L1440,200 L0,200 Z" fill="white"/>
-  </svg>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div style="display:flex;align-items:center;gap:12px">
-        <img src="/logo-fmc.png" alt="Fondo Mutuo de Cobertura" width="270" height="190" style="height:48px;width:auto;"/>
-        <div>
-          <div class="footer-logo-name">Fondo Mutuo de Cobertura</div>
-          <div class="footer-logo-sub">S.A.S. · Colombia</div>
-        </div>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <a class="ft-brand" href="#inicio"><span class="ft-logo"><img src="/logo-fmc.png" alt="Fondo Mutuo de Cobertura" width="270" height="190"/></span><span><b>Fondo Mutuo de Cobertura</b><small>S.A.S. · Colombia</small></span></a>
+        <p class="ft-about">Fiador institucional del sector solidario colombiano. Garantías que fortalecen su cartera.</p>
       </div>
-      <p>Fiador institucional del sector solidario colombiano. Garantías que fortalecen su cartera.</p>
+      <div>
+        <h4>Servicios</h4>
+        <ul><li><a href="#proceso">Cómo funciona</a></li><li><a href="#garantias">Nuestras garantías</a></li><li><a href="#paraquien">Para quién es</a></li><li><a href="#beneficios">Beneficios exclusivos</a></li></ul>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul><li><a href="#nosotros">Quiénes somos</a></li><li><a href="#asociados">Información para asociados</a></li><li><a href="/pqr">PQR</a></li><li><a class="ext" href="https://portalintermediarios.fondomutuodecobertura.com" target="_blank" rel="noopener">Portal intermediarios</a></li><li><a class="ext" href="https://www.fedemutuales.org/" target="_blank" rel="noopener">Federación de Mutuales de Antioquia</a></li></ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul><li><a href="#contacto">Solicitar vinculación</a></li><li><a href="mailto:admin@fondomutuodecobertura.com">admin@fondomutuodecobertura.com</a></li><li><a href="tel:+573104486842">+57 310 448 6842</a></li><li>Calle 52 #49-28, Ed. La Lonja, Medellín</li></ul>
+      </div>
     </div>
-    <div class="footer-col">
-      <h5>Servicios</h5>
-      <ul>
-        <li><a href="#proceso">Cómo funciona</a></li>
-        <li><a href="#garantias">Nuestras garantías</a></li>
-        <li><a href="#paraquien">Para quién es</a></li>
-        <li><a href="#beneficios">Beneficios exclusivos</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Empresa</h5>
-      <ul>
-        <li><a href="#nosotros">Quiénes somos</a></li>
-        <li><a href="#nosotros">Misión y visión</a></li>
-        <li><a href="/pqr">PQR</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Contacto</h5>
-      <ul>
-        <li><a href="#contacto">Solicitar vinculación</a></li>
-        <li><a href="mailto:admin@fondomutuodecobertura.com">admin@<br/>fondomutuodecobertura.com</a></li>
-        <li><a href="tel:+573104486842">+57 310 448 6842</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Fondo Mutuo de Cobertura S.A.S. · NIT 901.678.530-0 · Todos los derechos reservados.</p>
-    <div class="footer-legal">
-      <a href="/politica-datos">Política de tratamiento de datos</a>
-      <a href="/aviso-privacidad">Aviso de privacidad</a>
-      <a href="/aviso-legal">Aviso legal</a>
+    <div class="ft-bottom">
+      <p>© 2026 Fondo Mutuo de Cobertura S.A.S. · NIT 901.678.530-0 · Todos los derechos reservados.</p>
+      <nav aria-label="Legal"><a href="/politica-datos">Política de tratamiento de datos</a><a href="/aviso-privacidad">Aviso de privacidad</a><a href="/aviso-legal">Aviso legal</a></nav>
     </div>
   </div>
 </footer>
 
+<a href="https://wa.me/573104486842?text=Hola%2C%20tengo%20una%20consulta%20sobre%20Fondo%20Mutuo%20de%20Cobertura." class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg><use href="#i-wa"/></svg><span>¿Hablamos por WhatsApp?</span></a>
+
 <script>
-// FAQ
-document.querySelectorAll('.faq-q').forEach(q=>{
-  q.addEventListener('click',()=>{
-    const item=q.closest('.faq-item');
-    const wasOpen=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-    if(!wasOpen)item.classList.add('open');
-  });
-});
+(function(){
+const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const NS='http://www.w3.org/2000/svg';
 
-// Hamburger menu
-function toggleMenu(){
-  const menu=document.getElementById('mobileMenu');
-  menu.classList.toggle('open');
-}
-document.addEventListener('click',function(e){
-  const menu=document.getElementById('mobileMenu');
-  const hamburger=document.querySelector('.hamburger');
-  if(!menu.contains(e.target)&&!hamburger.contains(e.target)){
-    menu.classList.remove('open');
+/* ---------- NAV ---------- */
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>12);
+onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+const burger=document.getElementById('burger'),mmenu=document.getElementById('mmenu');
+function setMenu(open){mmenu.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú')}
+burger.addEventListener('click',e=>{e.stopPropagation();setMenu(!mmenu.classList.contains('open'))});
+mmenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+document.addEventListener('click',e=>{if(!mmenu.contains(e.target))setMenu(false)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+// enlace activo segun la seccion visible
+const links=[...document.querySelectorAll('.nav-links a[href^="#"]')];
+const secObs=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+en.target.id))}}),{rootMargin:'-45% 0px -50% 0px'});
+links.forEach(l=>{const s=document.querySelector(l.getAttribute('href'));if(s)secObs.observe(s)});
+
+/* ---------- HERO: arcos guilloché (cobertura) ---------- */
+const gsvg=document.getElementById('guilloche');
+if(gsvg){
+  const cx=720,cy=1010,arcs=[];
+  for(let i=0;i<24;i++){
+    const r=300+i*28;
+    for(let fam=0;fam<2;fam++){
+      let d='';const n=240,amp=4.5+(i%3)*1.2,k=20,ph=fam?i*0.42:Math.PI-i*0.42;
+      for(let s=0;s<=n;s++){const t=Math.PI+Math.PI*s/n,rr=r+amp*Math.sin(k*t+ph);d+=(s?'L':'M')+(cx+rr*Math.cos(t)).toFixed(1)+','+(cy+rr*Math.sin(t)).toFixed(1)}
+      const p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('class','g');
+      p.setAttribute('stroke',fam?'rgba(255,255,255,.075)':'rgba(103,190,236,'+(0.1+0.1*(1-i/24)).toFixed(3)+')');
+      if(!fam)p.id='arc'+i;
+      gsvg.appendChild(p);arcs.push(p);
+    }
   }
-});
-window.addEventListener('scroll',function(){
-  document.getElementById('mobileMenu').classList.remove('open');
-});
+  // nodos: la red de mutuales sobre los arcos
+  [[4,.16],[7,.33],[9,.71],[12,.12],[13,.86],[15,.42],[17,.62],[19,.08],[20,.93],[22,.27],[23,.77],[11,.5]].forEach(([i,f],j)=>{
+    const r=300+i*28,t=Math.PI+Math.PI*f,c=document.createElementNS(NS,'circle');
+    c.setAttribute('cx',(cx+r*Math.cos(t)).toFixed(1));c.setAttribute('cy',(cy+r*Math.sin(t)).toFixed(1));c.setAttribute('r',j%3?2.6:3.6);c.setAttribute('class','node');c.style.animationDelay=(j*0.37)+'s';gsvg.appendChild(c);
+  });
+  if(!reduce){
+    arcs.forEach((p,j)=>{const L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;p.style.transitionDelay=(Math.floor(j/2)*45)+'ms'});
+    requestAnimationFrame(()=>requestAnimationFrame(()=>arcs.forEach(p=>p.style.strokeDashoffset=0)));
+    // pulsos dorados que recorren algunos arcos
+    [[6,11],[13,15],[19,13]].forEach(([i,dur],j)=>{
+      const c=document.createElementNS(NS,'circle');c.setAttribute('r','3.4');c.setAttribute('class','pulse');c.setAttribute('opacity','0');
+      c.innerHTML='<animateMotion dur="'+dur+'s" begin="'+(2+j*2.5)+'s" repeatCount="indefinite"><mpath href="#arc'+i+'"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="'+dur+'s" begin="'+(2+j*2.5)+'s" repeatCount="indefinite"/>';
+      gsvg.appendChild(c);
+    });
+  }
+}
 
-// Async form submission with reCAPTCHA v3
+/* ---------- CONTADORES ---------- */
+const fmt=n=>Math.round(n).toLocaleString('es-CO');
+function countUp(el){const to=+el.dataset.count;if(reduce){el.textContent=fmt(to);return}const t0=performance.now(),D=1600;(function tick(t){const k=Math.max(0,Math.min(1,(t-t0)/D)),e=1-Math.pow(1-k,3);el.textContent=fmt(to*e);if(k<1)requestAnimationFrame(tick)})(t0)}
+
+/* ---------- REVELADO ---------- */
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;const el=en.target;el.classList.add('in');el.querySelectorAll('[data-count]').forEach(countUp);if(el.dataset.count)countUp(el);io.unobserve(el)}),{threshold:.18});
+document.querySelectorAll('[data-reveal],.stats').forEach(el=>io.observe(el));
+
+/* ---------- MEDIDOR 100% ---------- */
+const gVal=document.getElementById('gVal'),gNum=document.getElementById('gNum');
+if(gVal){const L=gVal.getTotalLength();gVal.style.strokeDasharray=L;
+  if(reduce){gVal.style.strokeDashoffset=0}else{gVal.style.strokeDashoffset=L;
+    new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){gVal.style.strokeDashoffset=0;gNum.dataset.count=100;countUp(gNum);o.disconnect()}},{threshold:.5}).observe(gVal)}}
+
+/* ---------- RECORRIDO ---------- */
+const STEPS={
+  1:{path:'p1',color:'#1E40AF',label:'Solicitud de crédito',nodes:['asociado','mutual']},
+  2:{path:'p2',color:'#1E40AF',label:'Garantía FMC',nodes:['mutual','fmc'],canopy:true},
+  3:{path:'p3',color:'#45B6E8',label:'Desembolso',nodes:['mutual','asociado']},
+  4:{path:'p4',color:'#1E40AF',label:'Reporte mensual',nodes:['fmc','mutual']},
+  5:{path:'p4',color:'#E6A41E',label:'Pago de la garantía',nodes:['fmc','mutual','asociado'],canopy:true,then:{path:'p6',label:'FMC asume el cobro'}}
+};
+const live=document.getElementById('live'),live2=document.getElementById('live2'),token=document.getElementById('token'),canopy=document.getElementById('canopy');
+const steps=[...document.querySelectorAll('.rec-step')],dots=[...document.querySelectorAll('#recDots button')],recNow=document.getElementById('recNow');
+let current=0,anim=0;
+const ease=k=>k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;
+// la accion del paso se muestra en la barra inferior del diagrama
+function setChip(n,txt){recNow.innerHTML='Paso <b>'+n+'</b> de 5 · <em>'+txt+'</em>'}
+// dibuja el trazo y mueve la ficha a lo largo del camino
+function travel(el,d,color,dur,dashed,done){
+  el.setAttribute('d',d);el.style.stroke=color;el.style.opacity=1;
+  const L=el.getTotalLength();if(!dashed){el.style.strokeDasharray=L}
+  const t0=performance.now(),id=++anim;
+  (function tick(t){if(id!==anim)return;const k=reduce?1:Math.max(0,Math.min(1,(t-t0)/dur)),e=ease(k);
+    if(!dashed)el.style.strokeDashoffset=L*(1-e);
+    const pt=el.getPointAtLength(L*e);token.setAttribute('cx',pt.x.toFixed(1));token.setAttribute('cy',pt.y.toFixed(1));
+    if(k<1)requestAnimationFrame(tick);else if(done)done()})(t0);
+}
+function activate(n){
+  if(n===current)return;current=n;const s=STEPS[n];
+  steps.forEach(li=>li.classList.toggle('on',+li.dataset.step===n));
+  dots.forEach(b=>b.classList.toggle('on',+b.dataset.go===n));
+  ['asociado','mutual','fmc'].forEach(k=>document.getElementById('n-'+k).classList.toggle('on',s.nodes.includes(k)));
+  canopy.classList.toggle('glow',!!s.canopy);
+  live2.style.opacity=0;token.setAttribute('opacity',1);
+  const p=document.getElementById(s.path);setChip(n,s.label);
+  travel(live,p.getAttribute('d'),s.color,1100,false,()=>{
+    if(!s.then)return;
+    setTimeout(()=>{if(current!==n)return;const p2=document.getElementById(s.then.path);setChip(n,s.then.label);
+      travel(live2,p2.getAttribute('d'),'#E6A41E',1500,true)},reduce?0:400);
+  });
+}
+const stepObs=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)activate(+en.target.dataset.step)}),{rootMargin:'-42% 0px -42% 0px'});
+steps.forEach(li=>{stepObs.observe(li);li.addEventListener('click',()=>activate(+li.dataset.step))});
+dots.forEach(b=>b.addEventListener('click',()=>{const n=+b.dataset.go;activate(n);const li=steps[n-1];const y=li.getBoundingClientRect().top+scrollY-window.innerHeight/2+li.offsetHeight/2;window.scrollTo({top:y,behavior:reduce?'auto':'smooth'})}));
+activate(1);
+
+/* ---------- FAQ ---------- */
+const tabs=[...document.querySelectorAll('.tab')];
+function selectTab(tab){tabs.forEach(t=>{const on=t===tab;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on})}
+tabs.forEach((t,i)=>{t.addEventListener('click',()=>selectTab(t));t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const nt=tabs[(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];selectTab(nt);nt.focus()}})});
+document.querySelectorAll('[data-faq-tab]').forEach(a=>a.addEventListener('click',()=>selectTab(document.getElementById('tab-'+a.dataset.faqTab))));
+document.querySelectorAll('.qa-q').forEach(q=>q.addEventListener('click',()=>{const open=q.getAttribute('aria-expanded')==='true';q.closest('.faq-panel').querySelectorAll('.qa-q').forEach(o=>o.setAttribute('aria-expanded','false'));q.setAttribute('aria-expanded',!open)}));
+})();
+
+/* ---------- FORMULARIO (Formspree + reCAPTCHA v3) ---------- */
 const form=document.getElementById('contact-form');
 if(form){
   form.addEventListener('submit',async function(e){
     e.preventDefault();
     const btn=document.getElementById('submit-btn');
-    btn.textContent='Verificando...';
+    btn.textContent='Verificando…';
     btn.disabled=true;
     try{
-      // Get reCAPTCHA token
       const token=await new Promise((resolve,reject)=>{
         grecaptcha.ready(()=>{
           grecaptcha.execute('6LcOFpwsAAAAAKnZJ00rSsHCC1mZy6klWccH8rhN',{action:'contact'})
@@ -810,7 +999,7 @@ if(form){
         });
       });
       document.getElementById('g-recaptcha-response').value=token;
-      btn.textContent='Enviando...';
+      btn.textContent='Enviando…';
       const res=await fetch(form.action,{
         method:'POST',
         body:new FormData(form),
@@ -829,24 +1018,14 @@ if(form){
     }
   });
 }
-
 function resetForm(){
   document.getElementById('form-success').classList.remove('show');
-  const form=document.getElementById('contact-form');
   form.reset();
   form.style.display='flex';
-  document.getElementById('submit-btn').textContent='Enviar solicitud →';
-  document.getElementById('submit-btn').disabled=false;
+  const btn=document.getElementById('submit-btn');
+  btn.textContent='Enviar solicitud →';
+  btn.disabled=false;
 }
 </script>
-<!-- WHATSAPP BUTTON -->
-<a href="https://wa.me/573104486842?text=Hola%2C%20tengo%20una%20consulta%20sobre%20Fondo%20Mutuo%20de%20Cobertura." 
-   class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-  <span class="whatsapp-label">¿Hablamos por WhatsApp?</span>
-</a>
-
 </body>
 </html>
